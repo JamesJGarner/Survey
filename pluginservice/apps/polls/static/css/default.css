@@ -1,0 +1,8 @@
+body {
+	background: rgba(238, 238, 238, 0.34);
+}
+
+h1, h2, h3, h4 , h5, p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
