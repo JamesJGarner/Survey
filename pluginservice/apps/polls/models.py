@@ -22,3 +22,14 @@ class Poll(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class PollAnswer(models.Model):
+
+    poll = models.ForeignKey(
+        Poll,
+        )
+
+    answer = models.CharField(
+        max_length=200,
+        )

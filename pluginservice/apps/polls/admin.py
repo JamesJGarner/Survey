@@ -1,5 +1,13 @@
 from django.contrib import admin
-from .models import Poll
+from .models import Poll, PollAnswer
 
-admin.site.register(Poll)
 
+class PollAnswerAdmin(admin.TabularInline):
+    extra = 1
+    model = PollAnswer
+
+
+class PollAdmin(admin.ModelAdmin):
+    inlines = [PollAnswerAdmin]
+
+admin.site.register(Poll, PollAdmin)
