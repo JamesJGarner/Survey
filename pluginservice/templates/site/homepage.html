@@ -5,7 +5,89 @@
 		<div class="large-12 columns">
 			<h2>You're now logged in.</h2>
 			<hr>
+			<p><a href="/logout/">Logout</a></p>
+			<p><a href="/polls/">Go to polls</a></p>
 		</div>
 	</div>
+	{% else %}
+	<link rel="stylesheet" href="/static/css/custom.css" />
+	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<h2>Login</h2>
+	<hr>
+	<form action="/login/" method="post">
+	{% csrf_token %}
+	<p><label for="id_username">Username:</label> <input id="id_username" maxlength="254" name="username" type="text"></p>
+	<p><label for="id_password">Password:</label> <input id="id_password" name="password" type="password"></p>
+	<input type="submit" value="Login" class="small button" / >
+	</form>
+	  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	</div>
+	<div class="video">
+		<video autoplay id="bgvid" loop>
+			<source src="/static/vid/landing.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="top-header">
+		<div class="row">
+			<div class="register">
+				<a href="#"><img src="/static/img/home/icons/profile.png"/>Register</a>
+				<a href="#" data-reveal-id="loginmodal">Log in</a>
+			</div>
+			<img class="logo" src="/static/img/home/logo.png"/>
+			<h1>NOTHING IS BETTER THAN FREEDOM</h1>
+			<h2 class="hide-for-small">Bring your web visitors a completely modern and easy way of engaging</h2>
+			<a href="pages/home.html" class="button red"><strong>Start, it's free!</strong></a>
+			<a href="#" class="button blue">Find out more →</a>
+
+			<ul class="social">	
+				<li><img src="/static/img/home/icons/Facebook.png" alt="Facebook"/></li>
+				<li><img src="/static/img/home/icons/Pinterest.png" alt="Pinterest"/></li>
+				<li><img src="/static/img/home/icons/Twitter.png" alt="Twitter"/></li>		
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="row">
+			<p class="section-title">Everything can be customized</p>
+			
+				<div class="large-6 columns">
+					<img src="/static/img/home/poll2.png" class="hide-for-small"/>
+				</div>
+				<div class="large-6 columns">
+					<h2>BE YOUR OWN MASTER</h2>
+					<p>The service we are running is offering a widget that works as a poll, this is a great way of engaging your visitors into functionality on your website rather than having them just looking at text and pictures.</p>
+					<p>Choose your theme, upload your pictures and manage the poll answers directly how you want it to suit your audience so that you can create the best experience. </p>
+					<p><strong>You are choosing why, where, when, who, what and how!</strong></p>
+				</div>
+		</div>
+		<div id="newsletter">
+			<h1>Our users have generated 460 widgets already!</h1>
+		</div>
+		<div class="row">
+			<p class="section-title">our brand new technology</p>
+			<div class="large-4 columns">
+				<h2>SUPER ANALYTICS ON YOUR POLLS</h2>
+				<p>Our widget is incredibly easy to integrate into your website, all it requires is a line of code then you'll be set. When your custom widget is attached it'll be helping with analytics about what people are choosing to vote on, but also it's activity.</p>
+				<p>This will help you create and gain knowledge about what makes your visitors trigger when it comes to their activity.</p>
+			</div>
+			<div class="large-8 columns">
+				<img src="/static/img/home/pc.png" />
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="footer">
+				<div class="large-6 small-12 columns">
+				<p>© VOTLA 2015 Copyright.</p>
+				</div>
+				<div class="large-6 small-12 columns">
+				<ul class="inline-list right">
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Jobs</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Suscribe</a></li>
+				</ul>
+			</div>
+		</div>
 	{% endif %}
 {% endblock%}

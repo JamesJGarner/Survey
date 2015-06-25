@@ -12,22 +12,18 @@
    <body>
    <div class="header">
      <div class="row">
-       <div class="large-12 columns">
-       <a href="/"><img src="/static/img/logo.png"></a>
-       {% if user.is_authenticated  %}
-       <p>
-        Welcome, {{ request.user }} | <a href="/logout">Logout.</a>
-       </p>
-       {% endif %}
-       </div>
+
      </div>
    </div>
-   {% if user.is_authenticated  %}
-   {% block content %}{% endblock%}
-   {%else %}
-    <p><a href="/login">Login</a></p>
-    {% block login %}{% endblock%}
-   {% endif %}
 
-   </body>
+    {% block content %}{% endblock%}
+
+
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/foundation.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
