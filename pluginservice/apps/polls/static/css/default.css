@@ -1,8 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300,200,100);
+@import url('/static/css/font-awesome.min.css');
+@import url('/static/css/font-awesome.css');
+
 body {
-	background: rgba(238, 238, 238, 0.34);
+	background: #e5e5e5;
 }
 
 h1, h2, h3, h4 , h5, p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+}
+
+
+.userportal h1 {
+	text-align: center;
+	color: #1f6380;
+	margin:40px 0;
+	font-weight: 400;
+}
+
+
+.active {
+	background-color: #1f6380 !important;
+	color:#FFF !important;
+}
+
+.userportal h2 {
+  color: #1f6380 !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: x-large;
+    font-weight: 400;
+}
+.userportal a {
+  background-color: transparent;
+  color: #1f6380 ;
+    font-size: 0.8125rem;
+  border: 2px #1f6380  solid;
+  padding: 15px 50px 15px 50px;
+  margin-top:20px 0;
+  float: left;
+  font-family: 'Raleway', sans-serif !important;
+
+}
+
+.userportal a:hover {
+	background-color: #1f6380;
+	color: #fff;
+}
+
+
+
+
+.learnmore h2 {
+  color: #fff !important;
+  margin-top: 12px;
+}
+
+
+
+
+.learnmore {
+	float: left;
+	width: 100%;
+	background: #1f6380 !important;
+	border: 1px solid #1b5974 !important;
+	border-left: 35px solid #1b5974 !important;
+}
+
+.learnmore h2 {
+	color:#FFF;
+	font-family: 'Raleway', sans-serif !important;
+	font-size: x-large;
+}
+
+
+.secondary.small.button {
+
+}
+
+.learnmoreButton {
+	  border: 2px #FFF  solid !important;
+	  color:#FFF !important;
+}
+
+
+.profile {
+  background-color: rgba(67, 172, 106, 1);
+  color: #fff;
+  border:2px solid #368a55;
+  margin-top:20px;
+  font-size: 0.8125rem;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.logout {
+  color: #ca3619;
+  background:none;
+  border: 2px #ca3619 solid;
+  margin-top:20px;
+   font-size: 0.8125rem;
+  font-family: 'Raleway', sans-serif !important;
 }
