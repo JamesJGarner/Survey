@@ -1,9 +1,10 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 from .models import Poll
 
 
 # Not important right now
-class ListPolls(ListView):
+class PollList(ListView):
     model = Poll
 
-
+class PollCreate(CreateView):
+	model = Poll

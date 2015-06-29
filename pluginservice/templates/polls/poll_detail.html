@@ -1,47 +1,3 @@
-<body></body>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<style>
-	
-	.poll-container {
-		width:400px;
-		background: url('/static/img/water.jpg') no-repeat;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		float: left;
-		background-size: 100%;
-	}
-	.poll-container h3 {
-	  margin: 20px 0 0 20px;
-	  font-size: 25pt;
-	  font-family: Calibri;
-	  color: #FFF;
-	  text-shadow: 1px 1px 1px #000;
-	}
-	.poll-container ul {
-		float: left;
-		width: 100%;
-		padding: 20px;
-		box-sizing: border-box;
-	}
-	.poll-container ul li{
-	  float: left;
-	  list-style: none;
-	  background: rgba(0, 0, 0, 0.66);
-	  color: #FFF;
-	  font-size: 14pt;
-	  width: 100%;
-	  padding: 10px;
-	  font-size: 14pt;
-	  margin: 6px 0;
-	  font-family: calibri;
-	  box-sizing: border-box;
-	}
-
-</style>
-<script>
 
 
 function IniPoll() {
@@ -54,9 +10,8 @@ function IniPoll() {
 		html += '<li>{{ a.answer }}</li>'
 	{% endfor %}
 	html +='</ul></div>';
-	$('body').append(html);
+	$('#poll').append(html);
 }
 
 IniPoll();
 
-</script>

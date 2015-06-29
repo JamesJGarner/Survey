@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ form.as_p }}
+
+
+<div class="row">
+	<div class="userportal">
+		<h1>Create your own poll.</h1>
+		<div class="panel left">
+			<p><a href="#">WIDGET POLL</a></p>
+			<hr>
+
+			<label>1. Create a Poll Name:</label>
+			<input id="id_title" maxlength="200" name="title" type="text" placeholder="Your Poll name will not be visible for anyone else than you">
+
+			<label>2. Question</label>
+			<input id="id_question" maxlength="200" name="question" type="text" placeholder="Choose the question you want to ask everyone">
+
+			<label>3. Choose a background:</label>
+			<input type="text" placeholder="Not in use yet.">
+
+			<label>Enter some questions:</label>
+			<div class="large-4 columns"><input type="text" placeholder="Poll question #1"></div>
+			<div class="large-4 columns"><input type="text" placeholder="Poll question #2"></div>
+			<div class="large-4 columns"><input type="text" placeholder="Poll question #3"></div>
+			<div class="large-12 columns">
+			<h3>This is what your Poll will look like:</h3>
+			<script src="/static/js/vendor/jquery.js"></script>
+			<link rel="stylesheet" href="/static/css/polls.css" />
+			<div id="poll"></div>
+			<script src="/api/polls/1.js"></script>
+			<hr>
+			</div>
+			<center>
+
+			<h4>Are you ready for more power?</h4>
+			<a href="#" class="secondary button small buttonSelected2">GENERATE THE WIDGET</a>
+			</center>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

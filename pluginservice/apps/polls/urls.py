@@ -1,8 +1,9 @@
 from django.conf.urls import patterns, url
-from .views import ListPolls
+from .views import PollList, PollCreate
 
 
 urlpatterns = patterns(
     '',
-    url(r'^$', ListPolls.as_view(), name='ListPolls'),
+    url(r'^manage/$', PollList.as_view(), name='PollList'),
+    url(r'^create/$', PollCreate.as_view(), name='PollCreate'),
 )
