@@ -7,11 +7,25 @@ body {
 
 }
 
-h1, h2, h3, h4 , h5, p {
+h1, h2, h3, h5, p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
 
+h4 {
+	margin-top: 25px;
+	color: #1f6380 !important;
+	font-family: 'Raleway', sans-serif;
+}
+h6 {
+	color: #2e3030;
+	font-family: 'Raleway', sans-serif;
+}
+
+.row .collapse {
+	font-family: 'Raleway', sans-serif;
+	padding: 5px 0px 5px 0px;
+}
 
 .userportal h1 {
 	text-align: center;
@@ -84,7 +98,7 @@ h1, h2, h3, h4 , h5, p {
 	  color:#FFF !important;
 }
 
-
+/* ------------- BUTTONS ------------- */
 .profile {
   background-color: rgba(67, 172, 106, 1);
   color: #fff;
@@ -92,13 +106,44 @@ h1, h2, h3, h4 , h5, p {
   margin-top:20px;
   font-size: 0.8125rem;
   font-family: 'Raleway', sans-serif !important;
+  padding: 15px 50px 15px 50px;
 }
-
+.profile:hover {
+  background-color: #e5e5e5;
+  color: #368a55;
+  border-color: #368a55;
+}
 .logout {
   color: #ca3619;
   background:none;
   border: 2px #ca3619 solid;
   margin-top:20px;
-   font-size: 0.8125rem;
+  font-size: 0.8125rem;
+  font-family: 'Raleway', sans-serif;
+  padding: 15px 50px 15px 50px;
+}
+.logout:hover {
+	background-color: #ca3619;
+	color: #fff;
+}
+.secondary.small.button {
+  background-color: transparent;
+  color: #1f6380 ;
+  border: 2px #1f6380  solid;
+  padding: 15px 50px 15px 50px;
+  margin: 0;
   font-family: 'Raleway', sans-serif !important;
 }
+.secondary.small.button:hover {
+  background-color: #1f6380;
+  color: #fff;
+}
+.buttonSelected2{
+  background-color: #1f6380 !important;
+  color: #fff !important; 
+}
+.buttonSelected2:hover{
+  background-color: #fff !important;
+  color: #1f6380 !important;
+}
+/* ------------- BUTTONS END ------------- */

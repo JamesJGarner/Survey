@@ -1,18 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300,200,100);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic;);
-
-
-h1, h2, h3, h4 , h5, p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
 body {
 	background: #FFF;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
-
 
 .video {
   width: 100%;
@@ -42,7 +34,7 @@ body {
   color: #FFF;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
-    font-weight: lighter !important;
+  font-weight: lighter !important;
   text-align: center;
 
 }
