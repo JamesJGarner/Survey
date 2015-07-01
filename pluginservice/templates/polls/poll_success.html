@@ -1,35 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Congrats!</h1>
 
 
 
 <div class="row">
-<div class="panel">
+				<div class="panel">
+				<h4><strong>Whoa! Hey there, you made it!</strong></h4>
+				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the steps below and it'll be up in no time.</p>
+				<!-- 
+				<a href="#" class="secondary button small"><i class="fa fa-info-circle" style="margin-right:5px;"></i> MORE INFORMATION</a>
+				<a href="#" class="secondary button small"><i class="fa fa-university" style="margin-right:5px;"></i> WATCH TUTORIALS</a>
+				-->
+				
 						<h4><strong>1.</strong> Your Widget Code</h4>
-							<p>Copy paste the widget code into a field on your website where you can use HTML, if you don't know how <a href="#">you can read more here</a>.</p>
+							<h6>Please make sure you have Jquery enabled on your site, if not then include this tag on top of the page.</h6>
 							<div class="panel">
-							<p>Please make sure you have Jquery enabled on your site, if not then include this tag</p>
-								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;<br><hr>
-									<b>Put this inside the HEAD tag</b>
-									&lt;link rel=&quot;stylesheet&quot; href=&quot;localhost:8000/static/css/polls.css&quot; /&gt;<br>
-									<b>But this at the bottom of the page</b>
-									&lt;script src=&quot;localhost:8000/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;
-
-
-
-
-								</p>
-								<p>
-									Then use this tag where you want the Poll to go: (Make sure its above the js file)
-
-									
-									</p>
-									&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;
+								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</h6>
 							</div>
-							<h4><strong>2.</strong> Your URL for sharing</h4>
-							<p>You can access your widget through the URL and use it to attach the widget onto things.</p>
+							<h6>Put this code between the &lt;head> and &lt;/head > tag on your website</p>
+							<div class="panel">
+									<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;http://localhost:8000/static/css/polls.css&quot; /&gt;</p>
+							</div>
+							<h6>And this one in the bottom of your &lt;body > and &lt;/body > tag on your website</h6>
+							<div class="panel">
+									<p>&lt;script src=&quot;http://localhost:8000/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
+							</div>
+							<h4><strong>2.</strong> Place your widget on the page</h4>
+							<h6>Then use this tag where you want the Poll to go: (<em>Make sure its above the js file</em>)</h6>
+							<div class="panel">
+									<p>&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;</p>
+							</div>
+							<h4><strong>3.</strong> Your URL for sharing</h4>
+							<h6>You can access your widget through the URL and use it to attach the widget onto things.</h6>
 							<div class="row collapse">
 								<div class="small-3 large-2 columns">
 								  <span class="prefix">http://</span>
@@ -38,7 +41,7 @@
 								  <input type="text" value="http://localhost:8000/polls/manage/{{ poll.id }}/">
 								</div>
 							</div>
-							<h4><strong>3.</strong> Share your widget</h4>
+							<h4><strong>4.</strong> Share your widget</h4>
 							<p>Share your own page for your widget tool through social media, you can also use the URL above.</p>
 							<a href="#"><img src="../img/icons/share_facebook.png" /></a>
 							<a href="#"><img src="../img/icons/share_twitter.png" /></a>
@@ -50,5 +53,5 @@
 							<a href="home.html" class="secondary button small buttonSelected2">OKAY, I GOT IT!</a>
 				
 				</div>
-
+		<br/><br/>
 {% endblock %}
