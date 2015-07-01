@@ -3,7 +3,7 @@
 {% block content %}
 <h3>Polls control panel</h3>
 	{% for poll in poll_list %}
-		<a href="/api/polls/{{ poll.id }}">{{ poll.title }} </a>
+		<a href="/polls/manage/{{ poll.id }}">{{ poll.title }} </a>
 		{{ poll.question }}
 	{% endfor %}
 {% endblock %}

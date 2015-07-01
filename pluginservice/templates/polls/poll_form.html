@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{{ form.as_p }}
-
 
 <div class="row">
 	<div class="userportal">
@@ -10,13 +8,22 @@
 		<div class="panel left">
 			<p><a href="#">WIDGET POLL</a></p>
 			<hr>
-
+			<form action="" method="post">
+			{% csrf_token %} 
 			<label>1. Create a Poll Name:</label>
 			<input id="id_title" maxlength="200" name="title" type="text" placeholder="Your Poll name will not be visible for anyone else than you">
 
 			<label>2. Question</label>
 			<input id="id_question" maxlength="200" name="question" type="text" placeholder="Choose the question you want to ask everyone">
 
+			<select id="id_created_by" name="created_by">
+<option value="" selected="selected">---------</option>
+<option value="1">username</option>
+</select>
+			<input type="submit">
+			</form>
+
+			<hr>
 			<label>3. Choose a background:</label>
 			<input type="text" placeholder="Not in use yet.">
 

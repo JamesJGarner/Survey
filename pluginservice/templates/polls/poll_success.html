@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Congrats!</h1>
+
+
+
+<div class="row">
+<div class="panel">
+						<h4><strong>1.</strong> Your Widget Code</h4>
+							<p>Copy paste the widget code into a field on your website where you can use HTML, if you don't know how <a href="#">you can read more here</a>.</p>
+							<div class="panel">
+							<p>Please make sure you have Jquery enabled on your site, if not then include this tag</p>
+								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;<br>
+						
+									&lt;link rel=&quot;stylesheet&quot; href=&quot;localhost:8000/static/css/polls.css&quot; /&gt;<br>
+						
+									&lt;script src=&quot;localhost:8000/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;
+
+
+
+
+								</p>
+								<p>
+									Then use this tag where you want the Poll to go:
+
+									
+									</p>
+									&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;
+							</div>
+							<h4><strong>2.</strong> Your URL for sharing</h4>
+							<p>You can access your widget through the URL and use it to attach the widget onto things.</p>
+							<div class="row collapse">
+								<div class="small-3 large-2 columns">
+								  <span class="prefix">http://</span>
+								</div>
+								<div class="small-9 large-10 columns">
+								  <input type="text" value="http://localhost:8000/api/polls/1">
+								</div>
+							</div>
+							<h4><strong>3.</strong> Share your widget</h4>
+							<p>Share your own page for your widget tool through social media, you can also use the URL above.</p>
+							<a href="#"><img src="../img/icons/share_facebook.png" /></a>
+							<a href="#"><img src="../img/icons/share_twitter.png" /></a>
+							<a href="#"><img src="../img/icons/share_google.png" /></a>
+							<a href="#"><img src="../img/icons/share_pinterest.png" /></a>
+							<a href="#"><img src="../img/icons/share_mail.png" /></a>
+				
+							<br/><br/><br/>
+							<a href="home.html" class="secondary button small buttonSelected2">OKAY, I GOT IT!</a>
+				
+				</div>
+
+{% endblock %}
