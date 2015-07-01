@@ -6,6 +6,8 @@ from pluginservice.apps.polls.models import Poll
 # Not important right now
 class API(DetailView):
     model = Poll
+    template_name = 'site/js.html'
+
 
 class Styles(TemplateView):
     template_name = 'site/styles.html'

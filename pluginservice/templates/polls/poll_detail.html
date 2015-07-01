@@ -1,17 +1,16 @@
+{% extends "base.html" %}
 
+{% block content %}
+<div class="row">
+	<div class="large-12 columns">
+		<div class="panel">
+			<h3>{{ poll.title }}</h3>
+			<hr>
+			{{ poll.question }}
+			<hr>
+			How to embed into your site <a href="help/">Click Here</a>
+		</div>
+	</div>
+</div>
 
-function IniPoll() {
-
-	html = '<div class="poll-container">'
-	html += "<h3>{{ poll.title}}</h3>";
-
-	html += '<ul>';
-	{% for a in poll.pollanswer_set.all %}
-		html += '<li>{{ a.answer }}</li>'
-	{% endfor %}
-	html +='</ul></div>';
-	$('#poll').append(html);
-}
-
-IniPoll();
-
+{% endblock content %}

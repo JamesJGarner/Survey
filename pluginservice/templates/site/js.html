@@ -1,0 +1,19 @@
+{% ifequal poll.deleted False %}
+function IniPoll() {
+
+	html = '<div class="poll-container">'
+	html += "<h3>{{ poll.title}}</h3>";
+
+	html += '<ul>';
+	{% for a in poll.pollanswer_set.all %}
+		html += '<li>{{ a.answer }}</li>'
+	{% endfor %}
+	html +='</ul></div>';
+	$('#poll').append(html);
+}
+
+IniPoll();
+
+{% endifequal %}
+
+

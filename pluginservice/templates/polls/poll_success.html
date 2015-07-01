@@ -11,10 +11,10 @@
 							<p>Copy paste the widget code into a field on your website where you can use HTML, if you don't know how <a href="#">you can read more here</a>.</p>
 							<div class="panel">
 							<p>Please make sure you have Jquery enabled on your site, if not then include this tag</p>
-								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;<br>
-						
+								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;<br><hr>
+									<b>Put this inside the HEAD tag</b>
 									&lt;link rel=&quot;stylesheet&quot; href=&quot;localhost:8000/static/css/polls.css&quot; /&gt;<br>
-						
+									<b>But this at the bottom of the page</b>
 									&lt;script src=&quot;localhost:8000/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;
 
 
@@ -22,7 +22,7 @@
 
 								</p>
 								<p>
-									Then use this tag where you want the Poll to go:
+									Then use this tag where you want the Poll to go: (Make sure its above the js file)
 
 									
 									</p>
@@ -35,7 +35,7 @@
 								  <span class="prefix">http://</span>
 								</div>
 								<div class="small-9 large-10 columns">
-								  <input type="text" value="http://localhost:8000/api/polls/1">
+								  <input type="text" value="http://localhost:8000/polls/manage/{{ poll.id }}/">
 								</div>
 							</div>
 							<h4><strong>3.</strong> Share your widget</h4>
