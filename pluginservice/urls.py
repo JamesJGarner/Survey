@@ -1,11 +1,12 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from .views import Homepage
+from .views import Homepage, TempProfile
 admin.autodiscover()
 
 urlpatterns = patterns(
     '',
     url(r'^$', Homepage.as_view(), name='homepage'),
+    url(r'^profile/$', TempProfile.as_view(), name='TempProfile'),
 
     url(r'^polls/', include('pluginservice.apps.polls.urls', namespace="polls")),
     url(r'^', include('pluginservice.apps.api.urls', namespace="api")),
