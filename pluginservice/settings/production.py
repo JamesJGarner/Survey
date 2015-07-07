@@ -112,11 +112,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www-media/pluginservice'
 MEDIA_URL = '/media/'
 
-
-EMAIL_HOST = 'smtp.postmarkapp.com'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'd3bc6062-a2e3-4d59-aa08-768483cfc714'
-EMAIL_HOST_PASSWORD = 'd3bc6062-a2e3-4d59-aa08-768483cfc714'
-
-#  Debitoor Access Token
-APIToken = "eyJ1c2VyIjoiNTE2YWVlY2UwNzNiZGFmMDBjMDAxZWZhIiwiYXBwIjoiNTUwMGEyMTgyNTU3MmVkNDZhMmMyMjlhIiwiY2hhbGxlbmdlIjoyLCIkZSI6MH0KwpLDpsK1fWJvwog9wothTMOOw7JoJ8K-"
+CURRENT_SITE_URL = 'localhost:8000'
