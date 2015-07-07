@@ -1,55 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-	{% for poll in poll_list %}
-		<a href="/polls/manage/{{ poll.id }}">{{ poll.title }} </a>
-		{{ poll.question }}
-	{% endfor %}
-
 			<div class="row">
 				<div class="panel">
 					<div class="manage">
-						<h4>Polls Control Panel</h4><br>
+						<h4><b>Poll</b> Manage</h4><br>
+							{% for poll in poll_list %}
 							<div class="large-4 columns Pollname">
-								<h3>21 CHARACTERS MAX</h3>
-									<img class="themes NoSelectedTheme" src="../img/polls/poll3/3.jpg">
-									<p>
-									<a href="#"><i class="fa fa-share-alt" style="margin-right:5px;"></i> Share</a> |  
-									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog" style="margin-right:5px;"></i> Edit</a> 
-									</p>
+								<h3>{{ poll.title }}</h3>
+								<p><img class="themes NoSelectedTheme" src="/static/img/water.jpg"></p>
+								<p>
+									<a href="#"><i class="fa fa-share-alt"></i> Share</a> |  
+									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog"></i> Edit</a> 
+								</p>
 							</div>
-							<div class="large-4 columns Pollname">
-								<h3>EXTRA LONG POLL</h3>
-									<img class="themes NoSelectedTheme" src="../img/polls/poll5/5.png">
-									<p>
-									<a href="#"><i class="fa fa-share-alt" style="margin-right:5px;"></i> Share</a> |  
-									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog" style="margin-right:5px;"></i> Edit</a> 
-									</p>
-							</div>
-							<div class="large-4 columns Pollname">
-								<h3>POLL NAME #3</h3>
-									<img class="themes NoSelectedTheme" src="../img/polls/poll4/4.png">
-									<p>
-									<a href="#"><i class="fa fa-share-alt" style="margin-right:5px;"></i> Share</a> |  
-									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog" style="margin-right:5px;"></i> Edit </a> 
-									</p>
-							</div>
-							<div class="large-4 columns Pollname">
-								<h3>POLL NAME #3</h3>
-									<img class="themes NoSelectedTheme" src="../img/polls/poll2/2.jpg">
-									<p>
-									<a href="#"><i class="fa fa-share-alt" style="margin-right:5px;"></i> Share</a> |  
-									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog" style="margin-right:5px;"></i> Edit</a>  
-									</p>
-							</div>
-							<div class="large-4 columns Pollname">
-								<h3>POLL NAME #3</h3>
-									<img class="themes NoSelectedTheme" src="../img/polls/poll3/3.jpg">
-									<p>
-									<a href="#"><i class="fa fa-share-alt" style="margin-right:5px;"></i> Share</a> |  
-									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog" style="margin-right:5px;"></i> Edit</a>  
-									</p>
-							</div>
+							{% endfor %}
 						<div class="clearfix"></div>
 					</div>
 				</div>
