@@ -20,11 +20,11 @@
 							</div>
 							<h6>Put this code between the <span class="marked">&lt;head></span> and <span class="marked">&lt;/head ></span> tag on your website</p>
 							<div class="panel">
-									<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;http://localhost:8000/static/css/polls.css&quot; /&gt;</p>
+									<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ current_site_url }}/static/css/polls.css&quot; /&gt;</p>
 							</div>
 							<h6>And this one in the bottom of your <span class="marked">&lt;body ></span> and <span class="marked">&lt;/body ></span> tag on your website</h6>
 							<div class="panel">
-									<p>&lt;script src=&quot;http://localhost:8000/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
+									<p>&lt;script src=&quot;{{ current_site_url }}/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
 							</div>
 							<h4><strong>2.</strong> Place your widget on the page</h4>
 							<h6>Then use this tag where you want the Poll to go (<em>Make sure its above the js file</em>):</h6>
@@ -38,7 +38,7 @@
 								  <span class="prefix">http://</span>
 								</div>
 								<div class="small-9 large-10 columns">
-								  <input type="text" value="http://localhost:8000/polls/manage/{{ poll.id }}/">
+								  <input type="text" value="{{ current_site_url }}/polls/manage/{{ poll.id }}/">
 								</div>
 							</div>
 							<h4><strong>4.</strong> Share your widget</h4>
