@@ -6,6 +6,43 @@ body {
 	background: #e5e5e5;
 
 }
+* {
+	transition: background-color 300ms ease-out;
+}
+
+/* --------------------------------------- */
+/* -------------- MAIN STYLES ------------ */
+/* --------------------------------------- */
+
+.row .collapse {
+	font-family: 'Raleway', sans-serif;
+	padding: 5px 0px 5px 0px;
+}
+.active {
+	background-color: #1f6380 !important;
+	color:#FFF !important;
+}
+.marked {
+	background-color: #e7e7e7;
+	padding: 5px;
+}
+.learnmore {
+	float: left;
+	width: 100%;
+	background: #1f6380 !important;
+	border: 1px solid #1b5974 !important;
+	border-left: 35px solid #1b5974 !important;
+	min-height: 140px;
+}
+
+/* --------------------------------------- */
+/* ------------ MAIN STYLES END ---------- */
+/* --------------------------------------- */
+
+
+/* --------------------------------------- */
+/* -------------- TYPOGRAPHY ------------- */
+/* --------------------------------------- */
 
 h1, h2, h3, h5, p {
 	font-family: 'Open Sans', sans-serif;
@@ -17,88 +54,59 @@ h4 {
 	color: #1f6380 !important;
 	font-family: 'Raleway', sans-serif;
 }
+.manage h4 {
+  color: #1f6380;
+  border-bottom: 1px solid #1f6380;
+  padding-bottom: 10px;
+  margin: 15px 15px 15px 15px;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: xx-large;
+}
 h6 {
 	color: #2e3030;
 	font-family: 'Raleway', sans-serif;
 }
-
-.row .collapse {
-	font-family: 'Raleway', sans-serif;
-	padding: 5px 0px 5px 0px;
-}
-
 .userportal h1 {
 	text-align: center;
 	color: #1f6380;
 	margin:40px 0;
 	font-weight: 400;
 }
-
-
-.active {
-	background-color: #1f6380 !important;
-	color:#FFF !important;
-}
-
 .userportal h2 {
   color: #1f6380 !important;
   font-family: 'Raleway', sans-serif !important;
   font-size: x-large;
     font-weight: 400;
 }
-.userportal a {
-  background-color: transparent;
-  color: #1f6380 ;
-    font-size: 0.8125rem;
-  border: 2px #1f6380  solid;
-  padding: 15px 50px 15px 50px;
-  margin-top:20px 0;
-  float: left;
-  font-family: 'Raleway', sans-serif !important;
-
-}
-
-.userportal a:hover {
-	background-color: #1f6380;
-	color: #fff;
-}
-
-
-
-
 .learnmore h2 {
   color: #fff !important;
   margin-top: 12px;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: x-large;
 }
-
-
-
-
-.learnmore {
-	float: left;
-	width: 100%;
-	background: #1f6380 !important;
-	border: 1px solid #1b5974 !important;
-	border-left: 35px solid #1b5974 !important;
+.managepollsection h4, .managepollsection p {
+	white-space: nowrap; 
+	display: inline-block;
 }
-
-.learnmore h2 {
-	color:#FFF;
-	font-family: 'Raleway', sans-serif !important;
-	font-size: x-large;
+.managepollsection .marked  p{
+	padding: 0px 10px 0px 10px;
 }
-
-
-.secondary.small.button {
-
+.managepollsection h4 {
+	line-height: 30px;
 }
-
-.learnmoreButton {
-	  border: 2px #FFF  solid !important;
-	  color:#FFF !important;
+.managepollsection .marked {
+	border-right: 5px solid #cdcbcb;
+	margin-right: 15px;
 }
+/* --------------------------------------- */
+/* ------------ TYPOGRAPHY END ----------- */
+/* --------------------------------------- */
 
-/* ------------- BUTTONS ------------- */
+
+/* --------------------------------------- */
+/* --------------- BUTTONS --------------- */
+/* --------------------------------------- */
+
 .profile {
   background-color: rgba(67, 172, 106, 1);
   color: #fff;
@@ -146,4 +154,54 @@ h6 {
   background-color: #fff !important;
   color: #1f6380 !important;
 }
+.learnmoreButton:hover {
+  background: #fff !important;
+  color: #1f6380 !important;
+ }
+ .Pollname p a {
+  background-color: #e7e7e7;
+  padding: 3px 7px 3px 7px;
+  margin: 3px;
+  color: #333333;
+}
+.Pollname p a:hover{
+	background-color: #b9b9b9;
+}
+.buttonSelected {
+  background-color: #1f6380 !important;
+  color: #fff !important;
+}
+.NoBorder {
+	border: none !important;
+}
+.buttonClear {
+  border: 2px #ca3619 solid !important;
+  color: #ca3619 !important;
+}
+.buttonClear:hover {
+  background: #ca3619 !important;
+  color: #fff !important;
+}
+.learnmoreButton {
+	border: 2px #FFF  solid !important;
+	color:#FFF !important;
+}
+.userportal .button a {
+  background-color: transparent;
+  color: #1f6380 ;
+  font-size: 0.8125rem;
+  border: 2px #1f6380  solid;
+  padding: 15px 50px 15px 50px;
+  margin-top:20px 0;
+  font-family: 'Raleway', sans-serif !important;
+
+}
+.userportal .button a:hover {
+	background-color: #1f6380;
+	color: #fff;
+}
+.secondary.small.button {}
+
+/* --------------------------------------- */
 /* ------------- BUTTONS END ------------- */
+/* --------------------------------------- */

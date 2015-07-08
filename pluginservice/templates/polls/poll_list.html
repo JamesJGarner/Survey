@@ -1,9 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Polls control panel</h3>
-	{% for poll in poll_list %}
-		<a href="/polls/manage/{{ poll.id }}">{{ poll.title }} </a>
-		{{ poll.question }}
-	{% endfor %}
+			<div class="row">
+				<div class="panel">
+					<div class="manage">
+						<h4><b>Poll</b> Manage</h4><br>
+							{% for poll in poll_list %}
+							
+							<div class="large-4 columns Pollname">
+								<h3>{{ poll.title }}</h3>
+								<p><img class="themes NoSelectedTheme" src="/static/img/water.jpg"></p>
+								<p>
+									<a href="#"><i class="fa fa-share-alt"></i> Share</a> |  
+									<a href="/polls/manage/{{ poll.id }}"><i class="fa fa-cog"></i> Edit</a> 
+								</p>
+							</div>
+							{% endfor %}
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>			
 {% endblock %}

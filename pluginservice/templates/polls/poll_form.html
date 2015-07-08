@@ -4,48 +4,73 @@
 
 <div class="row">
 	<div class="userportal">
-		<h1>Create your own poll.</h1>
-		<div class="panel left">
-			<p><a href="#">WIDGET POLL</a></p>
-			<hr>
+		<div class="panel">
+			<div class="clearfix">
+			<a class="secondary button small buttonSelected left" href="#"><i class="fa fa-cogs"></i> WIDGET POLL</a>
+			<button type="reset" class="secondary button small buttonClear right" value="Reset"><i class="fa fa-times-circle"></i> CLEAR POLL</button>
+			</div>
+			<hr class="invisible"/>
+			
 			<form action="" method="post">
 			{% csrf_token %} 
-			<label>1. Create a Poll Name:</label>
-			<input id="id_title" maxlength="200" name="title" type="text" placeholder="Your Poll name will not be visible for anyone else than you">
+			<label>
+				<h4><strong>1.</strong> Create a Poll Name</h4>
+			</label>
+			<input id="id_title" maxlength="200" name="title" type="text" placeholder="Your Poll name will not be visible for anyone else than you (Maximum of 21 characters)">
 
-			<label>2. Question</label>
+			<label>
+				<h4><strong>2.</strong> Add a Poll Question</h4>
+			</label>
 			<input id="id_question" maxlength="200" name="question" type="text" placeholder="Choose the question you want to ask everyone">
+<<<<<<< HEAD
 
 			<select id="id_created_by" name="created_by">
 				<option value="" selected="selected">---------</option>
 				<option value="1">username</option>
 			</select>
 			<input type="submit">
+=======
+>>>>>>> afd1a0a65356fb31a80d1054c3dbe27c78285999
 			</form>
-
-			<hr>
-			<label>3. Choose a background:</label>
+			<label>
+				<h4><strong>3.</strong> Choose a theme or upload</h4>
+			</label>
 			<input type="text" placeholder="Not in use yet.">
 
-			<label>Enter some questions:</label>
-			<div class="large-4 columns"><input type="text" placeholder="Poll question #1"></div>
-			<div class="large-4 columns"><input type="text" placeholder="Poll question #2"></div>
-			<div class="large-4 columns"><input type="text" placeholder="Poll question #3"></div>
-			<div class="large-12 columns">
-			<h3>This is what your Poll will look like:</h3>
-			<script src="/static/js/vendor/jquery.js"></script>
-			<link rel="stylesheet" href="/static/css/polls.css" />
-			<div id="poll"></div>
-			<script src="/api/polls/1.js"></script>
-			<hr>
+			<label>
+				<h4><strong>4.</strong> Enter some questions</h4>
+			</label>
+			<div class="row">
+				<div class="large-4 columns">
+					<input type="text" placeholder="Poll question #1">
+				</div>
+				<div class="large-4 columns">
+					<input type="text" placeholder="Poll question #2">
+				</div>
+				<div class="large-4 columns">
+					<input type="text" placeholder="Poll question #3">
+				</div>
+				<div class="left large-4 columns">
+					<a href="create.html" class="secondary button tiny NoBorder"><i class="fa fa-plus"></i> ADD MORE QUESTIONS</a>
+				</div>
 			</div>
+			<h4><strong>This is what your Poll will look like:</strong></h4>
+			
+				<script src="/static/js/vendor/jquery.js"></script>
+				<link rel="stylesheet" href="/static/css/polls.css" />
+				<div id="poll"></div>
+				<script src="/api/polls/1.js"></script>
+			
+			<hr class="invisible"/>
+			
 			<center>
-
-			<h4>Are you ready for more power?</h4>
-			<a href="#" class="secondary button small buttonSelected2">GENERATE THE WIDGET</a>
+				<h4>Are you ready for more power?</h4><br/>
+				<a href="#" class="secondary button small buttonSelected2">GENERATE THE WIDGET</a>
 			</center>
+			
+			<hr class="invisible"/><br/>
 		</div>
-	</div>
+	</div><br/>
 </div>
 
 {% endblock %}

@@ -7,27 +7,22 @@
 <div class="row">
 				<div class="panel">
 				<h4><strong>Whoa! Hey there, you made it!</strong></h4>
-				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the steps below and it'll be up in no time.</p>
-				<!-- 
-				<a href="#" class="secondary button small"><i class="fa fa-info-circle" style="margin-right:5px;"></i> MORE INFORMATION</a>
-				<a href="#" class="secondary button small"><i class="fa fa-university" style="margin-right:5px;"></i> WATCH TUTORIALS</a>
-				-->
-				
+				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the steps below and it'll be up in no time.</p>			
 						<h4><strong>1.</strong> Your Widget Code</h4>
-							<h6>Please make sure you have Jquery enabled on your site, if not then include this tag on top of the page.</h6>
+							<h6>Please make sure you have <a href="https://en.wikipedia.org/wiki/JQuery">Jquery</a> enabled on your site, if not then include this tag on top of the page.</h6>
 							<div class="panel">
 								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</h6>
 							</div>
-							<h6>Put this code between the &lt;head> and &lt;/head > tag on your website</p>
+							<h6>Put this CSS code between the <span class="marked">&lt;head></span> and <span class="marked">&lt;/head ></span> tag on your website</p>
 							<div class="panel">
-									<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;http://localhost:8000/static/css/polls.css&quot; /&gt;</p>
+									<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ current_site_url }}/static/css/polls.css&quot; /&gt;</p>
 							</div>
-							<h6>And this one in the bottom of your &lt;body > and &lt;/body > tag on your website</h6>
+							<h6>And this javascript in the bottom of your <span class="marked">&lt;body ></span> and <span class="marked">&lt;/body ></span> tag on your website</h6>
 							<div class="panel">
-									<p>&lt;script src=&quot;http://localhost:8000/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
+									<p>&lt;script src=&quot;{{ current_site_url }}/api/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
 							</div>
 							<h4><strong>2.</strong> Place your widget on the page</h4>
-							<h6>Then use this tag where you want the Poll to go: (<em>Make sure its above the js file</em>)</h6>
+							<h6>Then use this tag where you want the Poll to go (<em>Make sure its above the javascript file</em>)</h6>
 							<div class="panel">
 									<p>&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;</p>
 							</div>
@@ -38,7 +33,7 @@
 								  <span class="prefix">http://</span>
 								</div>
 								<div class="small-9 large-10 columns">
-								  <input type="text" value="http://localhost:8000/polls/manage/{{ poll.id }}/">
+								  <input type="text" value="{{ current_site_url }}/polls/manage/{{ poll.id }}/">
 								</div>
 							</div>
 							<h4><strong>4.</strong> Share your widget</h4>
@@ -48,10 +43,11 @@
 							<a href="#"><img src="../img/icons/share_google.png" /></a>
 							<a href="#"><img src="../img/icons/share_pinterest.png" /></a>
 							<a href="#"><img src="../img/icons/share_mail.png" /></a>
+							<!-- We need to add more buttons here -->
 				
 							<br/><br/><br/>
 							<a href="home.html" class="secondary button small buttonSelected2">OKAY, I GOT IT!</a>
-				
+							<hr class="invisible"/>
 				</div>
 		<br/><br/>
 {% endblock %}
