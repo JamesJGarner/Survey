@@ -1,12 +1,14 @@
 	.poll-container {
-		width:400px;
-		background: url('/static/img/water.jpg') no-repeat;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		float: left;
-		background-size: 100%;
+	  width: 100%;
+	  min-height: 100px;
+	  background: url('/static/img/water.jpg') no-repeat;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	  padding: 20px 0px 20px 0px;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	}
 	.poll-container h3 {
 	  margin: 20px 0 0 20px;

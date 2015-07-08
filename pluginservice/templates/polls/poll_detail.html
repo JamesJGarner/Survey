@@ -3,14 +3,37 @@
 {% block content %}
 <div class="row">
 	<div class="large-12 columns">
-		<div class="panel">
-			<h3>{{ poll.title }}</h3>
-			<hr>
-			{{ poll.question }}
-			<hr>
-			How to embed into your site <a href="help/">Click Here</a>
+		<div class="userportal">
+			<div class="panel">
+				<div class="managepollsection clearfix">
+				<div class="left">
+					<h4>Name <span class="marked"><p> {{ poll.title }} </p></span>  Question asked <span class="marked"><p> {{ poll.question }} </p></span></h4>
+				</div>
+				<div class="right">
+					<a href="#"><h4> <i class="fa fa-cog" style="margin-right:5px;"></i></h4></a>
+				</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="large-4 columns">
+						<a href="help/" class="secondary button NoBorder"> <i class="fa fa-code" style="margin-right:5px;"></i> Embed HTML Widget </a><br/>
+						<a href="help/" class="secondary button NoBorder"> <i class="fa fa-picture-o" style="margin-right:5px;"></i> Live Picture Feed </a><br/>
+						<a href="help/" class="secondary button NoBorder"> <i class="fa fa-paint-brush" style="margin-right:5px;"></i> Change your Layout </a><br/>
+					</div>
+					<div class="large-4 columns">
+					MORE COMING
+					</div>
+					<div class="large-4 columns">
+					MORE COMING			
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 {% endblock content %}
+				<!--
+					<a href="#" class="secondary button small"><i class="fa fa-info-circle" style="margin-right:5px;"></i> MORE INFORMATION</a>
+					<a href="#" class="secondary button small"><i class="fa fa-university" style="margin-right:5px;"></i> WATCH TUTORIALS</a>
+				-->
