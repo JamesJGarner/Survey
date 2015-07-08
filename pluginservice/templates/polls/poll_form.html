@@ -5,13 +5,12 @@
 <div class="row">
 	<div class="userportal">
 		<div class="panel">
+			<form action="" method="post">
 			<div class="clearfix">
 			<a class="secondary button small buttonSelected left" href="#"><i class="fa fa-cogs"></i> WIDGET POLL</a>
 			<button type="reset" class="secondary button small buttonClear right" value="Reset"><i class="fa fa-times-circle"></i> CLEAR POLL</button>
-			</div>
-			<hr class="invisible"/>
-			
-			<form action="" method="post">
+		</div>
+			<br>			
 			{% csrf_token %} 
 			<label>
 				<h4><strong>1.</strong> Create a Poll Name</h4>
@@ -22,16 +21,8 @@
 				<h4><strong>2.</strong> Add a Poll Question</h4>
 			</label>
 			<input id="id_question" maxlength="200" name="question" type="text" placeholder="Choose the question you want to ask everyone">
-<<<<<<< HEAD
-
-			<select id="id_created_by" name="created_by">
-				<option value="" selected="selected">---------</option>
-				<option value="1">username</option>
-			</select>
-			<input type="submit">
-=======
->>>>>>> afd1a0a65356fb31a80d1054c3dbe27c78285999
-			</form>
+			
+			
 			<label>
 				<h4><strong>3.</strong> Choose a theme or upload</h4>
 			</label>
@@ -54,21 +45,13 @@
 					<a href="create.html" class="secondary button tiny NoBorder"><i class="fa fa-plus"></i> ADD MORE QUESTIONS</a>
 				</div>
 			</div>
-			<h4><strong>This is what your Poll will look like:</strong></h4>
-			
-				<script src="/static/js/vendor/jquery.js"></script>
-				<link rel="stylesheet" href="/static/css/polls.css" />
-				<div id="poll"></div>
-				<script src="/api/polls/1.js"></script>
-			
-			<hr class="invisible"/>
-			
+
 			<center>
 				<h4>Are you ready for more power?</h4><br/>
-				<a href="#" class="secondary button small buttonSelected2">GENERATE THE WIDGET</a>
+				<input type="submit" value="GENERATE THE WIDGET" class="secondary button small buttonSelected2">
 			</center>
-			
-			<hr class="invisible"/><br/>
+			</form>
+			<br><br/>
 		</div>
 	</div><br/>
 </div>

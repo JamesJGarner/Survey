@@ -14,6 +14,26 @@ body {
 /* -------------- MAIN STYLES ------------ */
 /* --------------------------------------- */
 
+.header {
+  background-color: #FFF;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0 10px 0;
+}
+
+.header img {
+  width: 100px;
+  margin-top: -10px;
+}
+
+.header ul li {
+  list-style: none;
+  float:  left;
+}
+
+.header ul li a{
+    margin-left: 30px;
+}
+
 .row .collapse {
 	font-family: 'Raleway', sans-serif;
 	padding: 5px 0px 5px 0px;
