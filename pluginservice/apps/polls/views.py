@@ -25,6 +25,11 @@ class PollCreate(CreateView):
     def form_valid(self, form):
         Poll = form.save(commit=False)
         Poll.created_by = self.request.user
+        #Create objects
+
+        #print form.cleaned_data['choice1']
+
+
         self.object = form.save()
         return super(PollCreate, self).form_valid(form)
 
