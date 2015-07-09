@@ -12,6 +12,12 @@ class Poll(models.Model):
         max_length=200,
         )
 
+    image = models.CharField(
+        max_length=400,
+        blank=True,
+        null=True,
+        )
+
     created_by = models.ForeignKey(
         User
         )
