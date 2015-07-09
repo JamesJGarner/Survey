@@ -14,26 +14,12 @@ body {
 /* -------------- MAIN STYLES ------------ */
 /* --------------------------------------- */
 
-.header {
-  background-color: #FFF;
-  border-bottom: 1px solid #ccc;
-  padding: 30px 0 10px 0;
+#head {
+	margin-top: 50px;
 }
-
-.header img {
-  width: 100px;
-  margin-top: -10px;
+#head img {
+	height: 49px;
 }
-
-.header ul li {
-  list-style: none;
-  float:  left;
-}
-
-.header ul li a{
-    margin-left: 30px;
-}
-
 .row .collapse {
 	font-family: 'Raleway', sans-serif;
 	padding: 5px 0px 5px 0px;
@@ -139,31 +125,30 @@ h6 {
 /* --------------------------------------- */
 
 .profile {
-  background-color: rgba(67, 172, 106, 1);
-  color: #fff;
-  border:2px solid #368a55;
+  background-color: #43AC6A !important;
+  color: #fff !important;
+  border-color: #368a55 !important;
+  padding: 15px 20px 15px 25px !important;
   margin-top:20px;
   font-size: 0.8125rem;
   font-family: 'Raleway', sans-serif !important;
-  padding: 15px 50px 15px 50px;
 }
 .profile:hover {
-  background-color: #e5e5e5;
-  color: #368a55;
-  border-color: #368a55;
+  background-color: #e5e5e5 !important;
+  color: #368a55 !important;
+  border-color: #368a55 !important;
 }
 .logout {
-  color: #ca3619;
-  background:none;
-  border: 2px #ca3619 solid;
+  border: 2px #ca3619 solid !important;
+  color: #ca3619 !important;
   margin-top:20px;
   font-size: 0.8125rem;
   font-family: 'Raleway', sans-serif;
-  padding: 15px 50px 15px 50px;
+  padding: 15px 20px 15px 25px !important;
 }
 .logout:hover {
-	background-color: #ca3619;
-	color: #fff;
+  background: #ca3619 !important;
+  color: #fff !important;
 }
 .secondary.small.button {
   background-color: transparent;
@@ -185,6 +170,16 @@ h6 {
   background-color: #fff !important;
   color: #1f6380 !important;
 }
+.buttonSelected4 {
+  background-color: #d4881b !important;
+  color: #fff !important;
+  border-color: #b06f13 !important;
+}
+.buttonSelected4:hover {
+  background-color: #e5e5e5 !important;
+  color: #b06f13 !important;
+  border-color: #b06f13 !important;
+}
 .learnmoreButton:hover {
   background: #fff !important;
   color: #1f6380 !important;
@@ -204,14 +199,6 @@ h6 {
 }
 .NoBorder {
 	border: none !important;
-}
-.buttonClear {
-  border: 2px #ca3619 solid !important;
-  color: #ca3619 !important;
-}
-.buttonClear:hover {
-  background: #ca3619 !important;
-  color: #fff !important;
 }
 .learnmoreButton {
 	border: 2px #FFF  solid !important;
@@ -234,6 +221,14 @@ h6 {
 .widthbutton {
 	width: 100% !important;
 	text-align: left;
+}
+.buttonClear {
+  border: 2px #ca3619 solid !important;
+  color: #ca3619 !important;
+}
+.buttonClear:hover {
+	background-color: #ca3619 !important;
+	color: #fff !important;
 }
 .secondary.small.button {}
 
