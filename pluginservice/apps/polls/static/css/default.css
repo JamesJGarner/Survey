@@ -54,6 +54,17 @@ body {
 	border-left: 35px solid #1b5974 !important;
 	min-height: 140px;
 }
+.bluebackground {
+	background-color: rgb(51, 96, 163);
+	padding: 10px 20px 10px 20px;
+}
+.bluebackground h4 {
+	color: #fff !important;
+}
+.bluebackground a h4:hover {
+	color: #ccc !important;
+	transition: background-color 300ms ease-out !important;
+}
 
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
@@ -219,6 +230,10 @@ h6 {
 .userportal .button a:hover {
 	background-color: #1f6380;
 	color: #fff;
+}
+.widthbutton {
+	width: 100% !important;
+	text-align: left;
 }
 .secondary.small.button {}
 
