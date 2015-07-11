@@ -14,11 +14,24 @@ body {
 /* -------------- MAIN STYLES ------------ */
 /* --------------------------------------- */
 
-#head {
-	margin-top: 50px;
+.header {
+  background-color: #FFF;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0 10px 0;
 }
-#head img {
-	height: 49px;
+
+.header img {
+  width: 150px;
+  margin-top: -13px;
+}
+
+.header ul li {
+  list-style: none;
+  float:  left;
+}
+
+.header ul li a{
+    margin-left: 30px;
 }
 .row .collapse {
 	font-family: 'Raleway', sans-serif;
