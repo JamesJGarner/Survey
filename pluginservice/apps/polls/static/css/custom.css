@@ -1,9 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300,200,100);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-
+@import url('/static/css/font-awesome.min.css');
+@import url('/static/css/font-awesome.css');
+* { transition: all 0.2s ease !important; }
 body {
 	background: #FFF;
     overflow-y: scroll;
+}
+.whitebackground p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .video {
@@ -66,10 +71,11 @@ body {
 	margin:auto;
 	margin:5px;
 	width: 40px;
+	margin-top: 125px;
 }
 
 .logo {
-	width: 150px;
+	width: 350px;
 	margin:80px 0;
 }
 
@@ -118,6 +124,7 @@ p.section-title:after {
 	background-color: #1f6380;
 	padding: 60px 0;
 	text-align: center;
+	background-image: url("../img/overlay.jpg");
 }
 
 #newsletter h1 {
@@ -129,4 +136,113 @@ p.section-title:after {
   font-weight: bold;
   color: #1f6380;
 }
-
+.greybackground {
+  width: 100%;
+  background: #e5e5e5;
+  border: 1px solid #d8d8d8;
+  border-left: none;
+  border-right: none;
+ }
+ .buttonSelected3 {
+  background-color: #43AC6A !important;
+  color: #fff !important;
+  border-color: #368a55 !important;
+}
+.buttonSelected3:hover {
+	color: #43AC6A !important;
+	background-color: #fff !important;
+}
+.buttonSelected2 {
+  background-color: #1f6380 !important;
+  color: #fff !important;
+}
+.buttonSelected2:hover {
+	color: #1f6380 !important;
+	background-color: #fff !important;
+}
+.big {
+  font-size: large !important;
+}
+.secondary.small.button {
+  background-color: transparent;
+  color: #1f6380;
+  border: 2px #1f6380 solid;
+  padding: 15px 50px 15px 50px;
+  margin: 0;
+  font-family: 'Raleway', sans-serif !important;
+}
+#landing {
+	margin-bottom: 50px;
+}
+#landing h1 {
+  color: #fff;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: lighter !important;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+#landing h2 {
+  color: #fff;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: lighter !important;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+.poll {
+  width: 100%;
+  min-height: 100px;
+  background-image: url('../img/water.jpg');
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 0px 20px 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.pollgrid {
+  margin: 0 20px;
+  padding-top: 20px;
+}
+.poll h2 {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: x-large;
+}
+.polloption {
+  margin: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: lighter !important;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  margin-bottom: 20px;
+}
+.polloption:hover {
+	background: rgba(0, 0, 0, 0.7);
+}
+.polloption h3 {
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  text-shadow: 1px 1px 1px #000;
+  font-size: large;
+}
+.pollfooter {
+  margin-top: 100px;
+  width: 100%;
+  text-align: right;
+}
+.pollfooter a {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+.pollfooter a:hover {
+	text-decoration: underline;
+}
+span {
+	color: #333;
+}

@@ -31,7 +31,14 @@ body {
 }
 
 .header ul li a{
+	color: rgb(51, 96, 163);
     margin-left: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+}
+.header ul li a:hover {
+	color: #1e87b3;
 }
 .row .collapse {
 	font-family: 'Raleway', sans-serif;
@@ -64,7 +71,7 @@ body {
 	color: #ccc !important;
 	transition: background-color 300ms ease-out !important;
 }
-
+ 
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
 /* --------------------------------------- */
