@@ -40,6 +40,12 @@ body {
 .header ul li a:hover {
 	color: #1e87b3;
 }
+.fa {
+	margin-right: 5px;
+}
+.fa-home {
+	font-size: large;
+}
 .row .collapse {
 	font-family: 'Raleway', sans-serif;
 	padding: 5px 0px 5px 0px;
@@ -71,7 +77,36 @@ body {
 	color: #ccc !important;
 	transition: background-color 300ms ease-out !important;
 }
- 
+.widgetbox {
+	background-color: #34495e;
+	width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #34495e;
+    margin-bottom: 1.25rem;
+}
+.widgetbox h5 {
+	padding: 10px !important;
+	color: #fff !important;
+	margin: 0px !important;
+	font-weight: 400 !important;
+	text-transform: uppercase;
+}
+.widgetbox p {
+	padding: 10px !important;
+	color: #fff !important;
+	margin-bottom: 10px;
+}
+.widgetpagenext {
+	width: 100%;
+	background-color: #223d58;
+}
+.widgetpagenext p {
+	margin: 0px !important;
+}
+.widgetpagenext:hover {
+	background-color: #385776;
+}
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
 /* --------------------------------------- */
