@@ -1,12 +1,68 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Awesome, I can change my password.</h2>
+  <p class="lead">Remember to keep your password strong and secure by using signs and numbers too!</p>
+  <input type="text" placeholder="Your New Password">
+  <input type="text" placeholder="Password confirmation">
+  <a href="#" class="button bluebutton">Change Password</a>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="myModal2" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Change your E-mail.</h2>
+  <p class="lead">It's always nice to keep track of things.</p>
+  <input type="text" placeholder="Your New E-mail">
+  <input type="text" placeholder="Confirm E-mail">
+  <a href="#" class="button bluebutton">Change E-mail</a>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+
+
 <div class="row">
 <div class="large-12 columns">
-<div class="panel">
-<h3>Your Profile</h3>
+<div class="panel clearfix">
+<h3>Hi there Daniel, here's your Profile Settings!</h3>
 <hr>
-<p>Nothing to see here yet.
+<p>For optional security and recovery settings, we encourage social network assignation.</p>
+<div class="whitebackground clearfix">
+	<div class="left">
+		<img class="logo" src="/static/img/home/icons/facebook_profile.png"/>
+	</div>
+	<div class="right">
+	<p>You are logged in as <a href="#">Daniel Østvold</a>.</p>
+	</div>
+</div><br/>
+<div class="whitebackground clearfix">
+	<div class="left">
+		<img class="logo" src="/static/img/home/icons/google_profile.png"/>
+	</div>
+	<div class="right">
+	<p>You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
+	</div>
+</div><br/>
+<div class="row">
+		<div class="large-4 columns">
+			<label>Registered E-mail
+				<input type="text" placeholder="danost@outlook.com" disabled>
+			</label>
+		</div>
+		<div class="large-4 columns">
+			<label><br/>
+				<a href="#" data-reveal-id="myModal2" class="button small PasswordButton">Change E-mail</a>
+			</label>
+		</div>
+		<div class="large-4 columns">
+		<label><br/>
+			<a href="#" data-reveal-id="myModal" class="button small PasswordButton">Change Password</a>
+		</label>
+      </div>
+    </div><br/>
+		<small><p>Or you can <a href="#">deactivate your account</a>, but we'd like to have you here.</p></small>
+  </div>
 </div>
 </div>
 </div>

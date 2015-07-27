@@ -120,7 +120,13 @@ h1, h2, h3, h5, p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
-
+.whitebackground p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+.whitebackground {
+	background-color: #fff;
+	padding: 20px 20px 0px 20px;
+}
 h4 {
 	margin-top: 25px;
 	color: #1f6380 !important;
@@ -286,7 +292,20 @@ h6 {
 	color: #fff !important;
 }
 .secondary.small.button {}
-
+.PasswordButton {
+	height: 37px;
+	width: 100%;
+	line-height: 12px;
+	background-color: rgb(51, 96, 163);
+}
+.bluebutton {
+	background-color: rgb(51, 96, 163) !important;
+	border: 2px solid rgb(51, 96, 163) !important;
+}
+.bluebutton:hover {
+	background-color: #fff !important;
+	color: rgb(51, 96, 163) !important;
+}
 /* --------------------------------------- */
 /* ------------- BUTTONS END ------------- */
 /* --------------------------------------- */
