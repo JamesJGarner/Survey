@@ -25,7 +25,7 @@
 <div class="row">
 <div class="large-12 columns">
 <div class="panel clearfix">
-<h3>Hi there Daniel, here's your Profile Settings!</h3>
+<h3>Hi there {{ user.first_name|title  }}, here's your Profile Settings!</h3>
 <hr>
 <p>For optional security and recovery settings, we encourage social network assignation.</p>
 <div class="whitebackground clearfix">
@@ -33,7 +33,7 @@
 		<img class="logo" src="/static/img/home/icons/facebook_profile.png"/>
 	</div>
 	<div class="right">
-	<p>You are logged in as <a href="#">Daniel Østvold</a>.</p>
+	<p>You are logged in as <a href="#">{{ user.username|title  }}</a>.</p>
 	</div>
 </div><br/>
 <div class="whitebackground clearfix">
