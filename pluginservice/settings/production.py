@@ -112,4 +112,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www-media/pluginservice'
 MEDIA_URL = '/media/'
 
-CURRENT_SITE_URL = 'localhost:8000'
+CURRENT_SITE_URL = 'http://localhost:8000'
