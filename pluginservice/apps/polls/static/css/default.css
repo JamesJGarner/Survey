@@ -219,7 +219,10 @@ body {
 .team {
     font-size: 14pt;
 }
-
+.fa-arrow-right {
+	font-size: small !important;
+	line-height: 16px;
+}
 
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
