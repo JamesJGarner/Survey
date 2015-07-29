@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Change Your Password.</h2>
     <hr>
@@ -50,7 +49,9 @@
 </div>
 
 <div class="row">
+
     <div class="large-12 columns">
+    <h1><b>Profile</b></h1>
         <div class="panel clearfix">
             {% ifequal user.first_name "" %}
                 <h2>Hi there! Here's your Profile Settings.</h2>
