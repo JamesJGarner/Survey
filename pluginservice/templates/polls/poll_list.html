@@ -1,11 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
+	<div id="teammateadd" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<h2>Add Teammate</h2>
+		<hr>
+
+		<input type="text" placeholder="Search">
+			
+			<h4>Results:</h4>
+			<ul class="poll-list team">
+			{% for person in team.teammate.set.all %}
+			<li><img src="/static/img/example.png">{{ user.first_name }} {{ user.last_name }}</li>
+			<li><img src="/static/img/default.png">Peter Pan</li>
+			{% endfor %}
+			</ul>
+
+	  	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	</div>
+
 			<div class="row">
 			<div class="large-12 columns">
 			<div class="panel left100 simple">
 						<div class="left">
-				<h1>Poll Dashboard</h1>
+				<h1><small>Team</small> {{ team.name }}</h1>
 				</div>
 				<div class="right">
 				<a href="/widgets/polls/create/" class="secondary buttonSelected2 button small margin">Add Poll</a>
@@ -17,9 +34,12 @@
 			<div class="panel left100">
 			<h4>Team Involved</h4>
 			<ul class="poll-list team">
-			<li><img src="/static/img/example.png"> {{ user.first_name }} {{ user.last_name }}</li>
+			{% for person in team.teammate_set.all %}
+			<li><img src="/media/{{ person.user.userprofile.profile_picture }}">{{ person.user.first_name }} {{ person.user.last_name }}</li>
+			{% endfor %}
 			</ul>
-			<a href="#" class="add-button"><i class="fa fa-plus-circle"></i>Add Teammate</a>
+
+			<a href="#" data-reveal-id="teammateadd" class="add-button"><i class="fa fa-plus-circle"></i>Add Teammate</a>
 			</div>
 			</div>
 			<div class="large-8 columns">

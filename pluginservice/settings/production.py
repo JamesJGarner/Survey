@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'south',
     'pluginservice.apps.api',
     'pluginservice.apps.polls',
-    'pluginservice.apps.accounts'
+    'pluginservice.apps.accounts',
+    'pluginservice.apps.teams',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -111,6 +112,7 @@ LOGIN_REDIRECT_URL = '/'
 STATIC_ROOT = '/var/www-static/pluginservice'
 STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www-media/pluginservice'
+
 MEDIA_URL = '/media/'
 
 CURRENT_SITE_URL = 'http://localhost:8000'

@@ -4,15 +4,43 @@ from django.forms.models import inlineformset_factory
 from django.core.urlresolvers import reverse
 from pluginservice.settings.production import CURRENT_SITE_URL
 from .forms import CreateForm
-
+from pluginservice.apps.teams.models import Team, TeamMate
+from django.http import Http404  
 
 class PollHome(TemplateView):
     template_name = 'polls/polls_home.html'
 
 
-class PollList(ListView):
-    model = Poll
+class PollList(DetailView):
+    model = Team
+    template_name = 'polls/poll_list.html'
 
+
+    def get_context_data(self, **kwargs):
+        context = super(PollList, self).get_context_data(**kwargs)
+
+        people = TeamMate.objects.filter(team=self.kwargs['pk'])
+        print people
+        wd = []
+        print wd
+        exists = False
+        if people:
+            for person in people:
+                if person.user == self.request.user:
+                    exists = True
+                    break
+                else:
+                    exists = False
+
+            if not exists:
+                print exists
+                raise Http404
+
+            context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])
+        else:
+            raise Http404  
+
+        return context
 
 class PollDetail(DetailView):
     model = Poll

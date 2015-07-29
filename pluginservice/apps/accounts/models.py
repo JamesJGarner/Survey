@@ -3,7 +3,6 @@ from django.db import models
 from django.db.models.signals import post_save
 
 
-
 class EmailNotification(models.Model):
 
     title = models.CharField(
@@ -30,6 +29,11 @@ class UserProfile(models.Model):
         EmailNotification,
         null=True,
         blank=True,
+        )
+
+    profile_picture = models.ImageField(
+        default='../static/img/default.png',
+        upload_to='%Y/%m/%d'
         )
 
     def __unicode__(self):

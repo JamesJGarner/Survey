@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from pluginservice.apps.teams.models import Team
 
 class Poll(models.Model):
 
@@ -20,6 +20,11 @@ class Poll(models.Model):
 
     created_by = models.ForeignKey(
         User
+        )
+
+    team = models.ForeignKey(
+        Team,
+        null=True,
         )
 
     deleted = models.BooleanField(
