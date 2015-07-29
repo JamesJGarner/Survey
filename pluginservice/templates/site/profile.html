@@ -3,104 +3,104 @@
 {% block content %}
 
 <div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Change Your Password.</h2>
-  <hr>
-<label>Your Current Password:</label>
-<input type="password">
-<label>Your New Password:</label>
-<input type="password">
-<label>Confirm New Password:</label>
-  <input type="password">
- <p> <a href="#">Forgotten your password?</a></p>
- <p> <a href="#" class="button bluebutton tiny">Change Password</a></p>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    <h2 id="modalTitle">Change Your Password.</h2>
+    <hr>
+    <label>Your Current Password:</label>
+    <input type="password">
+    <label>Your New Password:</label>
+    <input type="password">
+    <label>Confirm New Password:</label>
+    <input type="password">
+    <p><a href="#">Forgotten your password?</a></p>
+    <p><a href="#" class="button bluebutton tiny">Change Password</a></p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
 <div id="myModal2" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <div class="large-12 columns">
-  <h2 id="modalTitle">Email Preferences.</h2><hr>
-
-  <h4><label>Your current email address:</label> <b>{{ user.email }}</b></h4>
-   <hr>
+      <h2 id="modalTitle">Email Preferences.</h2><hr>
+      <h4><label>Your current email address:</label> <b>{{ user.email }}</b></h4>
+      <hr>
   </div>
   <div class="large-6 columns">
-  <h4>Update Email Address</h4>
-
-  <hr>
-  <label>New email:</label>
-  <input type="text" placeholder="example@gmail.com">
-  <label>Confirm New email:</label>
-  <input type="text" placeholder="example@gmail.com">
-  <a href="#" class="button bluebutton tiny">Update Email</a>
+      <h4>Update Email Address</h4>
+      <hr>
+      <label>New email:</label>
+      <input type="text" placeholder="example@gmail.com">
+      <label>Confirm New email:</label>
+      <input type="text" placeholder="example@gmail.com">
+      <a href="#" class="button bluebutton tiny">Update Email</a>
   </div>
   <div class="large-6 columns">
-  <div class="panel sutle">
-	<h4>Email Notifications</h4>
-	<hr>
-	<form>
-
-	<ul class="email-checkboxes">
-		<li><input type="checkbox" value="x" checked><label>If we release a newsletter.</label></li><hr>
-		<li><input type="checkbox" value="x"><label>If there are new updates.</label></li><hr>
-		<li><input type="checkbox" value="x" checked><label>If our terms and conditions change.</label></li><hr>
-		<li><input type="checkbox" value="x" checked><label>If you receive a new award.</label></li><hr>
-		<li><input type="checkbox" value="x"><label>If your account need renewing.</label></li>
-	</ul>
-	</form>
-</div>
+    <div class="panel sutle">
+        <h4>Email Notifications</h4>
+        <hr>
+        <form>
+            <ul class="email-checkboxes">
+                <li><input type="checkbox" value="x" checked><label>If we release a newsletter.</label></li><hr>
+                <li><input type="checkbox" value="x"><label>If there are new updates.</label></li><hr>
+                <li><input type="checkbox" value="x" checked><label>If our terms and conditions change.</label></li><hr>
+                <li><input type="checkbox" value="x" checked><label>If you receive a new award.</label></li><hr>
+                <li><input type="checkbox" value="x"><label>If your account need renewing.</label></li>
+            </ul>
+        </form>
+    </div>
   </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
-
-
 <div class="row">
-<div class="large-12 columns">
-<div class="panel clearfix">
-{% ifequal user.first_name "" %}
-	<h2>Hi there! Here's your Profile Settings.</h2>
-	{% else %}
-	<h2>Hi there {{ user.first_name|title  }}, here's your Profile Settings!</h2>
-{% endifequal %}
-
-<hr>
-<p>For optional security and recovery settings, we encourage social network assignation.</p>
-<div class="whitebackground clearfix">
-	<div class="left">
-		<img class="logo" src="/static/img/home/icons/facebook_profile.png"/>
-	</div>
-	<div class="right">
-	<p>You are logged in as <a href="#">{{ user.username|title  }}</a>.</p>
-	</div>
-</div><br/>
-<div class="whitebackground clearfix">
-	<div class="left">
-		<img class="logo" src="/static/img/home/icons/google_profile.png"/>
-	</div>
-	<div class="right">
-	<p>You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
-	</div>
-</div><br/>
-<div class="row">
-		<div class="large-4 columns">
-			<label>Registered Email
-				<input type="text" value="{{ user.email }}" disabled>
-			</label>
-		</div>
-		<div class="large-4 columns">
-			<label><br/>
-				<a href="#" data-reveal-id="myModal2" class="button small PasswordButton">Email Preferences</a>
-			</label>
-		</div>
-		<div class="large-4 columns">
-		<label><br/>
-			<a href="#" data-reveal-id="myModal" class="button small PasswordButton">Change Password</a>
-		</label>
-      </div>
-    </div><br/>
-		<small><p>Or you can <a href="#">deactivate your account</a>, but we'd like to have you here.</p></small>
-  </div>
-</div>
-</div>
+    <div class="large-12 columns">
+        <div class="panel clearfix">
+            {% ifequal user.first_name "" %}
+                <h2>Hi there! Here's your Profile Settings.</h2>
+                {% else %}
+                <h2>Hi there {{ user.first_name|title  }}, here's your Profile Settings!</h2>
+            {% endifequal %}
+            <hr>
+            <p>For optional security and recovery settings, we encourage social network assignation.</p>
+            <div class="whitebackground clearfix">
+                <div class="left">
+                    <img class="logo" src="/static/img/home/icons/facebook_profile.png"/>
+                </div>
+            
+                <div class="right">
+                    <p>You are logged in as <a href="#">{{ user.username|title  }}</a>.</p>
+                </div>
+            </div>
+            <br/>
+            <div class="whitebackground clearfix">
+                <div class="left">
+                    <img class="logo" src="/static/img/home/icons/google_profile.png"/>
+                </div>
+            
+                <div class="right">
+                    <p>You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="large-4 columns">
+                    <label>Registered Email
+                        <input type="text" value="{{ user.email }}" disabled>
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        <br/>
+                        <a href="#" data-reveal-id="myModal2" class="button small PasswordButton">Email Preferences</a>
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        <br/>
+                        <a href="#" data-reveal-id="myModal" class="button small PasswordButton">Change Password</a>
+                    </label>
+                </div>
+            </div>
+            <br/>
+            <small><p>Or you can <a href="#">deactivate your account</a>, but we'd like to have you here.</p></small>
+        </div>
+    </div>
 </div>
 {% endblock %}
