@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'pluginservice.apps.api',
-    'pluginservice.apps.polls'
+    'pluginservice.apps.polls',
+    'pluginservice.apps.accounts'
 )
 
 MIDDLEWARE_CLASSES = (
