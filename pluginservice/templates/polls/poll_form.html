@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+<form action="" method="post">
 <div class="row">
-	<h1><b>Polls</b> Create.</h1>
-	<div class="userportal">
+	<div class="large-12 columns">
+	<div class="panel simple left100">
+	<div class="left">
+	<h1>Create a Poll</h1>
+	</div>
+	<div class="right">
+	<button type="reset" class="secondary button small buttonClear right" value="Reset"><i class="fa fa-times-circle"></i> CLEAR POLL</button>
+	</div>
+	</div>
+	</div>
+	<div class="large-12 columns">
 		<div class="panel">
-			<form action="" method="post">
-			<div class="clearfix">
-			<a class="secondary button small buttonSelected left" href="#"><i class="fa fa-cogs"></i> WIDGET POLL</a>
-			<button type="reset" class="secondary button small buttonClear right" value="Reset"><i class="fa fa-times-circle"></i> CLEAR POLL</button>
-		</div>
-			<br>			
 			{% csrf_token %} 
 			<label>
 				<h4><strong>1.</strong> Create a Poll Name</h4>
@@ -21,7 +25,6 @@
 				<h4><strong>2.</strong> Add a Poll Question</h4>
 			</label>
 			<input id="id_question" maxlength="200" name="question" type="text" placeholder="Choose the question you want to ask everyone">
-			
 			
 			<label>
 				<h4><strong>3.</strong>URL to image</h4>
@@ -45,15 +48,10 @@
 					<a href="create.html" class="secondary button tiny NoBorder"><i class="fa fa-plus"></i> ADD MORE QUESTIONS</a>
 				</div>
 			</div>
-
-			<center>
-				<h4>Are you ready for more power?</h4><br/>
-				<input type="submit" value="GENERATE THE WIDGET" class="secondary button small buttonSelected2">
-			</center>
-			</form>
-			<br><br/>
+			<hr>
+			<input type="submit" value="GENERATE THE WIDGET" class="button small buttonSelected2">
 		</div>
-	</div><br/>
+	</div>
 </div>
-
+</form>
 {% endblock %}

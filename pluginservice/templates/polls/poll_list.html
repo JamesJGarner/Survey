@@ -2,22 +2,43 @@
 
 {% block content %}
 			<div class="row">
-			<h1><b>Polls</b> Manage.</h1>
-				<div class="panel">
-					<div class="manage">
-							{% for poll in poll_list %}
-							
-							<div class="large-4 columns Pollname">
-								<h3>{{ poll.title }}</h3>
-								<p><img class="themes NoSelectedTheme" src="/static/img/water.jpg"></p>
-								<p>
-									<a href="#"><i class="fa fa-share-alt"></i> Share</a> |  
-									<a href="/widgets/polls/manage/{{ poll.id }}"><i class="fa fa-cog"></i> Edit</a> 
-								</p>
-							</div>
-							{% endfor %}
-						<div class="clearfix"></div>
-					</div>
+			<div class="large-12 columns">
+			<div class="panel left100 simple">
+						<div class="left">
+				<h1>Poll Dashboard</h1>
 				</div>
+				<div class="right">
+				<a href="/widgets/polls/create/" class="secondary buttonSelected2 button small margin">Add Poll</a>
+				</div>
+			</div>
+
+			</div>
+			<div class="large-4 columns">
+			<div class="panel left100">
+			<h4>Team Involved</h4>
+			<ul class="poll-list team">
+			<li><img src="/static/img/example.png"> {{ user.first_name }} {{ user.last_name }}</li>
+			</ul>
+			<a href="#" class="add-button"><i class="fa fa-plus-circle"></i>Add Teammate</a>
+			</div>
+			</div>
+			<div class="large-8 columns">
+			<div class="panel left100">
+
+			<h4>Poll Activity</h4>
+			<ul class="poll-list">
+			{% for poll in poll_list %}
+				<li>
+					<a href="/widgets/polls/{{ poll.id }}" class="right poll-edit"><i class="fa fa-cog"></i> Edit</a> 
+					<h5>{{ poll.title }}</h5>
+					<small>by {{ poll.created_by.first_name }} {{ poll.created_by.last_name }}</small>
+
+				</li>
+			
+			{% endfor %}
+			</ul>
+
+			</div>
+
 			</div>			
 {% endblock %}

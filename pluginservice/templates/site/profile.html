@@ -47,18 +47,15 @@
   </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
-
 <div class="row">
-
+<div class="large-12 columns">
+        <div class="panel left100 simple">
+            <h1>Profile</h1>
+        </div>
+    </div>
     <div class="large-12 columns">
-    <h1><b>Profile</b></h1>
         <div class="panel clearfix">
-            {% ifequal user.first_name "" %}
-                <h2>Hi there! Here's your Profile Settings.</h2>
-                {% else %}
-                <h2>Hi there {{ user.first_name|title  }}, here's your Profile Settings!</h2>
-            {% endifequal %}
-            <hr>
+
             <p>For optional security and recovery settings, we encourage social network assignation.</p>
             <div class="whitebackground clearfix">
                 <div class="left">

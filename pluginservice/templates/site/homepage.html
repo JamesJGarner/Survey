@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 	{% if user.is_authenticated  %}
-		<h3>This is the homepage</h3>
+		<div class="row">
+			<div class="large-12 columns">
+				<h2>Welcome to Semety.</h2>
+				<p>The best platform for your website.</p>
+			</div>
+		</div>
 	{% else %}
-	
 	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 	<h2>Login</h2>
 	<hr>
