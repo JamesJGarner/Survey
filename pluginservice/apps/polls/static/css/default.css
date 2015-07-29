@@ -219,8 +219,46 @@ body {
 .team {
     font-size: 14pt;
 }
+.team-page {
+  margin:0;
+}
+.team-page li {
+    list-style: none;
+    float:  left;
+    padding: 25px 0 0 0;
+    width:235px;
+    text-align: center;
+}
+.team-page img {
+width: 90px;
+    border-radius: 50%;
+}
+.team-page p {
+    font-size: 16pt;
+    line-height: 37px;
+}
 
+.accordion .content {
+    float: left;
+    width: 100%;
+}
 
+dd.accordion-navigation {
+    float: left;
+    width: 100%;
+}
+.control {
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    float: left;
+    background-color: #CCCBCB;
+    /* box-sizing: content-box; */
+    padding: 7px;
+}
+.accordion .accordion-navigation > .content, .accordion dd > .content {
+  padding:0 !important;
+}
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
 /* --------------------------------------- */
