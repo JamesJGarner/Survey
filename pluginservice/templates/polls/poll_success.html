@@ -4,29 +4,58 @@
 
 
 
+
 <div class="row">
 				<div class="panel">
+				
 				<h4><strong>Whoa! Hey there, you made it!</strong></h4>
-				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the steps below and it'll be up in no time.</p>			
-						<h4><strong>1.</strong> Your Widget Code</h4>
-							<h6>Please make sure you have <a href="https://en.wikipedia.org/wiki/JQuery">Jquery</a> enabled on your site, if not then include this tag on top of the page.</h6>
-							<div class="panel">
-								<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</h6>
-							</div>
-							<h6>Put this CSS code between the <span class="marked">&lt;head></span> and <span class="marked">&lt;/head ></span> tag on your website</p>
-							<div class="panel">
-									<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ current_site_url }}/static/css/widgets/polls.css&quot; /&gt;</p>
-							</div>
-							<h6>And this javascript in the bottom of your <span class="marked">&lt;body ></span> and <span class="marked">&lt;/body ></span> tag on your website</h6>
-							<div class="panel">
-									<p>&lt;script src=&quot;{{ current_site_url }}/api/widgets/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
-							</div>
-							<h4><strong>2.</strong> Place your widget on the page</h4>
-							<h6>Then use this tag where you want the Poll to go (<em>Make sure its above the javascript file</em>)</h6>
-							<div class="panel">
-									<p>&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;</p>
-							</div>
-							<h4><strong>3.</strong> Your URL for sharing</h4>
+				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the steps below and it'll be up in no time.</p>
+				</div>	
+<dl class="accordion" data-accordion>
+  <dd class="accordion-navigation">
+    <a href="#panel1b">1. Enable JQuery</a>
+    <div id="panel1b" class="content active">
+		<h6>Please make sure you have <a href="https://en.wikipedia.org/wiki/JQuery">Jquery</a> enabled on your site, if not then include this tag on top of the page.</h6>
+		<div class="panel">
+		<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</h6>
+		</div>
+    </div>
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel2b">2. Include CSS file</a>
+    <div id="panel2b" class="content">
+		<h6>Put this CSS code between the <span class="marked">&lt;head></span> and <span class="marked">&lt;/head ></span> tag on your website</p>
+		<div class="panel">
+		<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ current_site_url }}/static/css/widgets/polls.css&quot; /&gt;</p>
+		</div>
+    </div>
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel3b">3. Include JS file</a>
+    <div id="panel3b" class="content">
+	
+		<h6>And this javascript in the bottom of your <span class="marked">&lt;body ></span> and <span class="marked">&lt;/body ></span> tag on your website</h6>
+		<div class="panel">
+		<p>&lt;script src=&quot;{{ current_site_url }}/api/widgets/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
+		</div>
+    </div>
+  </dd>
+   <dd class="accordion-navigation">
+    <a href="#panel4b">4. Add Poll</a>
+    <div id="panel4b" class="content">
+		<h6>Then use this tag where you want the Poll to go (<em>Make sure its above the javascript file</em>)</h6>
+		<div class="panel">
+			<p>&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;</p>
+		</div>
+    </div>
+  </dd>
+</dl>		
+						
+<br>
+<div class="panel">
+							
+
+							<h4>Your URL for sharing</h4>
 							<h6>You can access your widget through the URL and use it to attach the widget onto things.</h6>
 							<div class="row collapse">
 								<div class="small-3 large-2 columns">
@@ -36,7 +65,7 @@
 								  <input type="text" value="{{ current_site_url }}/widgets/polls/{{ poll.id }}/">
 								</div>
 							</div>
-							<h4><strong>4.</strong> Share your widget</h4>
+							<h4>Share your widget</h4>
 							<p>Share your own page for your widget tool through social media, you can also use the URL above.</p>
 							<a href="#"><img src="../img/icons/share_facebook.png" /></a>
 							<a href="#"><img src="../img/icons/share_twitter.png" /></a>

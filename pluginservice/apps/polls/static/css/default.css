@@ -50,7 +50,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	padding: 5px 0px 5px 0px;
 }
-.active {
+.active-d {
 	background-color: #1f6380 !important;
 	color:#FFF !important;
 }
@@ -219,6 +219,7 @@ body {
 .team {
     font-size: 14pt;
 }
+
 
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
