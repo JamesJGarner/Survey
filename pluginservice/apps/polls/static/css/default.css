@@ -241,6 +241,11 @@ width: 90px;
 .accordion .content {
     float: left;
     width: 100%;
+
+.fa-arrow-right {
+	font-size: small !important;
+	line-height: 16px;
+
 }
 
 dd.accordion-navigation {

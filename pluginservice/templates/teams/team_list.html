@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="row">
+	<div class="large-12 columns">
+	<div class="panel simple">
+	<h1>Teams</h1>
+	</div>
+	</div>
+
+	<div class="large-12 columns">
+		<dl class="accordion" data-accordion>
+			{% for t in team_list %}
+			  <dd class="accordion-navigation">
+			    <a href="#panel{{ t.id}}">{{ t.name }} </a>
+			    <div id="panel{{ t.id}}" class="content">
+				<ul class="team-page">
+				{% for person in t.teammate_set.all %}
+				<li>
+				<img src="/media/{{ person.user.userprofile.profile_picture }}">
+				<p>	{{ person.user.first_name }} {{ person.user.last_name }}</p>
+				</li>
+
+				{% endfor %}
+				
+				</ul>
+				<span class="control">Edit</span>
+			    </div>
+			  </dd>
+			{% endfor %}
+			<dd class="accordion-navigation">
+			<a href="#"><center>Add Team</center></a>
+			</dd>
+		</dl>
+	</div>
+
+	</div>
+{% endblock %}
