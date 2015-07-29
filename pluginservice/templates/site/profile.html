@@ -2,21 +2,53 @@
 
 {% block content %}
 
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Awesome, I can change my password.</h2>
-  <p class="lead">Remember to keep your password strong and secure by using signs and numbers too!</p>
-  <input type="text" placeholder="Your New Password">
-  <input type="text" placeholder="Password confirmation">
-  <a href="#" class="button bluebutton">Change Password</a>
+<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Change Your Password.</h2>
+  <hr>
+<label>Your Current Password:</label>
+<input type="password">
+<label>Your New Password:</label>
+<input type="password">
+<label>Confirm New Password:</label>
+  <input type="password">
+ <p> <a href="#">Forgotten your password?</a></p>
+ <p> <a href="#" class="button bluebutton tiny">Change Password</a></p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
-<div id="myModal2" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Change your E-mail.</h2>
-  <p class="lead">It's always nice to keep track of things.</p>
-  <input type="text" placeholder="Your New E-mail">
-  <input type="text" placeholder="Confirm E-mail">
-  <a href="#" class="button bluebutton">Change E-mail</a>
+<div id="myModal2" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <div class="large-12 columns">
+  <h2 id="modalTitle">Email Preferences.</h2><hr>
+
+  <h4><label>Your current email address:</label> <b>{{ user.email }}</b></h4>
+   <hr>
+  </div>
+  <div class="large-6 columns">
+  <h4>Update Email Address</h4>
+
+  <hr>
+  <label>New email:</label>
+  <input type="text" placeholder="example@gmail.com">
+  <label>Confirm New email:</label>
+  <input type="text" placeholder="example@gmail.com">
+  <a href="#" class="button bluebutton tiny">Update Email</a>
+  </div>
+  <div class="large-6 columns">
+  <div class="panel sutle">
+	<h4>Email Notifications</h4>
+	<hr>
+	<form>
+
+	<ul class="email-checkboxes">
+		<li><input type="checkbox" value="x" checked><label>If we release a newsletter.</label></li><hr>
+		<li><input type="checkbox" value="x"><label>If there are new updates.</label></li><hr>
+		<li><input type="checkbox" value="x" checked><label>If our terms and conditions change.</label></li><hr>
+		<li><input type="checkbox" value="x" checked><label>If you receive a new award.</label></li><hr>
+		<li><input type="checkbox" value="x"><label>If your account need renewing.</label></li>
+	</ul>
+	</form>
+</div>
+  </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
@@ -25,7 +57,12 @@
 <div class="row">
 <div class="large-12 columns">
 <div class="panel clearfix">
-<h3>Hi there {{ user.first_name|title  }}, here's your Profile Settings!</h3>
+{% ifequal user.first_name "" %}
+	<h2>Hi there! Here's your Profile Settings.</h2>
+	{% else %}
+	<h2>Hi there {{ user.first_name|title  }}, here's your Profile Settings!</h2>
+{% endifequal %}
+
 <hr>
 <p>For optional security and recovery settings, we encourage social network assignation.</p>
 <div class="whitebackground clearfix">
@@ -46,13 +83,13 @@
 </div><br/>
 <div class="row">
 		<div class="large-4 columns">
-			<label>Registered E-mail
-				<input type="text" placeholder="danost@outlook.com" disabled>
+			<label>Registered Email
+				<input type="text" value="{{ user.email }}" disabled>
 			</label>
 		</div>
 		<div class="large-4 columns">
 			<label><br/>
-				<a href="#" data-reveal-id="myModal2" class="button small PasswordButton">Change E-mail</a>
+				<a href="#" data-reveal-id="myModal2" class="button small PasswordButton">Email Preferences</a>
 			</label>
 		</div>
 		<div class="large-4 columns">

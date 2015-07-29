@@ -107,6 +107,34 @@ body {
 .widgetpagenext:hover {
 	background-color: #385776;
 }
+.sutle {
+  background: none;
+  border-width: 1px !important;
+  margin-top: 13px;
+  padding-bottom: 5px;
+  float: right;
+}
+.email-checkboxes {
+  margin: 0;
+}
+.email-checkboxes {
+  float: left;
+  width: 100%;
+}
+.email-checkboxes li {
+  float: left;
+  list-style: none;
+  width: 100%;
+}
+.email-checkboxes input {
+  float: left;
+}
+.email-checkboxes label {
+    margin-top: -4px;
+  float: left;
+  margin-left: 14px;
+}
+
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
 /* --------------------------------------- */
@@ -120,7 +148,7 @@ h1, h2, h3, h5, p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
-.whitebackground p, h1, h2, h3, h4, h5, h6 {
+.whitebackground p, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro', sans-serif !important;
 }
 .whitebackground {
