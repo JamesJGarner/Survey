@@ -6,3 +6,9 @@ logout
 exit
 ./gunicorn.sh
 logout
+./gunicorn.sh
+./gunicorn.sh
+xit
+exit
+./gunicorn.sh
+exit
