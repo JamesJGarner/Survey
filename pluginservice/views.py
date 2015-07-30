@@ -7,10 +7,10 @@ class Homepage(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Homepage, self).get_context_data(**kwargs)
-
-        context['teams'] = TeamMate.objects.filter(user=self.request.user)
+        if self.request.user.is_authenticated():
+            context['teams'] = TeamMate.objects.filter(user=self.request.user)
   
-        context['invites'] = Invite.objects.filter(invite_to=self.request.user, closed=False)
+            context['invites'] = Invite.objects.filter(invite_to=self.request.user, closed=False)
         return context    
 
 class TempProfile(TemplateView):
