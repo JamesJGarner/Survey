@@ -2,17 +2,20 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from .views import Homepage, TempProfile, Widgets
-from apps.api.views import InviteViewSet
+from apps.api.views import InviteViewSet, UserViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'invites', InviteViewSet)
+
+
 admin.autodiscover()
 
 
 urlpatterns = patterns(
     '',
     url(r'^$', Homepage.as_view(), name='homepage'),
+    
     url(r'^profile/$', TempProfile.as_view(), name='TempProfile'),
     #url(r'^widgets/$', Widgets.as_view(), name='Widgets'),
     url(r'^widgets/polls/', include('pluginservice.apps.polls.urls', namespace="polls")),

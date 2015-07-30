@@ -3,8 +3,11 @@ from pluginservice.apps.polls.models import Poll
 from pluginservice.apps.teams.models import Invite
 from rest_framework import viewsets
 #from django.http import HttpRequest
-from .serializers import InviteSerializer
+from .serializers import InviteSerializer, UserSerializer
 from rest_framework import serializers
+from django.contrib.auth.models import User
+from rest_framework import generics, filters
+
 
 # Not important right now
 class API(DetailView):
@@ -14,6 +17,16 @@ class API(DetailView):
 
 class Styles(TemplateView):
     template_name = 'site/styles.html'
+
+
+
+class UserViewSet(generics.ListAPIView):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+    serializer = UserSerializer
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('username', 'email')
+
 
 
 class InviteViewSet(viewsets.ReadOnlyModelViewSet):
@@ -29,10 +42,5 @@ class InviteViewSet(viewsets.ReadOnlyModelViewSet):
         invite_to=1,
         closed=False,
     )
-
-
-
-
-
     serializer_class = InviteSerializer
 
