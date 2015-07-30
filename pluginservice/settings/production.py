@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'pluginservice.apps.polls',
     'pluginservice.apps.accounts',
     'pluginservice.apps.teams',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,6 +65,13 @@ SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT, "templates"),
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+}
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 

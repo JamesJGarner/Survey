@@ -5,8 +5,27 @@
 			<div class="large-12 columns">
 				<h2>Welcome to Semety.</h2>
 				<p>The best platform for your website.</p>
-				<p><a href="/widgets/polls/team/1">Team 1</a></p>
-				<p><a href="/widgets/polls/team/2">Team 2</a></p>
+
+				<hr>
+				<h4>Your Teams</h4>
+				{% for team in teams %}
+					{% if team.admin == True %}
+						<p><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a> -
+						 <a href="/team/#panel{{ team.team.id }}">Manage</a></p>
+					{% else %}
+						<p><a href="/widgets/polls/team/{{ team.id }}">{{ team.team }}</a></p>
+					{% endif %}
+				{% endfor %}				
+				<hr>
+				<h4>Invites</h4>
+				{% for invite in invites %}
+				<form action="/team/invitereponse/" method="post">
+				{% csrf_token %}
+				<input type="hidden" name="invite_id" value="{{ invite.id }}">
+				<p>{{ invite.invite_from }} has invited you to <b>{{ invite.team }}</b>
+				| <input type="submit" name="accept" value="Accept"> / <a href="#">Decline</a></p>
+				</form>
+				{% endfor %}
 			</div>
 		</div>
 	{% else %}

@@ -41,6 +41,11 @@ class Invite(models.Model):
         related_name='invite_to'
         )
 
+    team = models.ForeignKey(
+        Team,
+        null=True
+        )
+
     message = models.TextField(
         null=True,
         blank=True,
