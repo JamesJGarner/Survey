@@ -1,9 +1,9 @@
 #!/bin/bash
 
 NAME="pluginservice"                                         # Name of the application
-DJANGODIR=/var/www/pluginservice/                # Django project directory
-SOCKFILE=/var/www/pluginservice/gunicorn.sock    # we will communicte using this unix socket
-USER=domain                                           # the user to run as
+DJANGODIR=/var/www/plugin-service/                # Django project directory
+SOCKFILE=/var/www/plugin-service/gunicorn.sock    # we will communicte using this unix socket
+USER=plugin                                           # the user to run as
 GROUP=webapps                                           # the group to run as
 NUM_WORKERS=3                                           # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=pluginservice.settings.production     # which settings file should Django use
