@@ -49,11 +49,12 @@ class InviteResponse(FormView):
         if inviteobject.invite_to == self.request.user:
             inviteobject.closed = True
             inviteobject.save()
-            try:
-                TeamMate.objects.create(team=inviteobject.team, user=inviteobject.invite_to, admin=False)
-            except:
-                print "failed"
+            if form.cleaned_data["accept"] == "Accept":
+                try:
+                    TeamMate.objects.create(team=inviteobject.team, user=inviteobject.invite_to, admin=False)
+                except:
+                    print "failed"
 
-        print form.cleaned_data["accept"]
+
         return super(InviteResponse, self).form_valid(form)
 

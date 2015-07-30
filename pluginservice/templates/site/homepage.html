@@ -23,7 +23,7 @@
 				{% csrf_token %}
 				<input type="hidden" name="invite_id" value="{{ invite.id }}">
 				<p>{{ invite.invite_from }} has invited you to <b>{{ invite.team }}</b>
-				| <input type="submit" name="accept" value="Accept"> / <a href="#">Decline</a></p>
+				| <input type="submit" name="accept" value="Accept"> / <input type="submit" name="accept" value="Decline"></a></p>
 				</form>
 				{% endfor %}
 			</div>
