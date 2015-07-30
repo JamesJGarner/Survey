@@ -29,18 +29,14 @@ class UserViewSet(generics.ListAPIView):
 
 
 
-class InviteViewSet(viewsets.ReadOnlyModelViewSet):
-    model = Invite
-    """
-    Returns a list of the current invites you have
-    """
 
-    print Invite.invite_from
-
-
-    queryset = Invite.objects.filter(
-        invite_to=1,
-        closed=False,
-    )
+class InviteViewSet(generics.ListAPIView):
     serializer_class = InviteSerializer
 
+    def get_queryset(self):
+        """
+        Returns a list of the current invites you have
+        """
+        user = self.request.user
+        print user
+        return Invite.objects.filter(invite_to=user, closed=False)

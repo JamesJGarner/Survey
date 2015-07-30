@@ -6,7 +6,7 @@ from apps.api.views import InviteViewSet, UserViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'invites', InviteViewSet)
+
 
 
 admin.autodiscover()
