@@ -2,6 +2,7 @@ from django.views.generic import TemplateView
 from pluginservice.apps.accounts.models import EmailNotification
 from pluginservice.apps.teams.models import Invite, TeamMate
 
+
 class Homepage(TemplateView):
     template_name = 'site/homepage.html'
 
@@ -12,6 +13,7 @@ class Homepage(TemplateView):
   
             context['invites'] = Invite.objects.filter(invite_to=self.request.user, closed=False)
         return context    
+
 
 class TempProfile(TemplateView):
     template_name = 'site/profile.html'
