@@ -264,6 +264,16 @@ dd.accordion-navigation {
 .accordion .accordion-navigation > .content, .accordion dd > .content {
   padding:0 !important;
 }
+
+
+#search-results li div:first-child {
+  padding:0;
+}
+
+#search-results li div {
+  line-height: 55px;
+}
+
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
 /* --------------------------------------- */

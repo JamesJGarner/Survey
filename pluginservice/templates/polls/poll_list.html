@@ -5,11 +5,12 @@
 		<h2>Add Teammate</h2>
 		<hr>
 
-		<input type="text" placeholder="Search">
+		<input type="text" placeholder="Search" id="search"  onkeyup="return Search(event, false);">
 			
 			<h4>Results:</h4>
-			<ul class="poll-list team">
+			<ul class="poll-list team" id="search-results">
 			Not done yet
+
 			{% for person in team.teammate.set.all %}
 			<li><img src="/static/img/example.png">{{ user.first_name }} {{ user.last_name }}</li>
 			<li><img src="/static/img/default.png">Peter Pan</li>
@@ -63,3 +64,29 @@
 
 			</div>			
 {% endblock %}
+
+{% block js %}
+	<script src="/static/js/functions.js"></script>
+
+	<script>
+	var Team = {{ team.id }}
+	function Invite(userid) {
+	    if ($('#TableForm') != "[]") {
+	        submit = "/team/invite/";
+	        form = "invite_to=" + userid + "&team={{ team.id }}&csrfmiddlewaretoken={{ csrf_token }}"
+	        $.post(submit, form).fail(function () {
+	            setTimeout(failed, 500);
+	        }).done(function () {
+	            setTimeout(complete, 500);
+	            $('#user' + userid).html("<p>User has been invited</p>")
+	        });
+	    }
+	}
+
+	function failed() {}
+	function complete() {
+
+	}
+
+	</script>
+{% endblock js %}

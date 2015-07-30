@@ -1,6 +1,6 @@
 from django.views.generic import DetailView, TemplateView
 from pluginservice.apps.polls.models import Poll
-from pluginservice.apps.teams.models import Invite
+from pluginservice.apps.teams.models import Invite, TeamMate
 from rest_framework import viewsets
 #from django.http import HttpRequest
 from .serializers import InviteSerializer, UserSerializer
@@ -19,14 +19,24 @@ class Styles(TemplateView):
     template_name = 'site/styles.html'
 
 
-
 class UserViewSet(generics.ListAPIView):
     serializer_class = UserSerializer
-    queryset = User.objects.all()
-    serializer = UserSerializer
-    filter_backends = (filters.SearchFilter,)
-    search_fields = ('username', 'email')
 
+    def get_queryset(self):
+        team = self.kwargs['team']
+        queryset = User.objects.filter()
+
+        if team:
+            teams = TeamMate.objects.filter(team=team)
+            exclude = []
+            for person in teams:
+                exclude.append(person.user.id)
+            queryset = User.objects.exclude(pk__in=exclude)
+
+        serializer = UserSerializer
+        filter_backends = (filters.SearchFilter,)
+        search_fields = ('username', 'email')
+        return queryset
 
 
 
