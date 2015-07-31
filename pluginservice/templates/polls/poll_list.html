@@ -35,7 +35,7 @@
 			<div class="large-4 columns">
 			<div class="panel left100">
 			<h4>Team Involved</h4>
-			<ul class="poll-list team">
+			<ul class="poll-list team" id="team">
 			{% for person in team.teammate_set.all %}
 			<li><img src="/media/{{ person.user.userprofile.profile_picture }}">{{ person.user.first_name }} {{ person.user.last_name }}</li>
 			{% endfor %}
@@ -70,17 +70,20 @@
 
 	<script>
 	var Team = {{ team.id }}
+
 	function Invite(userid) {
-	    if ($('#TableForm') != "[]") {
-	        submit = "/team/invite/";
-	        form = "invite_to=" + userid + "&team={{ team.id }}&csrfmiddlewaretoken={{ csrf_token }}"
-	        $.post(submit, form).fail(function () {
-	            setTimeout(failed, 500);
-	        }).done(function () {
-	            setTimeout(complete, 500);
-	            $('#user' + userid).html("<p>User has been invited</p>")
-	        });
-	    }
+
+
+	    submit = "/team/invite/";
+	    form = "invite_to=" + userid + "&team={{ team.id }}&csrfmiddlewaretoken={{ csrf_token }}"
+	    $.post(submit, form).fail(function () {
+	        setTimeout(failed, 500);
+	    }).done(function () {
+	        setTimeout(complete, 500);
+	        ViewType("/api/user/" + userid + "/?", "#team");
+	        $('#user' + userid).html("<p>User has been invited</p>")
+	    });
+
 	}
 
 	function failed() {}

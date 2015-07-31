@@ -20,8 +20,26 @@ class Styles(TemplateView):
 
 
 class UserViewSet(generics.ListAPIView):
-    serializer_class = UserSerializer
 
+    def get_queryset(self):
+        team = self.kwargs['team']
+        exclude = []
+
+        if team:
+            teams = TeamMate.objects.filter(team=team)
+            for person in teams:
+                exclude.append(person.user.id)
+        
+        queryset = User.objects.exclude(pk__in=exclude)
+        return queryset
+
+    serializer_class = UserSerializer
+    serializer = UserSerializer
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('username', 'email')
+
+
+    """
     def get_queryset(self):
         team = self.kwargs['team']
         queryset = User.objects.filter()
@@ -31,13 +49,13 @@ class UserViewSet(generics.ListAPIView):
             exclude = []
             for person in teams:
                 exclude.append(person.user.id)
-            queryset = User.objects.exclude(pk__in=exclude)
+            queryset = User.objects.exclude(pk__in=exclude).filter()
 
         serializer = UserSerializer
         filter_backends = (filters.SearchFilter,)
         search_fields = ('username', 'email')
         return queryset
-
+    """
 
 
 class InviteViewSet(generics.ListAPIView):
@@ -50,3 +68,22 @@ class InviteViewSet(generics.ListAPIView):
         user = self.request.user
         print user
         return Invite.objects.filter(invite_to=user, closed=False)
+
+
+
+class UserDetailViewSet(generics.ListAPIView):
+
+    def get_queryset(self):
+        userid = self.kwargs['pk']
+        
+        queryset = User.objects.all()
+
+        if userid:
+            queryset = User.objects.filter(id=userid)
+
+        return queryset
+
+    serializer_class = UserSerializer
+    serializer = UserSerializer
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('username', 'email')
