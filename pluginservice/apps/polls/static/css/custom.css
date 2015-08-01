@@ -249,3 +249,118 @@ span {
 .fa {
 	margin-right: 5px;
 }
+.landingblue {
+	background-color: #36c3ff;
+	width: 100%;
+	padding: 0px 0px 150px 0px;
+}
+.register {
+	width: 100%;
+	text-align: right;
+	padding: 15px 0px 120px 0px;
+
+}
+
+.register a {
+	  color: #fff;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #000;
+}
+.landingblue h2, .landingblue h3 {
+	color: #fff !important;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: 300;
+}
+.landinggreen {
+	background: #00cb9b;
+	width: 100%;
+	padding: 100px 0px 100px 0px;
+}
+.landinggreen h5 {
+	font-weight: 200;
+    font-size: 45px;
+    color: #fff;
+}
+.landinggreen h6{
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 200 !important;
+	color: #fff;
+}
+.landingpurple {
+	background: #b346c1;
+	width: 100%;
+	padding: 100px 0px 100px 0px;
+}
+.landingpurple  h5 {
+	font-weight: 200;
+    font-size: 45px;
+    color: #fff;
+}
+.landingpurple  h6{
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 200 !important;
+	color: #fff;
+}
+.landingpurple a {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+.landingpurple a:hover {
+	color:#bebfbf;
+}
+.landingorange {
+	background: #f1b62a;
+	width: 100%;
+	padding: 100px 0px 100px 0px;
+}
+.landingorange   h5 {
+	font-weight: 200;
+    font-size: 45px;
+    color: #fff;
+}
+.landingorange   h6{
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 200 !important;
+	color: #fff;
+}
+.landingorange a {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+.landingwhite {
+	background: #fff;
+	width: 100%;
+	padding: 100px 0px 100px 0px;
+}
+.landingwhite   h5 {
+	font-weight: 200;
+    font-size: 45px;
+    color: rgb(51, 96, 163);
+}
+.landingwhite  h6{
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 200 !important;
+	color: rgb(51, 96, 163);
+}
+.landingdark {
+	background: #2c3e50;
+	width: 100%;
+	padding: 100px 0px 100px 0px;
+}
+.landingdark   h5 {
+	font-weight: 200;
+    font-size: 45px;
+    color: #fff;
+}
+.landingdark  h6{
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 200 !important;
+	color: #fff;
+}
