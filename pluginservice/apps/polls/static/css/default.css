@@ -61,10 +61,18 @@ body {
 .learnmore {
 	float: left;
 	width: 100%;
-	background: #1f6380 !important;
+	background:rgb(51, 96, 163) !important;
 	border: 1px solid #1b5974 !important;
-	border-left: 35px solid #1b5974 !important;
+	border-left: 30px solid #21559e !important;
 	min-height: 140px;
+}
+.learnmore a {
+	color: #fff !important;
+	font-weight: 300;
+	text-decoration: none !important;
+}
+.learnmore a:hover {
+	text-decoration: underline;
 }
 .bluebackground {
 	background-color: rgb(51, 96, 163);
@@ -411,6 +419,7 @@ h6 {
 .learnmoreButton:hover {
   background: #fff !important;
   color: #1f6380 !important;
+  text-decoration: none !important;
  }
  .Pollname p a {
   background-color: #e7e7e7;
@@ -472,6 +481,9 @@ h6 {
 .bluebutton:hover {
 	background-color: #fff !important;
 	color: rgb(51, 96, 163) !important;
+}
+.underline:hover {
+	text-decoration: underline;
 }
 /* --------------------------------------- */
 /* ------------- BUTTONS END ------------- */
