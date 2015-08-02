@@ -15,7 +15,7 @@ class CreateAccount(FormView):
         form.save()
 
         user = authenticate(
-            username=form.cleaned_data['username'].lower(),
+            username=form.cleaned_data['username'],
             password=form.cleaned_data['password1']
 
         )
