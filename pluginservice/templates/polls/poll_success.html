@@ -9,47 +9,59 @@
 				<div class="panel">
 				
 				<h4><strong>Whoa! Hey there, you made it!</strong></h4>
-				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the steps below and it'll be up in no time.</p>
+				<p>Don't worry about how you're going to integrate this into your website, it's really easy once you get a hang of it. Also, once it's on your page, then you'll be able to edit everything yourself. Just follow the four easy steps below and it'll be up in no time.</p>
 				</div>	
 <dl class="accordion" data-accordion>
   <dd class="accordion-navigation">
-    <a href="#panel1b"><i class="fa fa-arrow-right"></i> 1. Enable JQuery</a>
-    <div id="panel1b" class="content active">
+    <a href="#panel1b">
+	<div class="right">
+		<p class="numbers">1.</p>
+	</div>
+	<i class="fa fa-arrow-right"></i>Enable JQuery</a>
+    <div id="panel1b" class="content active"><br/>
 		<h6>Please make sure you have <a href="https://en.wikipedia.org/wiki/JQuery">Jquery</a> enabled on your site, if not then include this tag on top of the page.</h6>
-		<div class="panel">
+		<br/><div class="panel">
 		<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</h6>
 		</div>
     </div>
   </dd>
   <dd class="accordion-navigation">
-    <a href="#panel2b"><i class="fa fa-arrow-right"></i> 2. Include CSS file</a>
-    <div id="panel2b" class="content">
-		<h6>Put this CSS code between the <span class="marked">&lt;head></span> and <span class="marked">&lt;/head ></span> tag on your website</p>
+    <a href="#panel2b">
+	<div class="right">
+		<p class="numbers">2.</p>
+	</div>
+	<i class="fa fa-arrow-right"></i>Include CSS file</a>
+    <div id="panel2b" class="content"><br/>
+		<h6>Put this CSS code between the <span class="marked">&lt;head></span> and <span class="marked">&lt;/head ></span> tag on your website</h6><br/>
 		<div class="panel">
 		<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ current_site_url }}/static/css/widgets/polls.css&quot; /&gt;</p>
 		</div>
     </div>
   </dd>
   <dd class="accordion-navigation">
-    <a href="#panel3b"><i class="fa fa-arrow-right"></i> 3. Include JS file</a>
-    <div id="panel3b" class="content">
-	
-		<h6>And this javascript in the bottom of your <span class="marked">&lt;body ></span> and <span class="marked">&lt;/body ></span> tag on your website</h6>
+    <a href="#panel3b">
+	<div class="right">
+		<p class="numbers">3.</p>
+	</div>
+	<i class="fa fa-arrow-right"></i> Include JS file</a>
+    <div id="panel3b" class="content"><br/>
+		<h6>And this javascript in the bottom of your <span class="marked">&lt;body ></span> and <span class="marked">&lt;/body ></span> tag on your website</h6><br/>
 		<div class="panel">
 		<p>&lt;script src=&quot;{{ current_site_url }}/api/widgets/polls/{{ poll.id }}.js&quot;&gt;&lt;/script&gt;</p>
 		</div>
     </div>
   </dd>
    <dd class="accordion-navigation">
-   
-   
     <a href="#panel4b">
-	<i class="fa fa-arrow-right"></i>4.	Add Poll</a>
+	<div class="right">
+		<p class="numbers">4.</p>
+	</div>
+	<i class="fa fa-arrow-right"></i>	Add your Poll</a>
+	<div class="clearfix"></div>
 	
-	
-    <div id="panel4b" class="content">
+    <div id="panel4b" class="content"><br/>
 		<h6>Then use this tag where you want the Poll to go (<em>Make sure its above the javascript file</em>)</h6>
-		<div class="panel">
+		<br/><div class="panel">
 			<p>&lt;div id=&quot;poll&quot;&gt;&lt;/div&gt;</p>
 		</div>
     </div>
@@ -67,16 +79,19 @@
 								  <span class="prefix">http://</span>
 								</div>
 								<div class="small-9 large-10 columns">
-								  <input type="text" value="{{ current_site_url }}/widgets/polls/{{ poll.id }}/">
+								  <input type="text" value="{{ current_site_url }}/widgets/polls/{{ poll.id }}/" disabled>
 								</div>
 							</div>
 							<h4>Share your widget</h4>
 							<p>Share your own page for your widget tool through social media, you can also use the URL above.</p>
-							<a href="#"><img src="../img/icons/share_facebook.png" /></a>
-							<a href="#"><img src="../img/icons/share_twitter.png" /></a>
-							<a href="#"><img src="../img/icons/share_google.png" /></a>
-							<a href="#"><img src="../img/icons/share_pinterest.png" /></a>
-							<a href="#"><img src="../img/icons/share_mail.png" /></a>
+							<a href="#"><img class="logo" src="/static/img/share/facebook_share.png" alt=""></a> 
+							<a href="#"><img class="logo" src="/static/img/share/twitter_share.png" alt=""></a> 
+							<a href="#"><img class="logo" src="/static/img/share/google_share.png" alt=""></a> 
+							<a href="#"><img class="logo" src="/static/img/share/reddit_share.png" alt=""></a> 
+							<a href="#"><img class="logo" src="/static/img/share/blogger_share.png" alt=""></a> 
+							<a href="#"><img class="logo" src="/static/img/share/tumblr_share.png" alt=""></a> 
+							<a href="#"><img class="logo" src="/static/img/share/pinterest_share.png" alt=""></a> 
+							
 							<!-- We need to add more buttons here -->
 				
 							<br/><br/><br/>

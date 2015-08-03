@@ -578,4 +578,6 @@ h6 {
 .pollfooter a:hover {
 	text-decoration: underline;
 }
-
+.content h6{
+	margin: 10px !important;
+}
