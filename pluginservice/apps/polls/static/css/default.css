@@ -380,6 +380,11 @@ h6 {
 	border-right: 5px solid #cdcbcb;
 	margin-right: 15px;
 }
+.teamname {
+	line-height: 62px !important;
+	font-weight: bold;
+	color: rgb(51, 96, 163);
+}
 /* --------------------------------------- */
 /* ------------ TYPOGRAPHY END ----------- */
 /* --------------------------------------- */
@@ -428,7 +433,7 @@ h6 {
   color: #fff;
 }
 .buttonSelected2{
-  background-color: #1f6380 !important;
+  background-color: rgb(51, 96, 163) !important;
   color: #fff !important; 
 }
 .buttonSelected2:hover{
@@ -513,6 +518,9 @@ h6 {
 }
 .underline:hover {
 	text-decoration: underline;
+}
+.marginbig {
+	margin-top: 13px !important;
 }
 /* --------------------------------------- */
 /* ------------- BUTTONS END ------------- */
