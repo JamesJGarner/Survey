@@ -6,7 +6,7 @@ function Search() {
     if (searchbox.value == "") {
         structure = "";
     }
-    return SearchViewType("/api/users/?team=" + Team + "&search=" + SearchQuery, null, null);
+    return SearchViewType("/api/users/?inviteable=" + Team + "&search=" + SearchQuery, null, null);
 } 
 
 

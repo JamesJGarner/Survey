@@ -146,6 +146,8 @@ body {
 .left100 {
   float:left;
   width: 100%;
+  	-webkit-transition-property: width; 
+	transition-property: width;
 }
 
 .margin {
@@ -223,13 +225,22 @@ body {
   width: 60px;
   border-radius: 50%;
     margin-right: 12px;
+      float: left;
 }
 .team {
     font-size: 14pt;
 }
+
+.team li h4 {
+	font-size: 14pt;
+	line-height: 12px;
+	color: #333 !important;
+}
+
 .team-page {
   margin:0;
 }
+
 .team-page li {
     list-style: none;
     float:  left;
@@ -281,6 +292,7 @@ dd.accordion-navigation {
 #search-results li div {
   line-height: 55px;
 }
+
 
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */

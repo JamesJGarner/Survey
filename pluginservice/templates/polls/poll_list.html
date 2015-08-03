@@ -37,7 +37,7 @@
 			<h4>Team Involved</h4>
 			<ul class="poll-list team" id="team">
 			{% for person in team.teammate_set.all %}
-			<li><img src="/media/{{ person.user.userprofile.profile_picture }}">{{ person.user.first_name }} {{ person.user.last_name }}</li>
+			<li><img src="/media/{{ person.user.userprofile.profile_picture }}"><h4>{{ person.user.first_name }} {{ person.user.last_name }}</h4></li>
 			{% endfor %}
 			</ul>
 
