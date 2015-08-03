@@ -2,12 +2,13 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from .views import Homepage, TempProfile, Widgets
-from apps.api.views import InviteViewSet, UserViewSet
+from apps.api.views import InviteViewSet, UserViewSet, NotificationViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, base_name='users') 
 router.register(r'invites', InviteViewSet, base_name='invites') 
+router.register(r'notifications', NotificationViewSet, base_name='notifications') 
 
 
 

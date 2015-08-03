@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'pluginservice.apps.polls',
     'pluginservice.apps.accounts',
     'pluginservice.apps.teams',
+    'pluginservice.apps.notifications',
     'rest_framework',
 )
 

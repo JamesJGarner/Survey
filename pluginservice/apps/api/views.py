@@ -1,9 +1,10 @@
 from django.views.generic import DetailView, TemplateView
 from pluginservice.apps.polls.models import Poll
 from pluginservice.apps.teams.models import Invite, TeamMate
+from pluginservice.apps.notifications.models import Notification
 from rest_framework import viewsets
 #from django.http import HttpRequest
-from .serializers import InviteSerializer, UserSerializer
+from .serializers import InviteSerializer, UserSerializer, NotificationSerializer
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework import generics, filters
@@ -17,7 +18,12 @@ class API(DetailView):
 
 def TeamPlayers(teamID):
     tlist = []
+
     players = TeamMate.objects.filter(team=teamID)
+    invites = Invite.objects.filter(team=teamID, closed=False)
+
+    for player in invites:
+        tlist.append(player.invite_to.id)   
     
     for player in players:
         tlist.append(player.user.id)
@@ -62,4 +68,20 @@ class InviteViewSet(viewsets.ReadOnlyModelViewSet):
         user = self.request.user
         print user
         return Invite.objects.filter(invite_to=user, closed=False)
+
+
+
+class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    Returns a list of the current Notifications you have.
+    """
+    serializer_class = NotificationSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        return Notification.objects.filter(user=user, read=False)
+
+
+
+
 

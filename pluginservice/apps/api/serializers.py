@@ -1,5 +1,6 @@
 from rest_framework.serializers import HyperlinkedModelSerializer, HyperlinkedRelatedField
 from pluginservice.apps.teams.models import Invite, Team
+from pluginservice.apps.notifications.models import Notification
 from django.contrib.auth.models import User
 from pluginservice.apps.accounts.models import UserProfile
 from rest_framework.serializers import ModelSerializer
@@ -40,3 +41,13 @@ class UserSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'userprofile']
+
+
+class NotificationSerializer(HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Notification
+        fields = ['title', 'message']
+
+
+
