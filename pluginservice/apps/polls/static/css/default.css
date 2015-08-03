@@ -520,8 +520,62 @@ h6 {
 	text-decoration: underline;
 }
 .marginbig {
-	margin-top: 13px !important;
+	margin-top: 9px !important;
 }
 /* --------------------------------------- */
 /* ------------- BUTTONS END ------------- */
 /* --------------------------------------- */
+
+.poll {
+  width: 100%;
+  min-height: 100px;
+  background-image: url('../img/water.jpg');
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 0px 20px 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.pollgrid {
+  margin: 0 20px;
+  padding-top: 20px;
+}
+.poll h2 {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: x-large;
+}
+.polloption {
+  margin: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: lighter !important;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  margin-bottom: 20px;
+}
+.polloption:hover {
+	background: rgba(0, 0, 0, 0.7);
+}
+.polloption h3 {
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  text-shadow: 1px 1px 1px #000;
+  font-size: large;
+}
+.pollfooter {
+  margin-top: 100px;
+  width: 100%;
+  text-align: right;
+}
+.pollfooter a {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+.pollfooter a:hover {
+	text-decoration: underline;
+}
+
