@@ -47,7 +47,7 @@ class NotificationSerializer(HyperlinkedModelSerializer):
 
     class Meta:
         model = Notification
-        fields = ['title', 'message']
+        fields = ['title', 'text']
 
 
 
