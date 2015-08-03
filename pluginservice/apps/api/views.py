@@ -15,14 +15,13 @@ class API(DetailView):
     template_name = 'site/js.html'
 
 
-class Styles(TemplateView):
-    template_name = 'site/styles.html'
-
-
-class UserViewSet(generics.ListAPIView):
-
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    View the detail of a user and filter by team the avalible users that can be invited
+    """
     def get_queryset(self):
-        team = self.kwargs['team']
+        team = self.request.query_params.get('team', None)
+        print team
         exclude = []
 
         if team:
@@ -39,51 +38,15 @@ class UserViewSet(generics.ListAPIView):
     search_fields = ('username', 'email')
 
 
+class InviteViewSet(viewsets.ReadOnlyModelViewSet):
     """
-    def get_queryset(self):
-        team = self.kwargs['team']
-        queryset = User.objects.filter()
-
-        if team:
-            teams = TeamMate.objects.filter(team=team)
-            exclude = []
-            for person in teams:
-                exclude.append(person.user.id)
-            queryset = User.objects.exclude(pk__in=exclude).filter()
-
-        serializer = UserSerializer
-        filter_backends = (filters.SearchFilter,)
-        search_fields = ('username', 'email')
-        return queryset
+    Returns a list of the current invites you have.
     """
-
-
-class InviteViewSet(generics.ListAPIView):
     serializer_class = InviteSerializer
 
     def get_queryset(self):
-        """
-        Returns a list of the current invites you have
-        """
+
         user = self.request.user
         print user
         return Invite.objects.filter(invite_to=user, closed=False)
 
-
-
-class UserDetailViewSet(generics.ListAPIView):
-
-    def get_queryset(self):
-        userid = self.kwargs['pk']
-        
-        queryset = User.objects.all()
-
-        if userid:
-            queryset = User.objects.filter(id=userid)
-
-        return queryset
-
-    serializer_class = UserSerializer
-    serializer = UserSerializer
-    filter_backends = (filters.SearchFilter,)
-    search_fields = ('username', 'email')

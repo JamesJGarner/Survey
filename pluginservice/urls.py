@@ -6,6 +6,8 @@ from apps.api.views import InviteViewSet, UserViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
+router.register(r'users', UserViewSet, base_name='users') 
+router.register(r'invites', InviteViewSet, base_name='invites') 
 
 
 
@@ -21,7 +23,7 @@ urlpatterns = patterns(
     url(r'^widgets/polls/', include('pluginservice.apps.polls.urls', namespace="polls")),
     url(r'^team/', include('pluginservice.apps.teams.urls', namespace="teams")),
     url(r'^', include('pluginservice.apps.accounts.urls', namespace="accounts")),
-    url(r'^', include('pluginservice.apps.api.urls', namespace="api")),
+    #url(r'^', include('pluginservice.apps.api.urls', namespace="api")),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
