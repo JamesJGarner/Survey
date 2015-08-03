@@ -9,7 +9,6 @@
 			
 			<h4>Results:</h4>
 			<ul class="poll-list team" id="search-results">
-			Not done yet
 
 			{% for person in team.teammate.set.all %}
 			<li><img src="/static/img/example.png">{{ user.first_name }} {{ user.last_name }}</li>
@@ -64,7 +63,7 @@
 {% endblock %}
 
 {% block js %}
-	<script src="/static/js/functions.js"></script>
+	
 
 	<script>
 	var Team = {{ team.id }}
@@ -78,7 +77,6 @@
 	        setTimeout(failed, 500);
 	    }).done(function () {
 	        setTimeout(complete, 500);
-	        TeamListUpdate(userid);
 	        $('#user' + userid).html("<p>User has been invited</p>")
 	    });
 

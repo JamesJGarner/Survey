@@ -50,10 +50,7 @@ function TeamListUpdate(SearchQuery) {
     $.getJSON("/api/users/" + SearchQuery + "?&t=" + +new Date(),
 
 	    function (data) {
-		    var items = [];
-
-
-			
+		    var items = [];		
 		        var datastring = '<li id="userlist{0}"><img src="{1}"><h4>{2} {3}</h4></li>';
 		        console.log(data.userprofile);
 				items.push(
@@ -92,6 +89,62 @@ function Notfiy() {
 		});
 }
 
+
+function GetTeamList(teamid, append) {
+    $.getJSON("/api/users/?team=" + teamid + "&t=" + +new Date(), function (data) {
+	    var items = [];
+
+	    $.each( data, function( key, val ) {
+	        var datastring = '<li><img src="{1}"><h4>{2} {3}</h4></li>';
+			items.push(
+				String.format(
+					datastring,
+					val["id"],
+					val.userprofile.profile_picture,
+					val["first_name"],
+					val["last_name"]
+					)
+			);
+			});
+			if (append == true) {
+			$('#team').append(items)
+		}
+		else {
+			$('#team').html(items)
+		}
+	});
+}
+
+function GetInviteList() {
+    $.getJSON("/api/invites/" + "?&t=" + +new Date(), function (data) {
+	    var items = [];
+
+	    $.each( data, function( key, val ) {
+	        var datastring = '<form action="/team/invitereponse/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="{0}"><input type="hidden" name="invite_id" value="{1}"><p>{2} has invited you to <b>{3}</b><input type="submit" name="accept" value="Accept"> / <input type="submit" name="accept" value="Decline"></form></p>';
+			console.log(val);
+			items.push(
+				String.format(
+					datastring,
+					csrf,
+					val["id"],
+					val.invite_from.username,
+					val.team.name
+					)
+			);
+			});
+			$('#invites').html(items)
+	});
+}
+
+
+
+
+
+
+
+window.setInterval(function(){
+  GetTeamList(Team);
+}, 5000);
 
 
 

@@ -35,8 +35,10 @@
     <script src="/static/js/vendor/jquery.js"></script>
     <script src="/static/js/foundation.min.js"></script>
     <script src="/static/js/foundation/foundation.accordion.js"></script>
+    <script src="/static/js/functions.js"></script>
     <script>
       $(document).foundation();
+      var csrf = "{{ csrf_token }}"
     </script>
     <ul id="notification"></ul>
     {% block js %}{% endblock%}

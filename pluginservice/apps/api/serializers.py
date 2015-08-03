@@ -33,7 +33,7 @@ class InviteSerializer(HyperlinkedModelSerializer):
 
     class Meta:
         model = Invite
-        fields = ['invite_from', 'team','message']
+        fields = ['id', 'invite_from', 'team','message']
 
 
 class UserSerializer(HyperlinkedModelSerializer):
