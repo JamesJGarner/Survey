@@ -293,6 +293,23 @@ dd.accordion-navigation {
   line-height: 55px;
 }
 
+#notification {
+  position: absolute;
+  bottom: 0px;
+  right: 21px;
+  width: 300px;
+}
+
+#notification li {
+	background-color: rgba(49, 97, 165, 0.34);
+	list-style: none;
+	padding: 10px;
+	margin-top: 19px;
+	float: left;
+	width: 100%;
+	border: 1px solid rgba(51, 51, 51, 0.21);
+}
+
 
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */

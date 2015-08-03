@@ -73,6 +73,28 @@ function TeamListUpdate(SearchQuery) {
 
 
 
+function Notfiy() {
+    $.getJSON("/api/notifications/?&t=" + +new Date(), function (data) {
+		    var items = [];
+
+		    $.each( data, function( key, val ) {
+		        var datastring = '<li id="note{0}"><span>{1} </span> <p>{2}</p></li>';
+				items.push(
+					String.format(
+						datastring,
+						val["id"],
+						val["title"],
+						val["text"]
+						)
+				);
+  			});
+			$('#notification').append(items)
+		});
+}
+
+
+
+
 
 
 
