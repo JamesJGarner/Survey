@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div id="teammateadd" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<div id="teammateadd" class="reveal-modal meduim" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 		<h2>Add Teammate</h2>
 		<hr>
 
@@ -54,9 +54,7 @@
 					<a href="/widgets/polls/{{ poll.id }}" class="right poll-edit"><i class="fa fa-cog"></i> Edit</a> 
 					<h5>{{ poll.title }}</h5>
 					<small>by {{ poll.created_by.first_name }} {{ poll.created_by.last_name }}</small>
-
 				</li>
-			
 			{% endfor %}
 			</ul>
 
@@ -80,7 +78,7 @@
 	        setTimeout(failed, 500);
 	    }).done(function () {
 	        setTimeout(complete, 500);
-	        ViewType("/api/user/" + userid + "/?", "#team");
+	        TeamListUpdate(userid);
 	        $('#user' + userid).html("<p>User has been invited</p>")
 	    });
 

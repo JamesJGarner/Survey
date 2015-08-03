@@ -9,7 +9,7 @@ class UserProfileModelSerializer(ModelSerializer):
 
     class Meta:
         model = UserProfile
-        fields = ['id', 'username']
+        fields = ['profile_picture']
 
 
 class UserModelSerializer(ModelSerializer):
@@ -36,8 +36,7 @@ class InviteSerializer(HyperlinkedModelSerializer):
 
 
 class UserSerializer(HyperlinkedModelSerializer):
-
+    userprofile = UserProfileModelSerializer()
     class Meta:
         model = User
-        userprofile = UserProfileModelSerializer()
-        fields = ['id', 'username', 'first_name', 'last_name', 'email', 'is_staff']
+        fields = ['id', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'userprofile']

@@ -15,21 +15,34 @@ class API(DetailView):
     template_name = 'site/js.html'
 
 
+def TeamPlayers(teamID):
+    tlist = []
+    players = TeamMate.objects.filter(team=teamID)
+    
+    for player in players:
+        tlist.append(player.user.id)
+
+    return tlist
+
+
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
     """
     View the detail of a user and filter by team the avalible users that can be invited
     """
     def get_queryset(self):
+        inviteable = self.request.query_params.get('inviteable', None)
         team = self.request.query_params.get('team', None)
-        print team
-        exclude = []
+        queryset = User.objects.all();
+
+        if inviteable:
+            tlist = TeamPlayers(inviteable)
+            return User.objects.exclude(pk__in=tlist)
 
         if team:
-            teams = TeamMate.objects.filter(team=team)
-            for person in teams:
-                exclude.append(person.user.id)
+            tlist = TeamPlayers(team)
+            return User.objects.filter(pk__in=tlist)
+
         
-        queryset = User.objects.exclude(pk__in=exclude)
         return queryset
 
     serializer_class = UserSerializer
