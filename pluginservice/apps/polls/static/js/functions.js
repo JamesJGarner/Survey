@@ -121,7 +121,6 @@ function GetInviteList() {
 
 	    $.each( data, function( key, val ) {
 	        var datastring = '<form action="/team/invitereponse/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="{0}"><input type="hidden" name="invite_id" value="{1}"><p>{2} has invited you to <b>{3}</b><input type="submit" name="accept" value="Accept"> / <input type="submit" name="accept" value="Decline"></form></p>';
-			console.log(val);
 			items.push(
 				String.format(
 					datastring,
@@ -137,13 +136,30 @@ function GetInviteList() {
 }
 
 
+$(document).ready(function(){ 
+
+	if (document.getElementById('invites') !== null) {
+	  GetInviteList();
+	}
+
+	if (typeof Team !== 'undefined') {
+	  GetTeamList(Team);
+    }
+})
 
 
 
 
 
 window.setInterval(function(){
-  GetTeamList(Team);
+
+	if (document.getElementById('invites') !== null) {
+	  GetInviteList();
+	}
+
+	if (typeof Team !== 'undefined') {
+	  GetTeamList(Team);
+    }
 }, 5000);
 
 

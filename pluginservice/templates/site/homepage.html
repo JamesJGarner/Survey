@@ -24,12 +24,17 @@
 					<h4>Your Teams <small><a href="#" class="right"><i class="fa fa-bars"></i></a> <a href="/team/#panel{{ team.team.id }}" class="right"><i class="fa fa-cog"></i></a></small></h4>
 			<hr>
 				<ul class="email-checkboxes">
-				{% for team in teams %}
-					{% if team.admin == True %}    
-					<li><label><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a></label></li><hr>
-					{% endif %}
-				{% endfor %}   
+ 				{% for team in teams %}
+					{% if team.admin == True %}
+						<li><label><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a> - <a href="/team/#panel{{ team.team.id }}">Manage</a></label></p></li><hr>
+						 
+					{% else %}
+						<li><label><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a></label></li><hr>
+ 					{% endif %}
+				{% endfor %}	
 				</ul>
+				<h4>Invites</h4>
+				<div id="invites"></div>
 				</div>
 			</div>
 		</div>
