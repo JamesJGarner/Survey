@@ -2,7 +2,6 @@
 {% block content %}
 	{% if user.is_authenticated  %}
 		<div class="row">
-		
 		<div class="panel learnmore"><br/>
 				<div class="left"><h2>Interested in learning about how you use Semety?</h2></div>
 				<div class="right">
@@ -11,25 +10,46 @@
 				<center><a href="#" class="underline">No thanks, I got it.</a></center>
 		</div>
 		</div>
-			<div class="large-12 columns">
-				<h2>Welcome to Semety.</h2>
-				<p>The best platform for your website.</p>
-
-				<hr>
-				<h4>Your Teams</h4>
+		<hr>
+		<div class="panel">
+		<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
+		<h3 class="right"><span class="teamname"> Placement for extra options </span></h3>
+		<hr/>
+			<div class="row">
+				<div class="large-7 columns">
+				
+				</div>
+				<div class="large-5 columns right">
+					<div class="panel sutle right sutledash">
+					<h4>Your Teams <small><a href="#" class="right"><i class="fa fa-bars"></i></a> <a href="/team/#panel{{ team.team.id }}" class="right"><i class="fa fa-cog"></i></a></small></h4>
+			<hr>
+				<ul class="email-checkboxes">
 				{% for team in teams %}
-					{% if team.admin == True %}
-						<p><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a> -
-						 <a href="/team/#panel{{ team.team.id }}">Manage</a></p>
-					{% else %}
-						<p><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a></p>
+					{% if team.admin == True %}    
+					<li><label><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a></label></li><hr>
 					{% endif %}
-				{% endfor %}				
-				<hr>
-				<h4>Invites</h4>
-				<div id="invites"></div>
+				{% endfor %}   
+				</ul>
+				</div>
 			</div>
 		</div>
+		<hr class="invisible">
+		<h3 class="left">Keyword Activity</h3>
+		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle"></i></a></small></h3>
+		<hr/>
+		<small><p><a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
+		<hr>
+		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong> 137 </a>
+		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-book"></i> Harry Potter <strong>x</strong> 285 </a>
+		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong> 203 </a>
+		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong> 77 </a>
+		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong> 77 </a>
+		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong> 77 </a>
+		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong> 137 </a>
+		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong> 137 </a>
+		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong> 203 </a>
+		
+		</div><br/><br/>
 	{% else %}
 	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 		<h2>Login</h2>

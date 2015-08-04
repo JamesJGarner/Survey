@@ -72,7 +72,7 @@ body {
 	text-decoration: none !important;
 }
 .learnmore a:hover {
-	text-decoration: underline;
+	border-bottom: 1px dotted #fff !important;
 }
 .bluebackground {
 	background-color: rgb(51, 96, 163);
@@ -279,6 +279,21 @@ dd.accordion-navigation {
     background-color: #CCCBCB;
     /* box-sizing: content-box; */
     padding: 7px;
+}
+.sutledash {
+	width: 100%;
+}
+.sutledash label{
+	padding-bottom: 15px !important;
+	margin-left: 0px;
+	
+}
+.green {
+	color: #43ac6a;
+}
+.sutledash small {
+	line-height: 30px !important;
+	font-size: large !Important;
 }
 .accordion .accordion-navigation > .content, .accordion dd > .content {
   padding:0 !important;
