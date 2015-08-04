@@ -19,25 +19,38 @@
 				<div class="large-7 columns">
 				
 				</div>
-				<div class="large-5 columns right">
-					<div class="panel sutle right sutledash">
+				<div class="large-12 columns">
+
 					<h4>Your Teams <small><a href="#" class="right"><i class="fa fa-bars"></i></a> <a href="/team/#panel{{ team.team.id }}" class="right"><i class="fa fa-cog"></i></a></small></h4>
-			<hr>
-				<ul class="email-checkboxes">
+			
+				<ul class="yourteams">
  				{% for team in teams %}
 					{% if team.admin == True %}
-						<li><label><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a> - <a href="/team/#panel{{ team.team.id }}">Manage</a></label></p></li><hr>
+						<li>
+							<span class="left">
+							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
+							</span>
+							<span class="right">
+							<a href="/team/#panel{{ team.team.id }}" class="manage">Manage</a>
+							</span>
+						</li>
 						 
 					{% else %}
-						<li><label><a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a></label></li><hr>
+						<li>
+							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
+						</li>
  					{% endif %}
 				{% endfor %}	
 				</ul>
-				<h4>Invites</h4>
-				<div id="invites"></div>
+				</div><div class="large-12 columns">
+				<br>
+				<h4>Your Invitations</h4>
+				<hr>
+				<ul id="invites"></ul>
 				</div>
-			</div>
-		</div>
+				</div>
+		
+		
 		<hr class="invisible">
 		<h3 class="left">Keyword Activity</h3>
 		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle"></i></a></small></h3>

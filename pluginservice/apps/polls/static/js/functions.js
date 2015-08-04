@@ -120,7 +120,7 @@ function GetInviteList() {
 	    var items = [];
 
 	    $.each( data, function( key, val ) {
-	        var datastring = '<form action="/team/invitereponse/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="{0}"><input type="hidden" name="invite_id" value="{1}"><p>{2} has invited you to <b>{3}</b><input type="submit" name="accept" value="Accept"> / <input type="submit" name="accept" value="Decline"></form></p>';
+	        var datastring = '<form action="/team/invitereponse/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="{0}"><input type="hidden" name="invite_id" value="{1}"><li><span class="left">{2} has invited you to <b>{3}</b></span><span class="right"><input type="submit" name="accept" value="Accept"> <input type="submit" name="accept" value="Decline"></span></li></form>';
 			items.push(
 				String.format(
 					datastring,
