@@ -12,18 +12,21 @@
 		</div>
 		<hr>
 		<div class="panel">
-		<h3 class="left"><span class="teamname">{{ user.username|title  }}'s</span> Dashboard</h3>
-		<h3 class="right"><span class="teamname"> Placement for extra options </span></h3>
+		<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
+		<h3 class="right"><span class="teamname"> Analytics </span></h3>
 		<hr/>
 			<div class="row">
-				<div class="large-7 columns">
-				
-				</div>
-				<div class="large-12 columns">
-
-					<h4>Your Teams <small><a href="#" class="right"><i class="fa fa-bars"></i></a> <a href="/team/#panel{{ team.team.id }}" class="right"><i class="fa fa-cog"></i></a></small></h4>
-			
-				<ul class="yourteams">
+			<div class="large-12 columns">
+				<section class="tabs-example">
+				  <ul class="tabs" data-tab="">
+					<li class="tab-title active"><a href="#panel2-1"><i class="fa fa-envelope-o"></i> Check Your Invites</a></li>
+					<li class="tab-title"><a href="#panel2-2"><i class="fa fa-users"></i> View Your Teams </a></li>
+					<li class="tab-title"><a href="#"><i class="fa fa-cog"></i> Create a Widget</a></li>
+					<li class="tab-title right"><a href="#"><i class="fa fa-question-circle"></i></a></li>
+				  </ul>
+				  <div class="tabs-content">
+					<div class="content active" id="panel2-1">
+					<ul class="yourteams">
  				{% for team in teams %}
 					{% if team.admin == True %}
 						<li>
@@ -41,32 +44,36 @@
 						</li>
  					{% endif %}
 				{% endfor %}	
-				</ul>
-				</div><div class="large-12 columns">
-				<br>
-				<h4>Your Invitations</h4>
-				<hr>
-				<ul id="invites"></ul>
+				</ul>		  
+					</div>
+					<div class="content" id="panel2-2">
+					<ul id="invites"></ul>
+					</div>
 				</div>
-				</div>
+					<div class="content" id="panel2-3">
+					</div>
+				  </div>
+				</section>
+		</div>
 		
 		
-		<hr class="invisible">
-		<h4 class="left">Keyword Activity</h4>
+			<hr class="invisible">
+		<h3 class="left">Keyword Activity</h3>
 		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle"></i></a></small></h3>
 		<hr/>
-		<small><p><a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
+		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
 		<hr>
-		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong> 137 </a>
-		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-book"></i> Harry Potter <strong>x</strong> 285 </a>
-		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong> 203 </a>
-		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong> 77 </a>
-		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong> 77 </a>
-		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong> 77 </a>
-		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong> 137 </a>
-		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong> 137 </a>
-		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong> 203 </a>
-		
+		<div class="keywordactivity"><center>
+	<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
+		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-book"></i> Harry Potter <strong>x</strong><span class="keywordactivity2"> 285 </span></a>
+		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong><span class="keywordactivity2"> 203 </span></a>
+		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong><span class="keywordactivity2"> 77 </span></a>
+		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong><span class="keywordactivity2"> 77 </span></a>
+		<a href="#" class="secondary tiny button NoBorder"> <i class="fa fa-facebook-official"></i> Facebook <strong>x</strong><span class="keywordactivity2"> 77 </span></a>
+		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
+		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
+		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong><span class="keywordactivity2"> 203 </span></a>
+		</center></div>
 		</div><br/><br/>
 	{% else %}
 	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
