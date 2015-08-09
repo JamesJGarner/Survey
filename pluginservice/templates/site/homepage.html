@@ -13,7 +13,13 @@
 		<hr>
 		<div class="panel clearfix">
 		<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
-		<h3 class="right"><span class="teamname"> Analytics </span></h3>
+		<h3 class="right"><span class="teamname"> <a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-bars veryblue"></i></a> </span></h3>
+		<ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+		  <li><a href="#"><i class="fa fa-comments"></i> Keyword Activity</a></li>
+		  <li><a href="#"><i class="fa fa-users"></i> Interests Report</a></li>
+		  <li><a href="#"><i class="fa fa-bar-chart"></i> Traffic Sources</a></li>
+		  <li><a href="#"><i class="fa fa-globe"></i> Demographics</a></li>
+		</ul>
 		<hr/>
 			<div class="row">
 			<div class="large-12 columns">
@@ -35,6 +41,7 @@
 							</span>
 							<span class="right">
 							<a href="/team/#panel{{ team.team.id }}" class="manage"><i class="fa fa-cog"></i> Manage</a>
+							<a href="#" class="manage"><i class="fa fa-bar-chart"></i> View Analytics</a>
 							</span>
 						</li>
 						 

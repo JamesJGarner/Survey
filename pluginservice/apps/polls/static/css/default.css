@@ -356,11 +356,15 @@ dd.accordion-navigation {
     padding: 10px;
     float: left;
     width: 100%;
+	background-color: #fff;
+	margin: 10px 0px 10px 0px;
 }
 
 .yourteams li a {
     font-size: large;
 	color: #333333;
+	padding: 10px;
+	font-family: 'Raleway', sans-serif;
 }
 .yourteams li a:hover {
 	color: rgba(51, 96, 163, 0.93);
