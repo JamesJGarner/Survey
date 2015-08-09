@@ -385,6 +385,14 @@ dd.accordion-navigation {
 .yourteams {
 	padding: 10px 0px 10px 0px;
 }
+.radarreport {
+	width: 100%;
+	padding: 25px 0px 25px 0px;
+
+}
+.veryblue {
+	color: rgba(51, 96, 163, 0.93) !important;
+}
 /* --------------------------------------- */
 /* ------------ MAIN STYLES END ---------- */
 /* --------------------------------------- */

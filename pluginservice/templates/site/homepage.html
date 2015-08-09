@@ -11,7 +11,7 @@
 		</div>
 		</div>
 		<hr>
-		<div class="panel">
+		<div class="panel clearfix">
 		<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
 		<h3 class="right"><span class="teamname"> Analytics </span></h3>
 		<hr/>
@@ -19,9 +19,9 @@
 			<div class="large-12 columns">
 				<section class="tabs-example">
 				  <ul class="tabs" data-tab="">
-					<li class="tab-title active"><a href="#panel2-1"><i class="fa fa-envelope-o"></i> Check Your Invites</a></li>
-					<li class="tab-title"><a href="#panel2-2"><i class="fa fa-users"></i> View Your Teams </a></li>
-					<li class="tab-title"><a href="#"><i class="fa fa-cog"></i> Create a Widget</a></li>
+					<li class="tab-title active"><a href="#panel2-1"><i class="fa fa-users"></i> View Your Teams</a></li>
+					<li class="tab-title"><a href="#panel2-2"><i class="fa fa-envelope-o"></i> Check Your Invites</a></li>
+					<li class="tab-title"><a href="/create/"><i class="fa fa-cog"></i> Create a Widget</a></li>
 					<li class="tab-title right"><a href="#"><i class="fa fa-question-circle"></i></a></li>
 				  </ul>
 				  <div class="tabs-content">
@@ -34,7 +34,7 @@
 							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
 							</span>
 							<span class="right">
-							<a href="/team/#panel{{ team.team.id }}" class="manage">Manage</a>
+							<a href="/team/#panel{{ team.team.id }}" class="manage"><i class="fa fa-cog"></i> Manage</a>
 							</span>
 						</li>
 						 
@@ -57,11 +57,11 @@
 		</div>
 		
 		
-			<hr class="invisible">
+		<hr class="invisible">
 		<h3 class="left">Keyword Activity</h3>
-		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle"></i></a></small></h3>
+		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle veryblue"></i></a></small></h3>
 		<hr/>
-		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
+		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <strong><a href="#">This week</a></strong> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
 		<hr>
 		<div class="keywordactivity"><center>
 	<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
@@ -73,8 +73,54 @@
 		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
 		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
 		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong><span class="keywordactivity2"> 203 </span></a>
+		<br/>
+		<a href="#" class="secondary tiny button NoBorder"><strong>LOAD MORE...</strong></a>
 		</center></div>
-		</div><br/><br/>
+		<hr class="invisible">
+		<h3 class="left">Interests Report</h3>
+		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle veryblue"></i></a></small></h3>
+		<hr/>
+		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <strong><a href="#">Overall</a></strong></p></small>
+		<hr>
+		<div class="radarreport">
+		<canvas id="canvas"></canvas>
+		</div>
+		<script>
+			var radarChartData = {
+				labels: ["Radar Interest #1", "Radar Interest #2", "Radar Interest #3", "Radar Interest #4", "Radar Interest #5", "Radar Interest #6", "Radar Interest #7"],
+				datasets: [
+					{
+						label: "My First dataset",
+						fillColor: "rgba(220,220,220,0.2)",
+						strokeColor: "rgba(220,220,220,1)",
+						pointColor: "rgba(220,220,220,1)",
+						pointStrokeColor: "#fff",
+						pointHighlightFill: "#fff",
+						pointHighlightStroke: "rgba(220,220,220,1)",
+						data: [65,59,90,81,56,55,40]
+					},
+					{
+						label: "My Second dataset",
+						fillColor: "rgba(151,187,205,0.2)",
+						strokeColor: "rgba(151,187,205,1)",
+						pointColor: "rgba(151,187,205,1)",
+						pointStrokeColor: "#fff",
+						pointHighlightFill: "#fff",
+						pointHighlightStroke: "rgba(151,187,205,1)",
+						data: [28,48,40,19,96,27,100]
+					}
+				]
+			};
+
+			window.onload = function(){
+				window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {
+					responsive: true
+				});
+			}
+	</script>
+<br/>
+<br/>
+		
 	{% else %}
 	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 		<h2>Login</h2>
