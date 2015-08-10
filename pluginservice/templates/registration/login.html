@@ -4,9 +4,16 @@
 <div class="row">
       <div class="large-12 columns panel registerleft"><br/>
 	  <div class="loginbox marginauto">
+	  
 <center><a href="/"><img src="/static/img/logo.png"/></a></center>
-        <hr>
-        <form action="/login/" method="post">
+        <hr class="invisible">
+		<center><h5>Choose your way to log in.</h5></center><br/>
+		<div class="social-signup">
+            <a class="btn-connect-option facebook badge-facebook-connect marginleft20" href="#" onclick="GAG.GA.track('login-signup', 'facebook-connect', 'signup-form');">Facebook</a>
+            <span class="badge-gplus-connect" id="gplus_855192" data-gapiattached="true"><a class="btn-connect-option google-plus" href="javascript:void(0);" onclick="GAG.GPlus.btnClicked = true; GAG.GA.track('login-signup', 'gplus-connect', 'signup-form');">Google</a></span>
+		</div>
+		<hr>
+        <form action="/login/" method="post" class="registerform">
             <input type='hidden' name='csrfmiddlewaretoken' value='wyW155812Kwk1FUXaCwwYYpzLIStpL69' />
             <p><input id="id_username" maxlength="254" name="username" type="text" placeholder="Username or E-mail..." /></p>
 <p><input id="id_password" name="password" type="password" placeholder="Enter your password.." /></p>
