@@ -369,13 +369,23 @@ span {
 	height: 871px;
 	padding: 0px !important;
 	background-image: url('../img/norway.jpg');
-	border-bottom-color: rgb(216, 216, 216);
-	border-bottom-style: solid;
-	border-bottom-width: 3px;
-	border-left-color: rgb(216, 216, 216);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
 }
+
+.registerleft {
+    background: none;
+    border: none;
+}
+
 .registerbox h4 {
-	padding: 50px 50px 0px 50px;
+	padding: 100px 50px 0px 50px;
 	font-size: xx-largE;
 	margin: 0px;
 	font-family: 'Raleway', sans-serif !important;
