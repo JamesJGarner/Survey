@@ -479,3 +479,9 @@ aside {
 .registerboxfooter .right h2 a:Hover {
 	text-decoration: underline;
 }
+.marginauto {
+	margin: auto !important;
+}
+.loginbox {
+	width: 500px;
+}
