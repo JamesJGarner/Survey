@@ -364,3 +364,108 @@ span {
     font-weight: 200 !important;
 	color: #fff;
 }
+.registerbox{
+	width: 100%;
+	height: 887px;
+	padding: 0px !important;
+	background-image: url('../img/norway.jpg');
+	border-bottom-color: rgb(216, 216, 216);
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-left-color: rgb(216, 216, 216);
+}
+.registerbox h4 {
+	padding: 50px 50px 0px 50px;
+	font-size: xx-largE;
+	margin: 0px;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: bold;
+}
+.registerbox h3 {
+	color: #fff;
+	padding: 0px 50px 50px 50px;
+	font-family: 'Raleway', sans-serif !important;
+}
+.registerbox h5{
+	color: #fff;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: 300;
+    font-size: 1.25rem;
+	text-shadow: 1px 1px 1px #000;
+	padding: 0px 10px 20px 50px;
+}
+.yellow {
+	color: #f0c55d;
+}
+.nopadding {
+	padding: 0px !important;
+}
+.registerlogo {
+	width: 150px;
+	margin-bottom: 25px;
+}
+.registerleft h1{
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif !important;
+	color: rgb(51, 96, 163);
+	padding-top: 20px;
+}
+.registerleft p {
+	font-family: 'Raleway', sans-serif !important;
+}
+a.btn-connect-option.facebook {
+    background: #3b5998 url(../img/btn-connect-option.png) no-repeat;
+    margin-right: 20px;
+}
+a.btn-connect-option {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #2D72D9;
+    color: #fff;
+    width: 219px;
+    height: 60px;
+    line-height: 28px;
+    text-align: center;
+    padding: 15px 15px 15px 60px;
+    border-radius: 3px;
+    float: left;
+	margin-bottom: 20px;
+}
+a.btn-connect-option:hover {
+	opacity: 0.8;
+}
+a.btn-connect-option.google-plus {
+    background: #DC4D28 url(../img/btn-connect-option.png) no-repeat 0 -60px;
+}
+section#signup .social-signup {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.registerform input {
+	border-radius: 5px;
+	padding: 20px;
+	font-family: 'Raleway', sans-serif !important;
+}
+.buttonregister {
+	width: 100%;
+	background-color: rgb(51, 96, 163);
+}
+aside {
+	float: right;
+}
+.registerboxfooter {
+	margin-top: 250px;
+	margin-lefT: 20px;
+}
+.registerboxfooter h1 {
+	color: #fff;
+	display:inline-block;
+}
+.registerboxfooter h2 {
+	color: #fff;
+	display:inline-block;
+	font-size: 1rem;
+}

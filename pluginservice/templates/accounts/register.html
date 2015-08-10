@@ -1,18 +1,45 @@
 {% extends 'base.html' %}
-
 {% block content %}
         <br>
 <div class="row">
-    <div class="large-6 columns">
-        <h1>Register</h1>
-        <hr>
-        <form action="" method="post">
-            {% csrf_token %}
+    <div class="large-6 columns panel registerleft">
+        <h1>Good Morning!</h1><br/>
+		<p><strong>This day will be great.</strong> Join Semety so that you can bring your web visitors a completely modern and easy way of engaging.</p>
+		<hr class="invisible">
+		<center><h5>Automatic sign up using Social Media.</h5></center><br/>
+		<div class="social-signup">
+            <a class="btn-connect-option facebook badge-facebook-connect" href="#" onclick="GAG.GA.track('login-signup', 'facebook-connect', 'signup-form');">Facebook</a>
+            <span class="badge-gplus-connect" id="gplus_855192" data-gapiattached="true"><a class="btn-connect-option google-plus" href="javascript:void(0);" onclick="GAG.GPlus.btnClicked = true; GAG.GA.track('login-signup', 'gplus-connect', 'signup-form');">Google</a></span>
+        </div>
+		<hr class="invisible">
+		<center><h5>Or, do it manually.</h5></center><br/>
+        <form action="" method="post" class="registerform">
+            <input type="hidden" name="csrfmiddlewaretoken" value="wyW155812Kwk1FUXaCwwYYpzLIStpL69">
 
-            {{ form.as_p }}
-             <input type="submit" value="Register" class="small button" / >
+            <p><input id="id_username" maxlength="30" name="username" type="text" placeholder="Desired Semety Username..."></p>
+			<p><input id="id_email" name="email" type="email" placeholder="Your E-mail adress..."></p>
+			<p><input id="id_first_name" maxlength="30" name="first_name" type="text" placeholder="Enter your first name..."></p>
+			<p><input id="id_last_name" maxlength="30" name="last_name" type="text" placeholder="Write your surname..."></p>
+			<p><input id="id_password1" name="password1" type="password" placeholder="Password, make sure it's secure..."></p>
+			<p><input id="id_password2" name="password2" type="password" placeholder="Enter your password again..."></p>
+			<input type="submit" value="Register Now" class="button buttonregister">
         </form>
     </div>
+	<div class="large-6 columns nopadding">
+	<div class="registerbox">
+		<h4><span class="yellow">CHECK THIS OUT</span></h4>
+		<h3>Norway</h3>
+		<aside>
+			<h5>There are currently <strong>14.785 users</strong> on Semety in Norway, all using the product you'll get for free at this very moment.</h5>
+			<h5>The users have generated a total of <strong>287,342 functions</strong> that are active and used on their own websites and others.</h5>
+			<h5>Semety estimates that they will gain a total of <strong>215 Million NOK</strong> more by using Semety's functions!</h5>
+		</aside>
+	<hr class="invisible">
+	<div class="registerboxfooter">
+		<h1><i class="fa fa-map-marker"></i></h1><h2> <strong>Norway</strong>,<br/> Drammen</h2>
+	</div>
+	</div>
+	</div>
 </div>
 
 
