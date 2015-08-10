@@ -366,7 +366,7 @@ span {
 }
 .registerbox{
 	width: 100%;
-	height: 887px;
+	height: 871px;
 	padding: 0px !important;
 	background-image: url('../img/norway.jpg');
 	border-bottom-color: rgb(216, 216, 216);
@@ -468,4 +468,14 @@ aside {
 	color: #fff;
 	display:inline-block;
 	font-size: 1rem;
+}
+.registerboxfooter .right h2 {
+	margin-right: 20px;
+	margin-top: 25px;
+}
+.registerboxfooter .right h2 a {
+	color: #fff;
+}
+.registerboxfooter .right h2 a:Hover {
+	text-decoration: underline;
 }
