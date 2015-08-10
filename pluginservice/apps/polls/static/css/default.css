@@ -146,7 +146,7 @@ body {
 .left100 {
   float:left;
   width: 100%;
-  	-webkit-transition-property: width; 
+  	-webkit-transition-property: width;
 	transition-property: width;
 }
 
@@ -286,7 +286,7 @@ dd.accordion-navigation {
 .sutledash label{
 	padding-bottom: 15px !important;
 	margin-left: 0px;
-	
+
 }
 .green {
 	color: #43ac6a;
@@ -352,7 +352,7 @@ dd.accordion-navigation {
 
 .yourteams li {
     list-style: none;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
     padding: 10px;
     float: left;
     width: 100%;
@@ -453,7 +453,7 @@ h6 {
   font-size: x-large;
 }
 .managepollsection h4, .managepollsection p {
-	white-space: nowrap; 
+	white-space: nowrap;
 	display: inline-block;
 }
 .managepollsection .marked  p{
@@ -520,7 +520,7 @@ h6 {
 }
 .buttonSelected2{
   background-color: rgb(51, 96, 163) !important;
-  color: #fff !important; 
+  color: #fff !important;
 }
 .buttonSelected2:hover{
   background-color: #fff !important;

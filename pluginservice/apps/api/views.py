@@ -23,8 +23,8 @@ def TeamPlayers(teamID):
     invites = Invite.objects.filter(team=teamID, closed=False)
 
     for player in invites:
-        tlist.append(player.invite_to.id)   
-    
+        tlist.append(player.invite_to.id)
+
     for player in players:
         tlist.append(player.user.id)
 
@@ -48,7 +48,7 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
             tlist = TeamPlayers(team)
             return User.objects.filter(pk__in=tlist)
 
-        
+
         return queryset
 
     serializer_class = UserSerializer

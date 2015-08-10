@@ -14,8 +14,7 @@
 		<hr class="invisible">
 		<center><h5>Or, do it manually.</h5></center><br/>
         <form action="" method="post" class="registerform">
-            <input type="hidden" name="csrfmiddlewaretoken" value="wyW155812Kwk1FUXaCwwYYpzLIStpL69">
-
+            {% csrf_token %}
             <p><input id="id_username" maxlength="30" name="username" type="text" placeholder="Desired Semety Username..."></p>
 			<p><input id="id_email" name="email" type="email" placeholder="Your E-mail adress..."></p>
 			<p><input id="id_first_name" maxlength="30" name="first_name" type="text" placeholder="Enter your full name..."></p>

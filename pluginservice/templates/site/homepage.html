@@ -12,7 +12,7 @@
 		</div>
 		<hr>
 		<div class="panel clearfix">
-		<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
+		<h3 class="left"><span class="teamname">{{ user.username|title  }}'s</span> Dashboard</h3>
 		<h3 class="right"><span class="teamname"> <a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-bars veryblue"></i></a> </span></h3>
 		<ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
 		  <li><a href="#"><i class="fa fa-comments"></i> Keyword Activity</a></li>
@@ -34,7 +34,7 @@
 					<div class="content active" id="panel2-1">
 					<ul class="yourteams">
  				{% for team in teams %}
-					{% if team.admin == True %}
+					{% if team.admin %}
 						<li>
 							<span class="left">
 							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
@@ -44,14 +44,14 @@
 							<a href="#" class="manage"><i class="fa fa-bar-chart"></i> View Analytics</a>
 							</span>
 						</li>
-						 
+
 					{% else %}
 						<li>
 							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
 						</li>
  					{% endif %}
-				{% endfor %}	
-				</ul>		  
+				{% endfor %}
+				</ul>
 					</div>
 					<div class="content" id="panel2-2">
 					<ul id="invites"></ul>
@@ -62,8 +62,8 @@
 				  </div>
 				</section>
 		</div>
-		
-		
+
+
 		<hr class="invisible">
 		<h3 class="left">Keyword Activity</h3>
 		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle veryblue"></i></a></small></h3>
@@ -127,7 +127,7 @@
 	</script>
 <br/>
 <br/>
-		
+
 	{% else %}
 	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 		<h2>Login</h2>
@@ -167,7 +167,7 @@
 					<img src="/static/img/logo2.png"/><br/>
 					<h2>Experience the Freedom it Brings.</h2>
 					<h3>Bring your web visitors a completely modern and easy way of engaging</h3><br/>
-					
+
 					<a href="/register/" class="secondary button small buttonSelected3 big"> Start right now, it's free →</a>
 				</center>
 		</div>
@@ -184,7 +184,7 @@
 							<h2 style="text-align:right;"><i class="fa fa-bar-chart"></i></h2>
 					</div>
 					<div class="clearfix"></div>
-											
+
 					<a href="#">
 						<div class="polloption">
 							<h3>Yes, this sounds very interesting!</h3>
@@ -200,7 +200,7 @@
 								<h3>I don't have any opinion, I just came to check it out.</h3>
 						</div>
 					</a>
-											
+
 					<div class="pollfooter">
 						<a href=""><small>Powered by Semety 2015</small></a>
 					</div>
@@ -227,7 +227,7 @@
 	<div class="landingdark">
 		<div class="row">
 			<div class="large-7 columns">
-				
+
 			</div>
 			<div class="large-5 columns"><br/>
 				<h5>Be in the team you deserve, literally.</h5>
@@ -242,7 +242,7 @@
 				<h6>Semety will always have your back and let you choose everything you'd ever want to have, <a href="#">just read our success stories</a> and see for yourself.</h6>
 			</div>
 			<div class="large-6 columns"><br/>
-			
+
 			</div>
 		</div>
 	</div>
@@ -256,13 +256,13 @@
 					<li><img src="/static/img/home/frontpage/3.png"></li>
 					<li><img src="/static/img/home/frontpage/4.png"></li>
 					<li><img src="/static/img/home/frontpage/5.png"></li>
-					<li><img src="/static/img/home/frontpage/6.png"></li>				
+					<li><img src="/static/img/home/frontpage/6.png"></li>
 				</ul><br/><hr/><br/>
 				<h6>Our users have already generated <strong>460 functions</strong>, are you ready?</h6><br/><br/>
-				
+
 				<a href="#" class="secondary button small buttonSelected2 big">Want to read more?</a>
 			</center>
 		</div>
-				
+
 	{% endif %}
 {% endblock%}

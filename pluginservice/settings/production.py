@@ -43,8 +43,9 @@ INSTALLED_APPS = (
     'pluginservice.apps.polls',
     'pluginservice.apps.accounts',
     'pluginservice.apps.teams',
+    'pluginservice.apps.navigation',
     'pluginservice.apps.notifications',
-    'rest_framework',
+    'rest_framework'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -78,6 +79,7 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
+    'pluginservice.context.navigation'
 )
 
 ROOT_URLCONF = 'pluginservice.urls'
