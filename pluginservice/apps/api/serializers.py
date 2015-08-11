@@ -1,8 +1,9 @@
 from rest_framework.serializers import HyperlinkedModelSerializer, HyperlinkedRelatedField
 from pluginservice.apps.teams.models import Invite, Team
 from pluginservice.apps.notifications.models import Notification
-from django.contrib.auth.models import User
 from pluginservice.apps.accounts.models import UserProfile
+from pluginservice.apps.polls.models import Vote, Poll
+from django.contrib.auth.models import User
 from rest_framework.serializers import ModelSerializer
 
 
@@ -48,6 +49,15 @@ class NotificationSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Notification
         fields = ['id', 'title', 'text']
+
+
+class PollVoteSerializer(ModelSerializer):
+
+    class Meta:
+        model = Vote
+
+        fields = ['choice', 'timestamp']
+
 
 
 

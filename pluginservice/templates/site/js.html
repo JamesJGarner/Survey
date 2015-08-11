@@ -1,16 +1,22 @@
 {% ifequal poll.deleted False %}
 function IniPoll() {
 
-	html = '<div class="poll-container">'
+	html = '<div class="poll-container" id="p-contain">'
 	html += "<h3>{{ poll.title}}</h3>";
 
 	html += '<ul>';
 	{% for a in poll.pollanswer_set.all %}
-		html += '<li>{{ a.answer }}</li>'
+		html += '<a onclick="Answer( {{ a.id}} )"><li>{{ a.answer }}</li></a>'
 	{% endfor %}
 	html +='</ul></div>';
 	$('#poll').append(html);
 }
+
+function Answer(id) {
+    $('#p-contain h3').html("You result has been submitted!");
+    $('#p-contain ul').addClass("disabled");
+}
+
 
 IniPoll();
 

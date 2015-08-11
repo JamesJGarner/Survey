@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% if user.is_authenticated %} /* check if also the owner */
 <div class="row">
 		<div class="large-12 columns">
 		<div class="panel simple">
@@ -28,16 +30,34 @@
 					</div>
 					<div class="large-4 columns">
 					<p>LAYOUT</p>
-					<a href="/"><img class="logo" src="/static/img/water.jpg"></a>   
+					<a href="/"><img class="logo" src="/static/img/water.jpg"></a>
 					</div>
 					<div class="large-4 columns">
-					MORE COMING			
+					MORE COMING
 					</div>
 				</div>
 			</div>
 		</div>
 </div>
+{% else %}
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="http://localhost:8000/static/css/polls.css" />
+<style type="text/css">
+    body {
+            background: rgba(0, 0, 0, 0.89);
+    }
 
+    #poll {
+            margin: auto;
+    max-width: 600px;
+    margin-top: 10%;
+    }
+
+</style>
+<div id="poll"></div>
+<script src="http://localhost:8000/api/widgets/polls/1.js"></script>
+
+{% endif %}
 {% endblock content %}
 				<!--
 					<a href="#" class="secondary button small"><i class="fa fa-info-circle"></i> MORE INFORMATION</a>

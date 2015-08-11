@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from pluginservice.settings.production import CURRENT_SITE_URL
 from .forms import CreateForm
 from pluginservice.apps.teams.models import Team, TeamMate
-from django.http import Http404  
+from django.http import Http404
 
 class PollHome(TemplateView):
     template_name = 'polls/polls_home.html'
@@ -20,9 +20,6 @@ class PollList(DetailView):
         context = super(PollList, self).get_context_data(**kwargs)
 
         people = TeamMate.objects.filter(team=self.kwargs['pk'])
-        print people
-        wd = []
-        print wd
         exists = False
         if people:
             for person in people:
@@ -38,7 +35,7 @@ class PollList(DetailView):
 
             context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])
         else:
-            raise Http404  
+            raise Http404
 
         return context
 
@@ -60,7 +57,7 @@ class PollCreate(CreateView):
         choice2 = form.cleaned_data['choice2']
         choice3 = form.cleaned_data['choice3']
 
-        
+
         if choice1 != "":
             CreateAnswers = PollAnswer.objects.create(poll=self.object, answer=choice1)
             CreateAnswers.save()

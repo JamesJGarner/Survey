@@ -1,20 +1,14 @@
 from django.views.generic import DetailView, TemplateView
-from pluginservice.apps.polls.models import Poll
+from pluginservice.apps.polls.models import Poll, Vote
 from pluginservice.apps.teams.models import Invite, TeamMate
 from pluginservice.apps.notifications.models import Notification
 from rest_framework import viewsets
 #from django.http import HttpRequest
-from .serializers import InviteSerializer, UserSerializer, NotificationSerializer
+from .serializers import InviteSerializer, UserSerializer, NotificationSerializer, PollVoteSerializer
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework import generics, filters
-
-
-# Not important right now
-class API(DetailView):
-    model = Poll
-    template_name = 'site/js.html'
-
+from datetime import datetime
 
 def TeamPlayers(teamID):
     tlist = []
@@ -70,7 +64,6 @@ class InviteViewSet(viewsets.ReadOnlyModelViewSet):
         return Invite.objects.filter(invite_to=user, closed=False)
 
 
-
 class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
     """
     Returns a list of the current Notifications you have.
@@ -82,6 +75,14 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
         return Notification.objects.filter(user=user, read=False)
 
 
+class PollVoteViewSet(viewsets.ModelViewSet):
+    """
+    Allows someone to vote on a poll
+    """
+
+    serializer_class = PollVoteSerializer
+    def get_queryset(self):
 
 
+        return Vote.objects.filter(choice__poll=1)
 

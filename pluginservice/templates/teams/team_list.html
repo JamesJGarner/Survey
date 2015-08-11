@@ -10,12 +10,12 @@
 
 	<div class="large-12 columns">
 		<dl class="accordion" data-accordion>
-			{% for t in team_list %}
+			{% for team in team_list %}
 			  <dd class="accordion-navigation">
-			    <a href="#panel{{ t.id}}">{{ t.name }} </a>
-			    <div id="panel{{ t.id}}" class="content">
+			    <a href="#panel{{ team.id}}">{{ team.name }} </a>
+			    <div id="panel{{ team.id}}" class="content">
 				<ul class="team-page">
-				{% for person in t.teammate_set.all %}
+				{% for person in team.teammate_set.all %}
 				<li>
 				<img src="/media/{{ person.user.userprofile.profile_picture }}">
 				<p>	{{ person.user.first_name }} {{ person.user.last_name }}</p>
@@ -24,6 +24,7 @@
 
 				{% endfor %}
 				<li><a href="invite/">+ Invite Users</a></li>
+                <li><a href="/widgets/polls/team/{{ team.id }}">View Team page</a></li>
 				</ul>
 				<span class="control">Edit</span>
 			    </div>

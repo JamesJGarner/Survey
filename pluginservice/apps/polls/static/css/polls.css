@@ -1,15 +1,14 @@
-	.poll-container {
-	  width: 100%;
-	  min-height: 100px;
-	  background: url('/static/img/water.jpg') no-repeat;
-	  margin-top: 20px;
-	  margin-bottom: 20px;
-	  padding: 20px 0px 20px 0px;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-	}
+    .poll-container {
+        width: 100%;
+        min-height: 100px;
+        background: url('/static/img/water.jpg') no-repeat;
+        padding: 20px 0px 20px 0px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        float: left;
+    }
 	.poll-container h3 {
 	  margin: 20px 0 0 20px;
 	  font-size: 25pt;
@@ -17,22 +16,30 @@
 	  color: #FFF;
 	  text-shadow: 1px 1px 1px #000;
 	}
-	.poll-container ul {
-		float: left;
-		width: 100%;
-		padding: 20px;
-		box-sizing: border-box;
-	}
-	.poll-container ul li{
-	  float: left;
-	  list-style: none;
-	  background: rgba(0, 0, 0, 0.66);
-	  color: #FFF;
-	  font-size: 14pt;
-	  width: 100%;
-	  padding: 10px;
-	  font-size: 14pt;
-	  margin: 6px 0;
-	  font-family: calibri;
-	  box-sizing: border-box;
-	}
+    .poll-container ul {
+        float: left;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .poll-container ul li {
+        float: left;
+        list-style: none;
+        background: rgba(0, 0, 0, 0.66);
+        color: #FFF;
+        font-size: 14pt;
+        width: 100%;
+        padding: 10px;
+        font-size: 14pt;
+        margin: 6px 0;
+        font-family: calibri;
+        box-sizing: border-box;
+    }
+    .poll-container ul li:hover {
+        background: rgba(0, 0, 0, 0.76);
+    }
+    .disabled {
+    opacity: .5;
+    pointer-events: none;
+    }

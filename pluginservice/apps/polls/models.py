@@ -44,3 +44,22 @@ class PollAnswer(models.Model):
     answer = models.CharField(
         max_length=200,
         )
+
+
+    def __unicode__(self):
+        return self.answer
+
+
+class Vote(models.Model):
+
+    choice = models.ForeignKey(
+        PollAnswer,
+        )
+
+    timestamp = models.DateTimeField(
+        auto_now_add=True,
+        )
+
+
+    def __unicode__(self):
+        return self.poll
