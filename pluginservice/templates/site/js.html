@@ -2,7 +2,7 @@
 function IniPoll() {
 
 	html = '<div class="poll-container" id="p-contain">'
-	html += "<h3>{{ poll.title}}</h3>";
+	html += "<h3>{{ poll.question }}</h3>";
 
 	html += '<ul>';
 	{% for a in poll.pollanswer_set.all %}

@@ -4,7 +4,7 @@
 @import url('/static/css/font-awesome.css');
 * { transition: all 0.2s ease !important; }
 body {
-	background: #FFF;
+  background: #FFF;
     overflow-y: scroll;
 }
 .whitebackground p, h1, h2, h3, h4, h5, h6 {
@@ -29,10 +29,10 @@ body {
 }
 
 .top-header {
-	float: left;
-	height: 100%;
-	width: 100%;
-	text-align: center;
+  float: left;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .top-header h1, .top-header h2 {
@@ -45,19 +45,19 @@ body {
 }
 
 .red {
-	background-color: #cb2028;
-	-moz-border-radius: 28px;
-	-webkit-border-radius: 28px;
-	border-radius: 28px;
-	margin: 5% 0;
+  background-color: #cb2028;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  margin: 5% 0;
 }
 
 .blue {
-	background-color: #4b69b6;
-	-moz-border-radius: 28px;
-	-webkit-border-radius: 28px;
-	border-radius: 28px;
-	  margin: 5% 0;
+  background-color: #4b69b6;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+    margin: 5% 0;
 }
 
 .social {
@@ -66,28 +66,28 @@ body {
   width: 150px;
 }
 .social li {
-	list-style: none;
-	float: left;
-	margin:auto;
-	margin:5px;
-	width: 40px;
-	margin-top: 125px;
+  list-style: none;
+  float: left;
+  margin:auto;
+  margin:5px;
+  width: 40px;
+  margin-top: 125px;
 }
 
 .logo {
-	width: 350px;
-	margin:80px 0;
+  width: 350px;
+  margin:80px 0;
 }
 
 .register {
-	width: 100%;
-	text-align: right;
-	margin-top: 20px;
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
 
 }
 
 .register a {
-	  color: #fff;
+    color: #fff;
   margin-left: 10px;
   font-weight: bold;
   font-size: 18px;
@@ -95,7 +95,7 @@ body {
 }
 
 .register img {
-	  width: 18px;
+    width: 18px;
   margin: 5px;
   margin-top: -1px;
 }
@@ -120,16 +120,16 @@ p.section-title:after {
 }
 
 #newsletter {
-	width: 100%;
-	background-color: #1f6380;
-	padding: 60px 0;
-	text-align: center;
-	background-image: url("../img/overlay.jpg");
+  width: 100%;
+  background-color: #1f6380;
+  padding: 60px 0;
+  text-align: center;
+  background-image: url("../img/overlay.jpg");
 }
 
 #newsletter h1 {
-	color:#FFF;
-	font-family: 'Raleway', sans-serif !important;
+  color:#FFF;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 .section h2 {
@@ -150,16 +150,16 @@ p.section-title:after {
   border: 3px solid !important;
 }
 .buttonSelected3:hover {
-	color: #fff !important;
-	background-color: #3161a5 !important;
+  color: #fff !important;
+  background-color: #3161a5 !important;
 }
 .buttonSelected2 {
   background-color: #1f6380 !important;
   color: #fff !important;
 }
 .buttonSelected2:hover {
-	color: #1f6380 !important;
-	background-color: #fff !important;
+  color: #1f6380 !important;
+  background-color: #fff !important;
 }
 .big {
   font-size: large !important;
@@ -173,7 +173,7 @@ p.section-title:after {
   font-family: 'Raleway', sans-serif !important;
 }
 #landing {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 #landing h1 {
   color: #fff;
@@ -223,7 +223,7 @@ p.section-title:after {
   margin-bottom: 20px;
 }
 .polloption:hover {
-	background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 .polloption h3 {
   color: #fff;
@@ -242,44 +242,44 @@ p.section-title:after {
   text-shadow: 1px 1px 1px #000;
 }
 .pollfooter a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 span {
-	color: #333;
+  color: #333;
 }
 .fa {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 .landingblue {
-	background-color: #2e64b6;
-	width: 100%;
-	padding: 0px 0px 150px 0px;
+  background-color: #f7f7f6;
+  width: 100%;
+  padding: 0px 0px 150px 0px;
 }
 .register {
-	width: 100%;
-	text-align: right;
-	padding: 15px 0px 120px 0px;
+  width: 100%;
+  text-align: right;
+  padding: 15px 0px 120px 0px;
 }
 
 .register a {
-  color: #fff;
+  color: rgb(51, 96, 163);
   margin-left: 10px;
   font-weight: bold;
   font-size: 18px;
   text-shadow: none !important;
 }
 .landingblue h2, .landingblue h3 {
-	color: #fff !important;
-	font-family: 'Raleway', sans-serif !important;
-	font-weight: 300;
+  color: rgb(51, 96, 163) !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 300;
 }
 .landinggreen {
-	background-color: #13ad51;
-	width: 100%;
-	padding: 100px 0px 100px 0px;
+  background-color: rgb(51, 96, 163) !important;
+  width: 100%;
+  padding: 100px 0px 100px 0px;
 }
 .landinggreen h5 {
-	font-weight: 200;
+  font-weight: 200;
     font-size: 45px;
     color: #fff;
 }
@@ -287,15 +287,15 @@ span {
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+  color: #fff;
 }
 .landingpurple {
-	background: #d23b4a;
-	width: 100%;
-	padding: 100px 0px 100px 0px;
+  background: #bb2b68;
+  width: 100%;
+  padding: 100px 0px 100px 0px;
 }
 .landingpurple  h5 {
-	font-weight: 200;
+  font-weight: 200;
     font-size: 45px;
     color: #fff;
 }
@@ -303,22 +303,22 @@ span {
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+  color: #fff;
 }
 .landingpurple a {
-	color: #fff;
-	border-bottom: 1px dotted #fff;
+  color: #fff;
+  border-bottom: 1px dotted #fff;
 }
 .landingpurple a:hover {
-	color:#bebfbf;
+  color:#bebfbf;
 }
 .landingorange {
-	background: #dda00f;
-	width: 100%;
-	padding: 100px 0px 100px 0px;
+  background: #dda00f;
+  width: 100%;
+  padding: 100px 0px 100px 0px;
 }
 .landingorange   h5 {
-	font-weight: 200;
+  font-weight: 200;
     font-size: 45px;
     color: #fff;
 }
@@ -326,19 +326,19 @@ span {
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+  color: #fff;
 }
 .landingorange a {
-	color: #fff;
-	border-bottom: 1px dotted #fff;
+  color: #fff;
+  border-bottom: 1px dotted #fff;
 }
 .landingwhite {
-	background: #fff;
-	width: 100%;
-	padding: 100px 0px 100px 0px;
+  background: #fff;
+  width: 100%;
+  padding: 100px 0px 100px 0px;
 }
 .landingwhite   h5 {
-	font-weight: 200;
+  font-weight: 200;
     font-size: 45px;
     color: rgb(51, 96, 163);
 }
@@ -346,15 +346,15 @@ span {
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: rgb(51, 96, 163);
+  color: rgb(51, 96, 163);
 }
 .landingdark {
-	background: #2c3e50;
-	width: 100%;
-	padding: 100px 0px 100px 0px;
+  background: #2c3e50;
+  width: 100%;
+  padding: 100px 0px 100px 0px;
 }
 .landingdark   h5 {
-	font-weight: 200;
+  font-weight: 200;
     font-size: 45px;
     color: #fff;
 }
@@ -362,56 +362,66 @@ span {
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+  color: #fff;
 }
 .registerbox{
-	width: 100%;
-	height: 871px;
-	padding: 0px !important;
-	background-image: url('../img/norway.jpg');
-	border-bottom-color: rgb(216, 216, 216);
-	border-bottom-style: solid;
-	border-bottom-width: 3px;
-	border-left-color: rgb(216, 216, 216);
+  width: 100%;
+  height: 871px;
+  padding: 0px !important;
+  background-image: url('../img/norway.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
 }
+
+.registerleft {
+    background: none;
+    border: none;
+}
+
 .registerbox h4 {
-	padding: 50px 50px 0px 50px;
-	font-size: xx-largE;
-	margin: 0px;
-	font-family: 'Raleway', sans-serif !important;
-	font-weight: bold;
+  padding: 100px 50px 0px 50px;
+  font-size: xx-largE;
+  margin: 0px;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: bold;
 }
 .registerbox h3 {
-	color: #fff;
-	padding: 0px 50px 50px 50px;
-	font-family: 'Raleway', sans-serif !important;
+  color: #fff;
+  padding: 0px 50px 50px 50px;
+  font-family: 'Raleway', sans-serif !important;
 }
 .registerbox h5{
-	color: #fff;
-	font-family: 'Raleway', sans-serif !important;
-	font-weight: 300;
+  color: #fff;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 300;
     font-size: 1.25rem;
-	text-shadow: 1px 1px 1px #000;
-	padding: 0px 10px 20px 50px;
+  text-shadow: 1px 1px 1px #000;
+  padding: 0px 10px 20px 50px;
 }
 .yellow {
-	color: #f0c55d;
+  color: #f0c55d;
 }
 .nopadding {
-	padding: 0px !important;
+  padding: 0px !important;
 }
 .registerlogo {
-	width: 150px;
-	margin-bottom: 25px;
+  width: 150px;
+  margin-bottom: 25px;
 }
 .registerleft h1{
-	font-weight: 300;
-	font-family: 'Raleway', sans-serif !important;
-	color: rgb(51, 96, 163);
-	padding-top: 20px;
+  font-weight: 300;
+  font-family: 'Raleway', sans-serif !important;
+  color: rgb(51, 96, 163);
+  padding-top: 20px;
 }
 .registerleft p {
-	font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
 }
 a.btn-connect-option.facebook {
     background: #3b5998 url(../img/btn-connect-option.png) no-repeat;
@@ -430,10 +440,10 @@ a.btn-connect-option {
     padding: 15px 15px 15px 60px;
     border-radius: 3px;
     float: left;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 a.btn-connect-option:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 a.btn-connect-option.google-plus {
     background: #DC4D28 url(../img/btn-connect-option.png) no-repeat 0 -60px;
@@ -445,46 +455,46 @@ section#signup .social-signup {
     margin-bottom: 20px;
 }
 .registerform input {
-	border-radius: 5px;
-	padding: 20px;
-	font-family: 'Raleway', sans-serif !important;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: 'Raleway', sans-serif !important;
 }
 .buttonregister {
-	width: 100%;
-	background-color: rgb(51, 96, 163);
+  width: 100%;
+  background-color: rgb(51, 96, 163);
 }
 aside {
-	float: right;
+  float: right;
 }
 .registerboxfooter {
-	margin-top: 250px;
-	margin-lefT: 20px;
+  margin-top: 250px;
+  margin-lefT: 20px;
 }
 .registerboxfooter h1 {
-	color: #fff;
-	display:inline-block;
+  color: #fff;
+  display:inline-block;
 }
 .registerboxfooter h2 {
-	color: #fff;
-	display:inline-block;
-	font-size: 1rem;
+  color: #fff;
+  display:inline-block;
+  font-size: 1rem;
 }
 .registerboxfooter .right h2 {
-	margin-right: 20px;
-	margin-top: 25px;
+  margin-right: 20px;
+  margin-top: 25px;
 }
 .registerboxfooter .right h2 a {
-	color: #fff;
+  color: #fff;
 }
 .registerboxfooter .right h2 a:Hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .marginauto {
-	margin: auto !important;
+  margin: auto !important;
 }
 .loginbox {
-	width: 500px;
+  width: 500px;
 }
 .marginleft20 {
-	margin-left: 20px;
+  margin-left: 20px;
 }
