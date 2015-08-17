@@ -11,6 +11,37 @@
 		</div>
 		</div>
 		<hr>
+		<div class="row">
+		
+		<div class="large-6 columns">
+			<div class="panel left">
+				<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
+				<h4 class="right nomargin"><div class="invitesection"><i class="fa fa-envelope"></i> TEAM INVITES <span>(0)</span></div></h4>
+				<center>
+					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-comments"></i> <div class="right">Keyword Activity</div></a>
+					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-users"></i> <div class="right">Interests Report</div></a>
+					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-bar-chart"></i> <div class="right">Traffic Sources</div></a>
+					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-globe"></i> <div class="right">Demographics</div></a>
+					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-search-plus"></i> <div class="right">Search Engine Optimizing</div></a>
+				</center>
+			</div>
+		</div>
+		<div class="large-6 columns">
+			<div class="startout right">
+				<h2 class="left"><i class="fa fa-arrow-right"></i></h2>
+				<h2 class="right startoutright">START CREATING CONTENT</h2>
+				<hr/>
+				<div class="right">
+					<a href="/create/"><h3>Poll Creation</h3></a>
+				</div>
+			</div>
+		</div>
+		</diV>
+		
+		
+		<hr/>
+		
+		
 		<div class="panel clearfix">
 		<h3 class="left"><span class="teamname">{{ user.username|title  }}'s</span> Dashboard</h3>
 		<h3 class="right"><span class="teamname"> <a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-bars veryblue"></i></a> </span></h3>
@@ -37,7 +68,7 @@
 					{% if team.admin %}
 						<li>
 							<span class="left">
-							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
+							<a href="/widgets/polls/team/{{ team.team.id }}"> {{ team.team }}</a>
 							</span>
 							<span class="right">
 							<a href="/team/#panel{{ team.team.id }}" class="manage"><i class="fa fa-cog"></i> Manage</a>
@@ -65,12 +96,12 @@
 
 
 		<hr class="invisible">
-		<h3 class="left">Keyword Activity</h3>
+		<h3 class="left"><i class="fa fa-tags small"></i> General Tags Activity</h3>
 		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle veryblue"></i></a></small></h3>
 		<hr/>
-		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <strong><a href="#">This week</a></strong> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
+		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <span class="veryblue"><a href="#">This week</a></span> | <a href="#">This month</a> | <a href="#">Overall</a></p></small>
 		<hr>
-		<div class="keywordactivity"><center>
+		<div class="keywordactivity"><center><br/>
 	<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
 		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-book"></i> Harry Potter <strong>x</strong><span class="keywordactivity2"> 285 </span></a>
 		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong><span class="keywordactivity2"> 203 </span></a>
@@ -80,14 +111,12 @@
 		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
 		<a href="#" class="secondary button NoBorder"> <i class="fa fa-cutlery"></i> Cookies <strong>x</strong><span class="keywordactivity2"> 137 </span></a>
 		<a href="#" class="secondary large button NoBorder"> <i class="fa fa-film"></i> James Bond <strong>x</strong><span class="keywordactivity2"> 203 </span></a>
-		<br/>
-		<a href="#" class="secondary tiny button NoBorder"><strong>LOAD MORE...</strong></a>
 		</center></div>
 		<hr class="invisible">
-		<h3 class="left">Interests Report</h3>
+		<h3 class="left"><i class="fa fa-bookmark-o small"></i> Interests Report</h3>
 		<h3 class="right"><small><a href="#"><i class="fa fa-info-circle veryblue"></i></a></small></h3>
 		<hr/>
-		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <strong><a href="#">Overall</a></strong></p></small>
+		<small><p><i class="fa fa-line-chart"></i> <a href="#">This day</a> | <a href="#">This week</a> | <a href="#">This month</a> | <span class="veryblue"><a href="#">Overall</a></span></p></small>
 		<hr>
 		<div class="radarreport">
 		<canvas id="canvas"></canvas>
@@ -166,7 +195,7 @@
 				<center>
 					<img src="/static/img/logo2.png"/><br/>
 					<h2>Experience the Freedom it Brings.</h2>
-					<h3>Bring your web visitors a completely modern and easy way of engaging</h3><br/>
+					<h3>Catch your web visitors a completely modern and easy way of engaging</h3><br/>
 
 					<a href="/register/" class="secondary button small buttonSelected3 big"> Start right now, it's free →</a>
 				</center>
@@ -260,7 +289,7 @@
 				</ul><br/><hr/><br/>
 				<h6>Our users have already generated <strong>460 functions</strong>, are you ready?</h6><br/><br/>
 
-				<a href="#" class="secondary button small buttonSelected2 big">Want to read more?</a>
+				<a href="#" class="secondary button small buttonSelected2 big">Or, do you want to read more?</a>
 			</center>
 		</div>
 
