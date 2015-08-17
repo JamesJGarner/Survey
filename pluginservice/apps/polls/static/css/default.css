@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300,200,100);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 @import url('/static/css/font-awesome.min.css');
 @import url('/static/css/font-awesome.css');
+
 
 body {
 	background: #e5e5e5;
@@ -71,7 +73,7 @@ body {
 	font-weight: 300;
 	text-decoration: none !important;
 }
-.learnmore a:hover {
+.learnmore2:hover {
 	border-bottom: 1px dotted #fff !important;
 }
 .bluebackground {
@@ -347,7 +349,6 @@ dd.accordion-navigation {
 
 .yourteams {
     margin: 0;
-    border-top: 1px solid #ddd;
 }
 
 .yourteams li {
@@ -358,6 +359,7 @@ dd.accordion-navigation {
     width: 100%;
 	background-color: #fff;
 	margin: 10px 0px 10px 0px;
+	
 }
 
 .yourteams li a {
@@ -365,6 +367,7 @@ dd.accordion-navigation {
 	color: #333333;
 	padding: 10px;
 	font-family: 'Raleway', sans-serif;
+	
 }
 .yourteams li a:hover {
 	color: rgba(51, 96, 163, 0.93);
@@ -372,16 +375,29 @@ dd.accordion-navigation {
 
 .yourteams .manage {
   background: none;
-  background-color: rgba(51, 96, 163, 0.93);
+  background-color: #fff;
   padding: 8px 19px;
   margin-left: 10px;
   font-size: 9pt;
-  color: #FFF;
+  color: rgba(51, 96, 163, 0.93);
   border: 2px solid rgba(51, 96, 163, 0.93);
+  border-radius: 5px;
+  font-family: 'Oxygen', sans-serif;
+  
+}
+.joinedteams {
+	padding-bottom: 15px;
+	margin-top: 5px !important;
+}
+.teamsearch {
+	padding: 10px !important;
+	padding-right: 20px !important;
+	padding-left: 20px !important;
+	border-radius: 25px !important;
 }
 .yourteams .manage:hover {
-  background-color: #fff;
-  color: rgba(51, 96, 163, 0.93);
+  background-color: rgba(51, 96, 163, 0.93);
+  color: #fff;
 }
 .keywordactivity2 {
 	color: #2424AE;
@@ -470,6 +486,7 @@ h6 {
 	line-height: 62px !important;
 	font-weight: bold;
 	color: rgb(51, 96, 163);
+	font-family: 'Oxygen', sans-serif;
 }
 /* --------------------------------------- */
 /* ------------ TYPOGRAPHY END ----------- */
@@ -568,16 +585,41 @@ h6 {
 .startout {
 	width: 100%;
 	border: 1px solid #d8d8d8;
-	background-color: #2c3e50;
+	background-color: #fff;
 	color: #fff !Important;
 	font-family: 'Raleway', sans-serif;
+	min-height: 476px;
+}
+.startout img {
+	width: 115px;
+	height: 115px;
+	margin: auto;
+	margin: 20px;
+}
+.startoutbutton {
+	border-radius: 5px;
+	font-size: 1rem !important;
+	font-family: 'Oxygen', sans-serif;
+}
+.startout p{
+	color: #222222;
+	padding: 20px;
+}
+.new {
+	color: #ee2e3d;
+	font-size: small;
+	margin-left: 5px;
+}
+.startout h1 {
+	font-size: 1.7rem;
+	text-align: centeR;
+	padding: 20px;
+	padding-bottom: 0px;
+	font-family: 'Oxygen', sans-serif;
 }
 .startout h2 {
-	color: #fff;
-	padding: 30px;
 	font-size: 1.5rem;
-	padding-bottom: 10px;
-	padding-top: 15px;
+	font-family: 'Oxygen', sans-serif;
 }
 .startout h3 {
 	padding-top: 0px;
@@ -585,7 +627,16 @@ h6 {
 	color: #fff;
 	font-size: x-large;
 	line-height: 0px !important;
+	font-family: 'Oxygen', sans-serif;
 }
+.createyourcontent {
+	font-family: 'Oxygen', sans-serif;
+	letter-spacing: 2px;
+	background: rgb(51, 96, 163) !important;
+}
+
+
+
 .startoutright {
 	line-height: 42px;
 }
@@ -601,6 +652,9 @@ h6 {
 	padding: 10px;
 	margin-top: 18px;
 	font-family: 'Raleway', sans-serif;
+}
+.invitesection:hover {
+	background:#D42936;
 }
 .nomargin {
 	margin: 0px !important;
@@ -644,7 +698,6 @@ h4 .invitesection {
 	background-color: #ca3619 !important;
 	color: #fff !important;
 }
-.secondary.small.button {}
 .PasswordButton {
 	height: 37px;
 	width: 100%;
