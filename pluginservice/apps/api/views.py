@@ -1,10 +1,10 @@
 from django.views.generic import DetailView, TemplateView
 from pluginservice.apps.polls.models import Poll, Vote
-from pluginservice.apps.teams.models import Invite, TeamMate
+from pluginservice.apps.teams.models import Invite, TeamMate, Team
 from pluginservice.apps.notifications.models import Notification
 from rest_framework import viewsets
 #from django.http import HttpRequest
-from .serializers import InviteSerializer, UserSerializer, NotificationSerializer, PollVoteSerializer
+from .serializers import InviteSerializer, UserSerializer, NotificationSerializer, PollVoteSerializer, TeamModelSerializer
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework import generics, filters
@@ -21,6 +21,17 @@ def TeamPlayers(teamID):
 
     for player in players:
         tlist.append(player.user.id)
+
+    return tlist
+
+
+def YourTeams(userID):
+    tlist = []
+
+    results = TeamMate.objects.filter(user=userID)
+
+    for result in results:
+        tlist.append(Team.objects.get(id=result.team.id))
 
     return tlist
 
@@ -86,3 +97,14 @@ class PollVoteViewSet(viewsets.ModelViewSet):
 
         return Vote.objects.filter(choice__poll=1)
 
+
+class TeamViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    Returns a list of the current Teams you have.
+    """
+    serializer_class = TeamModelSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+
+        return YourTeams(user)
