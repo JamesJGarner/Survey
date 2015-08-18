@@ -93,7 +93,9 @@ body {
   font-size: 18px;
   text-shadow: none !important;
 }
-
+.register a:Hover {
+	opacity: 0.8;
+}
 .register img {
     width: 18px;
   margin: 5px;
