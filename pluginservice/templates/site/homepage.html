@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 	{% if user.is_authenticated  %}
+
+        <div id="invitesModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <h2 id="modalTitle">Your Invites.</h2><hr>
+            <ul id="invites"></ul>
+          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+
 		<div class="row">
 		<div class="panel learnmore"><br/>
 				<div class="left"><h2>Interested in learning about how you use Semety?</h2></div>
@@ -12,11 +20,11 @@
 		</div>
 		<hr>
 		<div class="row">
-		
+
 		<div class="large-6 columns">
 			<div class="panel left">
 				<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
-				<h4 class="right nomargin"><a href="#"><div class="invitesection"><i class="fa fa-envelope"></i> TEAM INVITES <span>(0)</span></div></a></h4>
+				<h4 class="right nomargin"><a href="#" data-reveal-id="invitesModal"><div class="invitesection"><i class="fa fa-envelope"></i> TEAM INVITES <span>(0)</span></div></a></h4>
 				<center>
 					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-comments"></i> <div class="right">Keyword Activity</div></a>
 					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-users"></i> <div class="right">Interests Report</div></a>
@@ -35,7 +43,7 @@
 				<center>
 						<a href="/create/" class="secondary buttonSelected2 button small marginbig startoutbutton"><i class="fa fa-bar-chart"></i> Create a Poll</a>
 				</center>
-				
+
 				<hr clasS="invisible"/>
 			</div>
 		</div>
@@ -67,11 +75,11 @@
 				{% endfor %}
 			</ul>
 			<div class="content" id="panel2-2">
-				<ul id="invites"></ul>
+
 			</div>
 		<hr class="invisible"/>
 		</div>
-		
+
 <br/>
 <br/>
 

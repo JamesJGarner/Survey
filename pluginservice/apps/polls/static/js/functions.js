@@ -7,7 +7,7 @@ function Search() {
         structure = "";
     }
     return SearchViewType("/api/users/?inviteable=" + Team + "&search=" + SearchQuery, null, null);
-} 
+}
 
 
 
@@ -18,7 +18,7 @@ function SearchViewType(SearchQuery) {
 		    var items = [];
 			for (var i = 0; i < data.length; i++) {
 
-			
+
 		        var datastring = '<li id="user{0}">' +
 		               '<div class="large-1 columns">' +
 		                   '<img src="http://localhost:8000/static/img/default.png">' +
@@ -45,12 +45,12 @@ function SearchViewType(SearchQuery) {
 		});
 }
 
-	
+
 function TeamListUpdate(SearchQuery) {
     $.getJSON("/api/users/" + SearchQuery + "?&t=" + +new Date(),
 
 	    function (data) {
-		    var items = [];		
+		    var items = [];
 		        var datastring = '<li id="userlist{0}"><img src="{1}"><h4>{2} {3}</h4></li>';
 		        console.log(data.userprofile);
 				items.push(
@@ -136,10 +136,26 @@ function GetInviteList() {
 }
 
 
-$(document).ready(function(){ 
+
+function CountInvites() {
+    $.getJSON("/api/invites/" + "?&t=" + +new Date(), function (data) {
+        var count = 0;
+
+        $.each( data, function( key, val ) {
+            count += 1;
+        });
+        $('.invitesection span').html("(" + count + ")")
+    });
+}
+
+
+
+
+$(document).ready(function(){
 
 	if (document.getElementById('invites') !== null) {
 	  GetInviteList();
+      CountInvites();
 	}
 
 	if (typeof Team !== 'undefined') {
@@ -155,6 +171,7 @@ window.setInterval(function(){
 
 	if (document.getElementById('invites') !== null) {
 	  GetInviteList();
+      CountInvites();
 	}
 
 	if (typeof Team !== 'undefined') {
@@ -187,9 +204,9 @@ function escapeHtml(string) {
 if (!String.format) {
   String.format = function(format) {
     var args = Array.prototype.slice.call(arguments, 1);
-    return format.replace(/{(\d+)}/g, function(match, number) { 
+    return format.replace(/{(\d+)}/g, function(match, number) {
       return typeof args[number] != 'undefined'
-        ? args[number] 
+        ? args[number]
         : match
       ;
     });
