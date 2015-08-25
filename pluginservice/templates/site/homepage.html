@@ -7,6 +7,27 @@
             <ul id="invites"></ul>
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
         </div>
+		 <div id="createpollModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <h2 id="modalTitle">{{ user.username|title  }}, start out fresh.</h2><hr>
+           
+		   <div class="large-6 columns">
+		   <h4><i class="fa fa-user"></i> Create a solo function</h4>
+		   <p>By creating solo functions you'll be able to use everything Semety has to offer. You can choose between
+			  using your generated function through a Wordpress Plugin, Iframe, HTML Code or Live Picture Feeding.
+				</p><br/><br/>
+			<center><a href="#" class="createapollhref">Create a Poll</a></center>
+			<br/><br/>
+		   </div>
+		   <div class="large-6 columns">
+		   <h4><i class="fa fa-users"></i> Start out with a team</h4>
+		   <p>If you choose to start out with a team, you won't miss any of our features either. You will in fact be
+		      able to set up your own team with moderators and members, or you can just join a desired team later.<br/>
+				</p><br/><br/>
+			<center><a href="/team/create/" class="createapollhref">Create a Team</a></center>
+			<br/><br/>
+		   </div>
+          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
 
 
 		<div class="row">
@@ -41,7 +62,7 @@
 				<p>We are offering a Poll function in our <span class="new">BETA</span>&nbsp; platform. As Semety grows, we'll push out more functions that will bring experiences alike, such that will bring more analytics, monetizing opportunities and fun. <br/><br/>
 				You can choose between a Wordpress Plugin, iFrame, HTML code or Live Picture Feeding through our control panel.<br/></p>
 				<center>
-						<a href="/create/" class="secondary buttonSelected2 button small marginbig startoutbutton"><i class="fa fa-bar-chart"></i> Create a Poll</a>
+						<a href="/create/" data-reveal-id="createpollModal" class="secondary buttonSelected2 button small marginbig startoutbutton"><i class="fa fa-bar-chart"></i> Create a Poll</a>
 				</center>
 
 				<hr clasS="invisible"/>
@@ -59,7 +80,7 @@
 					{% if team.admin %}
 						<li>
 							<span class="left">
-							<a href="/widgets/polls/team/{{ team.team.id }}"> {{ team.team }} </a>
+							<a href="/widgets/polls/team/{{ team.team.id }}" class="joinedteamslink"><small class="smallusers"><i class="fa fa-users"></i></small>  {{ team.team }} </a>
 							</span>
 							<span class="right">
 							<a href="/team/#panel{{ team.team.id }}" class="manage"><i class="fa fa-cog"></i></a>
@@ -69,7 +90,7 @@
 
 					{% else %}
 						<li>
-							<a href="/widgets/polls/team/{{ team.team.id }}">{{ team.team }}</a>
+							<a href="/widgets/polls/team/{{ team.team.id }}" >{{ team.team }}</a>
 						</li>
  					{% endif %}
 				{% endfor %}
