@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from .views import Homepage, TempProfile, Widgets, PollJS
+from pluginservice.apps.navigation.views import PageDetail
 from apps.api.views import InviteViewSet, UserViewSet, NotificationViewSet, PollVoteViewSet, TeamViewSet
 from rest_framework import routers
 
@@ -28,6 +29,7 @@ urlpatterns = patterns(
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name='logout'),
     url(r'^api/', include(router.urls)),
     url(r'^api/widgets/polls/(?P<pk>\d+).js$', PollJS.as_view(), name='PollList'),
+    url(r"^(?P<page_slug>[^/]+)/$", PageDetail.as_view(), name="page_slugs"),
 )
 
 if settings.DEBUG:

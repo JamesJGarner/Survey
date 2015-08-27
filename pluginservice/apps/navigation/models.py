@@ -23,6 +23,15 @@ class Page(models.Model):
         null=True,
         )
 
+    show_in_nav = models.BooleanField(
+            default=True,
+        )
+
+    html_content = models.TextField(
+        null=True,
+        blank=True
+    )
+
     def __unicode__(self):
         return self.title
 
