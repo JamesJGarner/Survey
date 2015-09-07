@@ -387,13 +387,33 @@ dd.accordion-navigation {
 }
 .joinedteams {
 	padding-bottom: 15px;
-	margin-top: 5px !important;
+	margin-top: 7px !important;
+	font-size: 1.2em;
+}
+.joinedteams span {
+	background-color: #e7e7e7;
+    border-color: #b9b9b9;
+	padding: 5px 15px 5px 15px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 25px;
+}
+.joinedteams span:hover {
+	background-color: #b9b9b9;
+}
+.joinedteams span:first-child {
+	margin-left: 0px;
+}
+.joinedteams .selected {
+	background-color: rgba(51, 96, 163, 0.93) !important;
+	color: #fff !important;
 }
 .teamsearch {
 	padding: 10px !important;
 	padding-right: 20px !important;
 	padding-left: 20px !important;
 	border-radius: 25px !important;
+	width: 300px !important;
 }
 .yourteams .manage:hover {
   background-color: rgba(51, 96, 163, 0.93);
