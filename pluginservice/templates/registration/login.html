@@ -15,8 +15,21 @@
 		<hr>
         <form action="/login/" method="post" class="registerform">
             {% csrf_token %}
-            <p><input id="id_username" maxlength="254" name="username" type="text" placeholder="Username or E-mail..." /></p>
-<p><input id="id_password" name="password" type="password" placeholder="Enter your password.." /></p>
+			<hr class="invisible"/>
+			<div class="group">      
+			  <input id="id_username" maxlength="254" name="username" type="text"  required>
+			  <span class="highlight"></span>
+			  <span class="bar"></span>
+			  <label>Username or E-mail...</label>
+			</div>
+			
+			<div class="group">      
+			  <input id="id_password" name="password" type="password"  required>
+			  <span class="highlight"></span>
+			  <span class="bar"></span>
+			  <label>Enter your password...</label>
+			</div>
+			
              <input type="submit" value="Login to the site" class="button buttonregister">
         </form>
 		<center><p>Or <a href="/register/">Register</a> or go back to <a href="/"> main page</a></p></center>
