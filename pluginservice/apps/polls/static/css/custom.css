@@ -92,6 +92,7 @@ body {
   font-weight: bold;
   font-size: 18px;
   text-shadow: none !important;
+  margin-right: 10px;
 }
 .register a:Hover {
 	opacity: 0.8;
