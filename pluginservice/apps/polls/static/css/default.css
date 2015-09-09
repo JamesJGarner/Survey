@@ -380,29 +380,43 @@ dd.accordion-navigation {
   margin-left: 10px;
   font-size: 9pt;
   color: rgba(51, 96, 163, 0.93);
-  border: 2px solid rgba(51, 96, 163, 0.93);
-  border-radius: 5px;
   font-family: 'Oxygen', sans-serif;
+  font-size: normal;
   
+}
+.yourteams .manage .fa {
+	margin: 0px;
+}
+.red {
+	color: #D42936 !important;
+	font-weight: bold;
+	border-radius: 12px;
+}
+.red:hover {
+	color:#fff !important;
+	background-color: #D42936 !important;
 }
 .joinedteams {
 	padding-bottom: 15px;
-	margin-top: 7px !important;
-	font-size: 1.2em;
+	margin-top: 11px !important;
+	font-size: 1em;
+}
+.joinedteams .fa {
+	display: inline-block;
+}
+.joinedteams a{
+	    color: #333333 !important;
 }
 .joinedteams span {
 	background-color: #e7e7e7;
     border-color: #b9b9b9;
 	padding: 5px 15px 5px 15px;
 	margin-right: 10px;
-	margin-left: 10px;
+	margin-left: 10px !important;
 	border-radius: 25px;
 }
 .joinedteams span:hover {
 	background-color: #b9b9b9;
-}
-.joinedteams span:first-child {
-	margin-left: 0px;
 }
 .joinedteams .selected {
 	background-color: rgba(51, 96, 163, 0.93) !important;
@@ -416,8 +430,7 @@ dd.accordion-navigation {
 	width: 300px !important;
 }
 .yourteams .manage:hover {
-  background-color: rgba(51, 96, 163, 0.93);
-  color: #fff;
+  color: #333;
 }
 .keywordactivity2 {
 	color: #2424AE;
