@@ -882,6 +882,8 @@ h4 .invitesection {
 	padding-left: 30px;
 	font-family: 'Raleway', sans-serif !important;
 	font-size: large;
+	line-height: 0px !Important;
+	margin-top: 18px !Important;
 }
 .whitetutorial2 h4{
 	font-weight: bold;
@@ -994,6 +996,7 @@ ul.pagination li.current a, ul.pagination li.current button {
 	font-family: 'Raleway', sans-serif;
 	color: #333333;
 	font-weight: 300;
+	margin-top: 8px !Important;
 }
 #analytics h6 {
 	font-family: 'Raleway', sans-serif;
@@ -1016,13 +1019,13 @@ ul.pagination li.current a, ul.pagination li.current button {
     color: #FFFFFF !important;
 }
 .side-nav li a:not(.button) {
-	color: rgb(28, 168, 221);
+	color: rgb(51, 96, 163);
 	border-radius: 25px;
 	font-size: 1.1em !important;
 
 }
 .side-nav li a:not(.button):hover {
-	background-color: #1ca8dd !important;
+	background-color: rgb(51, 96, 163) !important;
 	color: #fff !important;
 }
 .tag {
