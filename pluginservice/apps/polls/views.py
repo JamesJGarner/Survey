@@ -18,23 +18,7 @@ class PollList(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PollList, self).get_context_data(**kwargs)
-
-        people = TeamMate.objects.filter(team=self.kwargs['pk'])
-        exists = False
-        if people:
-            for person in people:
-                if person.user == self.request.user:
-                    exists = True
-                    break
-                else:
-                    exists = False
-
-            if not exists:
-                print exists
-                raise Http404
-
-            context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])
-        else:
+        if not owner(context, self):
             raise Http404
 
         return context
@@ -42,6 +26,29 @@ class PollList(DetailView):
 class PollDetail(DetailView):
     model = Poll
 
+    def get_context_data(self, **kwargs):
+        context = super(PollDetail, self).get_context_data(**kwargs)
+        context['checker'] = owner(context, self)
+        return context
+
+def owner(context, self):
+        people = TeamMate.objects.filter(team=self.kwargs['pk'])
+        exists = False
+
+        if people:
+            for person in people:
+                if person.user == self.request.user:
+                    return True
+                    break
+                else:
+                    exists = False
+
+            if not exists:
+                return False
+
+            context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])
+        else:
+            return False    
 
 class PollCreate(CreateView):
     model = Poll

@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="row">
+<div class="large-6 columns">
+<br>
+<h1>Create a Team.</h1>
+<h4 class="subheading">Bring your company / group together</h4>
+<hr>
 <form method="post">
 {{form.as_p }}
 {% csrf_token %} 
-<input type="submit">
+<input type="submit" class="button small" value="Create Team">
 </form>
+</div>
+</div>
 {% endblock %}
