@@ -31,45 +31,48 @@
 		<br>
 		{% if not user.userprofile.tutorial_completed %}
 		<div class="row">
-		<div class="panel learnmore"><br/>
-				<div class="left"><h2>Interested in learning about how you use Semety?</h2></div>
-				<div class="right">
-				<a href="/tutorial/" class="right secondary button small learnmoreButton">START OUT →</a>
-				<hr class="invisible">
-				<center><a href="#" class="learnmore2">No thanks, I got it.</a></center>
+		<div class="large-12 columns">
+			<div class="panel learnmore"><br/>
+					<div class="left"><h2>Interested in learning about how you use Semety?</h2></div>
+					<div class="right">
+						<a href="/tutorial/" class="right secondary button small learnmoreButton">START OUT →</a>
+						<hr class="invisible">
+						<center><a href="#" class="learnmore2">No thanks, I got it.</a></center>
+					</div>
+			</div>
+			</div>
 		</div>
-		</div>
-		<hr>
-		{% endif %}
-		
+		{% endif %}	
 		<div class="row">
-		<div class="large-6 columns">
-			<div class="panel left">
-				<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
-				<h4 class="right nomargin"><a href="#" data-reveal-id="invitesModal"><div class="invitesection"><i class="fa fa-envelope"></i> TEAM INVITES <span>(0)</span></div></a></h4>
-				<center>
-					<a href="/analyticskeyword/" class="secondary button NoBorder widthbutton"><i class="fa fa-comments"></i> <div class="right">Keyword Activity</div></a>
-					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-users"></i> <div class="right">Interests Report</div></a>
-					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-area-chart"></i> <div class="right">Traffic Sources <span class="new">NEW!</span></div></a>
-					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-globe"></i> <div class="right">Demographics</div></a>
-					<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-search-plus"></i> <div class="right">Search Engine Optimizing</div></a>
-				</center>
+			<div class="large-6 columns">
+				<div class="panel left">
+					<h3 class="left"><span class="teamname">{{ user.username|title  }}</span>'s Dashboard</h3>
+					<h4 class="right nomargin"><a href="#" data-reveal-id="invitesModal"><div class="invitesection"><i class="fa fa-envelope"></i> TEAM INVITES <span>(0)</span></div></a></h4>
+					<center>
+						<a href="/analyticskeyword/" class="secondary button NoBorder widthbutton"><i class="fa fa-comments"></i> <div class="right">Keyword Activity</div></a>
+						<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-users"></i> <div class="right">Interests Report</div></a>
+						<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-area-chart"></i> <div class="right">Traffic Sources <span class="new">NEW!</span></div></a>
+						<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-globe"></i> <div class="right">Demographics</div></a>
+						<a href="#" class="secondary button NoBorder widthbutton"><i class="fa fa-search-plus"></i> <div class="right">Search Engine Optimizing</div></a>
+					</center>
+				</div>
 			</div>
-		</div>
-		<div class="large-6 columns">
-			<div class="startout right">
-				<h1>Start Right Here!</h1>
-				<hr/>
-				<p>We are offering a Poll function in our <span class="new">BETA</span>&nbsp; platform. As Semety grows, we'll push out more functions that will bring experiences alike, such that will bring more analytics, monetizing opportunities and fun. <br/><br/>
-				You can choose between a Wordpress Plugin, iFrame, HTML code or Live Picture Feeding through our control panel.<br/></p>
-				<center>
-						<a href="/create/" data-reveal-id="createpollModal" class="secondary buttonSelected2 button small marginbig startoutbutton"><i class="fa fa-bar-chart"></i> Create a Poll</a>
-				</center>
+			<div class="large-6 columns">
+				<div class="startout right">
+					<h1>Start Right Here!</h1>
+					<hr/>
+					<p>We are offering a Poll function in our <span class="new">BETA</span>&nbsp; platform. As Semety grows, we'll push out more functions that will bring experiences alike, such that will bring more analytics, monetizing opportunities and fun. <br/><br/>
+					You can choose between a Wordpress Plugin, iFrame, HTML code or Live Picture Feeding through our control panel.<br/></p>
+					<center>
+							<a href="/create/" data-reveal-id="createpollModal" class="secondary buttonSelected2 button small marginbig startoutbutton"><i class="fa fa-bar-chart"></i> Create a Poll</a>
+					</center>
 
-				<hr clasS="invisible"/>
+					<hr clasS="invisible"/>
+				</div>
 			</div>
 		</div>
-		</div>
+		<div class="row">
+		<div class="large-12 columns">
 		<div class="panel">
 		<h3 class="left joinedteams"><a href="#"><span class="selected"><i class="fa fa-bookmark-o"></i> Show All</span></a> / <a href="#"><span> <i class="fa fa-user"></i> Solo Functions</span></a> / <a href="#"><span> <i class="fa fa-users"></i>  Team Creations</span></a></h3>
 		<div class="right">
@@ -102,7 +105,8 @@
 			</div>
 		<hr class="invisible"/>
 		</div>
-
+	</div>
+</div>
 <br/>
 <br/>
 
