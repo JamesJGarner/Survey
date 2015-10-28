@@ -29,7 +29,7 @@
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
         </div>
 		<br>
-
+		{% if not user.userprofile.tutorial_completed %}
 		<div class="row">
 		<div class="panel learnmore"><br/>
 				<div class="left"><h2>Interested in learning about how you use Semety?</h2></div>
@@ -40,6 +40,8 @@
 		</div>
 		</div>
 		<hr>
+		{% endif %}
+		
 		<div class="row">
 		<div class="large-6 columns">
 			<div class="panel left">

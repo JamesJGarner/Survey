@@ -36,6 +36,10 @@ class UserProfile(models.Model):
         upload_to='%Y/%m/%d'
         )
 
+    tutorial_completed = models.BooleanField(
+        default=False,  
+        )
+
     def __unicode__(self):
         return self.user.username
 

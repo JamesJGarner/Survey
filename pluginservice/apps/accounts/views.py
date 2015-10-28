@@ -28,3 +28,13 @@ class CreateAccount(FormView):
 
 class ChangePassword(FormView):
     form_class = PasswordChangeForm
+
+
+class TutorialForm(FormView):
+    template_name = 'accounts/register.html'
+    success_url = '/'
+
+    def form_valid(self, form):   
+        user = UserProfile.get(user=self.request.user)
+        user.tutorial_completed = True;
+        user.save()
