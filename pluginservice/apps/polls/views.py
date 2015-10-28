@@ -45,24 +45,23 @@ class PollDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(PollDetail, self).get_context_data(**kwargs)
         context['checker'] = owner(context, self)
+        print owner(context, self)
         return context
 
 def owner(context, self):
-        people = TeamMate.objects.filter(team=self.kwargs['pk'])
+        poll = Poll.objects.get(id=self.kwargs['pk'])
+        people = TeamMate.objects.filter(team=poll.team.id)
         exists = False
 
         if people:
             for person in people:
-                if person.user == self.request.user:
+                if person.user.id == self.request.user.id:
                     return True
-                    break
                 else:
                     exists = False
 
             if not exists:
                 return False
-
-            
         else:
             return False    
 
