@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 	{% if user.is_authenticated  %}
-
         <div id="invitesModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
           <h2 id="modalTitle">Your Invites.</h2><hr>
             <ul id="invites"></ul>
