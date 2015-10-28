@@ -18,7 +18,7 @@ class PollList(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PollList, self).get_context_data(**kwargs)
-        context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])
+        context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])  
         if not owner(context, self):
             raise Http404
 
