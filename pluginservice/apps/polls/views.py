@@ -21,7 +21,6 @@ class PollList(DetailView):
         context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])  
         context['admin'] = isUserAdmin(context, self)
 
-
         if not owner(context, self):
             raise Http404
 
