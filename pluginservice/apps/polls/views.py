@@ -19,10 +19,25 @@ class PollList(DetailView):
     def get_context_data(self, **kwargs):
         context = super(PollList, self).get_context_data(**kwargs)
         context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])  
+        context['admin'] = isUserAdmin(context, self)
+
+
         if not owner(context, self):
             raise Http404
 
         return context
+
+def isUserAdmin(context, self):
+
+    try:
+     user = TeamMate.objects.get(team=self.kwargs['pk'], user=self.request.user)
+
+     if user.admin:
+        return True
+     else:
+        return False
+    except:
+        return False
 
 class PollDetail(DetailView):
     model = Poll
