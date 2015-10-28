@@ -1241,3 +1241,8 @@ ul.pagination li.current a, ul.pagination li.current button {
     opacity: 1;
   }
 }
+
+.profilemain p {
+      border-bottom: 1px solid rgba(221, 221, 221, 0.46);
+    line-height: 28px;
+}

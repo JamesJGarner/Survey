@@ -64,21 +64,31 @@
 		</div>
         </div>
     </div>
+
+
     <div class="large-12 columns">
         <div class="panel clearfix">
-
-            <p>For optional security and recovery settings, we encourage social network assignation.</p>
-            <div class="whitebackground clearfix">
-                <div class="left">
-                    <img class="logo" src="/static/img/home/icons/facebook_profile.png"/>
-                </div>
-            
-                <div class="right">
-                    <p>You are logged in as <a href="#">{{ user.username|title  }}</a>.</p>
-                </div>
+        <br>
+           <h5>Your profile settings</h5>
+            <div class="whitebackground clearfix profilemain">
+             <a href="#" class="right">edit</a>
+             <br>
+            <div class="large-6 columns">
+                <p>Username:</p>
+                <p>Full Name:</p>
+                <p>Balance:</p>
+            </div>
+            <div class="large-6 columns">
+                <p>{{ user.username|title }}</p>
+                <p>{{ user.first_name }} {{ user.last_name }}</p>
+                <p>£{{ user.userprofile.balance }}</p>
+                <br>
+            </div>
             </div>
             <br/>
+             <p>For optional security and recovery settings, we encourage social network assignation.</p>
             <div class="whitebackground clearfix">
+
                 <div class="left">
                     <img class="logo" src="/static/img/home/icons/google_profile.png"/>
                 </div>
