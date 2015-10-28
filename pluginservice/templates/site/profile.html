@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+<div id="passwordmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Change Your Password.</h2>
     <hr>
     <label>Your Current Password:</label>
@@ -15,7 +14,7 @@
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
-<div id="myModal2" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+<div id="emailmodal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <div class="large-12 columns">
       <h2 id="modalTitle">Email Preferences.</h2><hr>
       <h4><label>Your current email address:</label> <b>{{ user.email }}</b></h4>
@@ -53,73 +52,80 @@
   </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
+<div id="deactivatemodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h2 id="modalTitle">Deactivate your account.</h2>
+    <hr>
+    <p>You can <a href="#">deactivate your account</a>, but we'd really like to have you here.</p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<br>
 <div class="row">
-<div class="large-12 columns">
-        <div class="panel left100 simple">
+    <div class="large-12 columns">
+        <div class="whitebackground left100 simple">
             <div class="left">
-            <h3>Hey <span class="teamname">{{ user.username|title  }}</span>, this is your Profile Settings!</h3>
-		</div>
-		<div class="right">
-			<a href="#" class="secondary buttonSelected2 button small marginbig">Become a Pro Publisher!</a>
-		</div>
+                <h3>PROFILE</h3>
+            </div>
+            <div class="right">
+                <a href="#" class="buttonSelected2 button small">Become a Pro Publisher!</a>
+            </div>
         </div>
     </div>
-
-
     <div class="large-12 columns">
-        <div class="panel clearfix">
-        <br>
-           <h5>Your profile settings</h5>
-            <div class="whitebackground clearfix profilemain">
-             <a href="#" class="right">edit</a>
-             <br>
+        <div class="whitebackground profilemain underlinep">
+            <div class="large-12 columns">
+                <h5 class="left">Your profile information.</h5>
+                <a href="#" class="right">Edit</a>
+            </div>
+            <br>
+            <br>
             <div class="large-6 columns">
                 <p>Username:</p>
+                <p>Email:</p>
                 <p>Full Name:</p>
                 <p>Balance:</p>
+                <p>API Token</p>
             </div>
             <div class="large-6 columns">
                 <p>{{ user.username|title }}</p>
+                <p>{{ user.email }}</p>
                 <p>{{ user.first_name }} {{ user.last_name }}</p>
                 <p>£{{ user.userprofile.balance }}</p>
+                <p>x03f3033fkadqw</p>
                 <br>
             </div>
-            </div>
-            <br/>
-             <p>For optional security and recovery settings, we encourage social network assignation.</p>
-            <div class="whitebackground clearfix">
-
-                <div class="left">
-                    <img class="logo" src="/static/img/home/icons/google_profile.png"/>
-                </div>
-            
-                <div class="right">
-                    <p>You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
-                </div>
-            </div>
-            <br/>
+        </div>
+        <br/>
+        <div class="whitebackground left100">        
             <div class="row">
                 <div class="large-4 columns">
-                    <label>Registered Email
-                        <input type="text" value="{{ user.email }}" disabled>
+                    <label>
+                        <a href="#" data-reveal-id="emailmodal" class="button small PasswordButton">Email Preferences</a>
                     </label>
                 </div>
                 <div class="large-4 columns">
                     <label>
-                        <br/>
-                        <a href="#" data-reveal-id="myModal2" class="button small PasswordButton">Email Preferences</a>
+                        <a href="#" data-reveal-id="passwordmodal" class="button small PasswordButton">Change Password</a>
                     </label>
                 </div>
                 <div class="large-4 columns">
                     <label>
-                        <br/>
-                        <a href="#" data-reveal-id="myModal" class="button small PasswordButton">Change Password</a>
+                        <a href="#" data-reveal-id="deactivatemodal" class="button small PasswordButton">Dactivate Account</a>
                     </label>
                 </div>
             </div>
-			<hr/><br/>
-            <small><p>You can <a href="#">deactivate your account</a>, but we'd really like to have you here.</p></small>
+        </div>
+		<div class="whitebackground profilemain">
+            <div class="large-12 columns">
+                <h5>Social network assignation.</h5>
+                <p>For optional security and recovery settings, we encourage social network assignation.</p>
+            </div>
+        </div>
+        <div class="whitebackground left100">
+            <p class="left"> <img class="logo" src="/static/img/home/icons/google_profile.png"/></p>
+            <p class="right">You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
         </div>
     </div>
 </div>
-{% endblock %}
+<br>
+{% endblock %} 

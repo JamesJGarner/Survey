@@ -1242,7 +1242,24 @@ ul.pagination li.current a, ul.pagination li.current button {
   }
 }
 
-.profilemain p {
-      border-bottom: 1px solid rgba(221, 221, 221, 0.46);
-    line-height: 28px;
+.underlinep p {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.46);
+  line-height: 28px;
+}
+
+.profilemain {
+  border-top:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  float: left;
+  width:100%;
+  background-color:#FFF;
+}
+
+.profile-box {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  float: left;
+  width: 100%;
+  padding-top:20px;
+  margin-bottom: 20px;
 }
