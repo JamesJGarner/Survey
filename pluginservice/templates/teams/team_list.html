@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+	<br>
 	<div class="row">
 	<div class="large-12 columns">
-	<div class="panel simple">
-	<h1>Teams</h1>
+	<div class="whitebackground left100 simple">
+	<h3>TEAMS</h3>
+	</div>
+	<div class="whitebackground profilemain">
+			<p>Create, delete and manage your teams.</p>
 	</div>
 	</div>
 
 	<div class="large-12 columns">
-		<dl class="accordion" data-accordion>
+		<ul class="team-list">
 			{% for team in team_list %}
-			  <dd class="accordion-navigation">
-			    <a href="#panel{{ team.id}}">{{ team.name }} </a>
+			  <li class="accordion-navigation">
+			    <h4 href="#panel{{ team.id}}">{{ team.name }} <a href="#">Edit</a></h4>
 			    <div id="panel{{ team.id}}" class="content">
 				<ul class="team-page">
 				{% for person in team.teammate_set.all %}
@@ -26,13 +30,13 @@
 				<li><a href="invite/">+ Invite Users</a></li>
                 <li><a href="/widgets/polls/team/{{ team.id }}">View Team page</a></li>
 				</ul>
-				<span class="control">Edit</span>
+				
 			    </div>
-			  </dd>
+			  </li>
 			{% endfor %}
 
 			<a href="create/">Create Team</a>
-		</dl>
+		</ul>
 	</div>
 
 	</div>

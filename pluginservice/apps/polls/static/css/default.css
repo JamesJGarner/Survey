@@ -269,19 +269,6 @@ width: 90px;
 
 }
 
-dd.accordion-navigation {
-    float: left;
-    width: 100%;
-}
-.control {
-    /* position: absolute; */
-    /* bottom: 0; */
-    width: 100%;
-    float: left;
-    background-color: #CCCBCB;
-    /* box-sizing: content-box; */
-    padding: 7px;
-}
 .sutledash {
 	width: 100%;
 }
@@ -1267,6 +1254,34 @@ ul.pagination li.current a, ul.pagination li.current button {
   padding-top:20px;
   margin-bottom: 20px;
 }
+
+.team-list {
+  margin:0;
+  background: #fff;
+  float:  left;
+  width:  100%;
+}
+
+.team-list li {
+  list-style:   none;
+}
+
+.team-list h4 {
+  width:100%;
+  border-bottom:  1px solid #ddd;
+  padding:  20px;
+  margin-top:   0;
+  line-height: 24px;
+  text-align: left;
+  float:  left;
+}
+
+.team-list h4 a {
+  float:  right;
+  font-size:  13pt;
+
+}
+
 .progress  {
 	color:#fff !important;
 	text-shadow: 1px 1px 1px #000, 

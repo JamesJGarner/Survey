@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .models import Team, Invite, TeamMate
 from django.core.urlresolvers import reverse
 from .forms import InviteResponseForm, InviteUserForm
+from pluginservice.apps.polls.views import owner
 
 class TeamHome(ListView):
     model = Team
@@ -31,7 +32,14 @@ class InviteUser(CreateView):
     def form_valid(self, form):
         TeamForm = form.save(commit=False)
         TeamForm.invite_from = self.request.user
-        self.object = form.save()
+
+
+        if owner(self, form.cleaned_data["team"].id):
+            self.object = form.save()
+        else:
+            print "not owner"
+            form.clean()
+            
         return super(InviteUser, self).form_valid(form)
 
 class InviteResponse(FormView):
