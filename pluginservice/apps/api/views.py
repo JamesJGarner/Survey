@@ -94,7 +94,12 @@ class PollVoteViewSet(viewsets.ModelViewSet):
     serializer_class = PollVoteSerializer
     def get_queryset(self):
 
-
+        """
+        step 1 get all the teams the user is in
+        step 2 filter by the polls the users is involved in
+        step 3 get all the votes ass
+        """
+    
         return Vote.objects.filter(choice__poll=1)
 
 

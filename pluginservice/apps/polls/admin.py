@@ -1,17 +1,17 @@
 from django.contrib import admin
-from .models import Poll, PollAnswer, Vote
+from .models import Poll, PollAnswer, PollAnswer
 
 
 class PollAnswerAdmin(admin.TabularInline):
     extra = 1
     model = PollAnswer
 
-class VoteAdmin(admin.TabularInline):
+class PollAnswerAdmin(admin.TabularInline):
     extra = 1
-    model = Vote
+    model = PollAnswer
 
 
 class PollAdmin(admin.ModelAdmin):
-    inlines = [PollAnswerAdmin, VoteAdmin]
+    inlines = [PollAnswerAdmin, PollAnswerAdmin]
 
 admin.site.register(Poll, PollAdmin)

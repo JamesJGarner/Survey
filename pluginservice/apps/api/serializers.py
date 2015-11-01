@@ -55,7 +55,6 @@ class PollVoteSerializer(ModelSerializer):
 
     class Meta:
         model = Vote
-
         fields = ['choice', 'timestamp']
 
 

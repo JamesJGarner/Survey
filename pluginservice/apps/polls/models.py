@@ -60,11 +60,10 @@ class Vote(models.Model):
         auto_now_add=True,
         )
 
-    ip = models.CharField(
+    ip = models.IPAddressField(
         max_length=200,
         null=True,
         )
-
 
     def __unicode__(self):
         return self.poll
