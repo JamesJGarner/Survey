@@ -140,10 +140,16 @@ function GetInviteList() {
 function CountInvites() {
     $.getJSON("/api/invites/" + "?&t=" + +new Date(), function (data) {
         var count = 0;
-
+        var disabled = "";
         $.each( data, function( key, val ) {
             count += 1;
         });
+        if (count == 0) {
+        	$('.invitesection').addClass("disabled");
+        }
+        else {
+        	$('.invitesection').removeClass("disabled");
+        }
         $('.invitesection span').html("(" + count + ")")
     });
 }
