@@ -1266,20 +1266,49 @@ ul.pagination li.current a, ul.pagination li.current button {
   list-style:   none;
 }
 
-.team-list h4 {
+.team-header {
   width:100%;
-  border-bottom:  1px solid #ddd;
-  padding:  20px;
-  margin-top:   0;
-  line-height: 24px;
+  border-top:  1px solid #ddd;
+
+
   text-align: left;
   float:  left;
+}
+
+.team-header h4 {
+  margin: 20px;
+    line-height: 24px;
+
 }
 
 .team-list h4 a {
   float:  right;
   font-size:  13pt;
 
+}
+
+.team-butons {
+  float: left;
+  border-right:1px solid #ddd;
+}
+
+.team-buttons a {
+    float: left;
+    height: 100%;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-left: 1px solid #ddd;
+    color:rgb(51, 96, 163);
+}
+
+.team-divider {
+    border-top: 1px solid #ddd;
+    float: left;
+    width: 100%;
+}
+
+.nobb {
+  border-bottom: 0;
 }
 
 .progress  {

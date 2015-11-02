@@ -1,6 +1,6 @@
 {% for page in navigation %}
 <li>
-    <a href="{{ page.slug }}">
+    <a href="/{{ page.slug }}">
         {% if page.slug == "/" %}<i class="fa fa-home"></i>{% endif %}
         {{ page.title }}
     </a>
