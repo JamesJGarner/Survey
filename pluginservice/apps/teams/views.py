@@ -8,6 +8,17 @@ from pluginservice.apps.polls.views import owner
 class TeamHome(ListView):
     model = Team
 
+    def get_queryset(self):
+
+        teamlist = []
+
+        for team in Team.objects.all():
+            if owner(self, team.id):
+                teamlist.append(team.id)
+
+        queryset = Team.objects.filter(id__in=teamlist)
+        return queryset
+
 class TeamCreate(CreateView):
     model = Team
 
