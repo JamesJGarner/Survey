@@ -8,23 +8,21 @@
     <div class="large-12 columns">
         <div class="whitebackground left100">
             <div class="left">
-                <h3>POLL</h3>
+                <h3>POLL DETAILS</h3>
             </div>
             <div class="right">
-                <a href="#" class="buttonSelected2 button small">Edit</a>
+                <a href="#" class="buttonSelected2 button small"><i class="fa fa-line-chart"></i> Check Analytics</a>
             </div>
         </div>
     </div>
 	<div class="large-12 columns">
 		<div class="bluebackground left100 marked">
-			<div class="large-10 columns">
-					<h4>Name: <span>{{ poll.title }}</span></h4>
-					<h4>Question asked: <span>{{ poll.question }}</span></h4>
-			</div>
-			<div class="large-2 columns">
-				<div class="right icons">
-					<a href="#"><h4><i class="fa fa-cog"></i></h4></a>
-					<a href="#"><h4><i class="fa fa-trash-o"></i></h4></a>
+			<div class="large-12 columns">
+				<div class="pollinformation">
+					<h4><span> Function Name: </span><br/> <em> {{ poll.title }} </em></h4>
+				</div>
+				<div class="pollinformation">
+					<h4><span> Question asked: </span><br/> <em> {{ poll.question }} </em></h4>
 				</div>
 			</div>
 		</div>
@@ -34,10 +32,17 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="white">
-				<h4>MODIFY</h4>
+				<div class="right icons">
+					<a href="#" alt="Information"><h4><i class="fa fa-info-circle"></i></h4></a>
+					<a href="#" alt="Configuration"><h4><i class="fa fa-cog"></i></h4></a>
+					<a href="#" alt="Delete Function"><h4><i class="fa fa-trash-o"></i></h4></a>
+				</div>
+				<h4>Instantly Modify Your Function</h4>
 			</div>
 			<div class="grey-round-buttons left100">
-				<a href="help/"> <i class="fa fa-code"></i> Embed HTML Widget </a>
+				<a href="help/"> <i class="fa fa-code"></i> HTML Widget </a>
+				<a href="help/"> <i class="fa fa-desktop"></i> iFrame Integration </a>
+				<a href="help/"> <i class="fa fa-wordpress"></i> Wordpress Plugin </a>
 				<a href="help/"> <i class="fa fa-picture-o"></i> Live Picture Feed </a>
 				<a href="help/"> <i class="fa fa-paint-brush"></i> Change your Layout </a>
 			</div>
@@ -47,7 +52,8 @@
 		<div class="large-12 columns">
 			<div class="profilemain white">
 				<center>
-					<h3>Statistics</h3>
+					<h3>Quick Statistics</h3>
+						<br/>
 					<div class="large-3 columns">
 						<label>Total Votes</label>
 						<h4>2,333</h4>
@@ -68,6 +74,10 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+
+
 {% else %}
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="/static/css/polls.css" />
@@ -88,7 +98,8 @@
 
 {% endif %}
 {% endblock content %}
-				<!--
+				<!-- 
+					\\\\\\ MORE OPTIONS FOR LATER USE ///////
 					<a href="#" class="secondary button small"><i class="fa fa-info-circle"></i> MORE INFORMATION</a>
 					<a href="#" class="secondary button small"><i class="fa fa-university"></i> WATCH TUTORIALS</a>
 				-->

@@ -1180,7 +1180,7 @@ table {
 .grey-round-buttons a {
     background-color: #FFF;
     color: #333333;
-    width: 200px;
+    width: calc(195px - 1px);
     height:200px;
     float: left;
 
@@ -1192,6 +1192,10 @@ table {
 
 .grey-round-buttons a:hover {
       background-color: rgba(185, 185, 185, 0.25);
+}
+.grey-round-buttons a:last-child {
+	background-color: rgb(51, 96, 163);
+	color: #fff !important;
 }
 
 .grey-round-buttons {
@@ -1215,21 +1219,27 @@ table {
 }
 
 .marked div h4 span {
-  padding: 10px 20px;
-  font-size: 14pt;
+  font-size: 16pt;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: #333;
-  background-color: #e7e7e7;
-  border-right: 5px solid #cdcbcb;
+  color: #FFF;
   font-size: 1rem;
 }
 
 .icons a {
   float: left;
   margin-left:10px;
+  margin-right: 10px;
 }
 
 .marked div h4:first-child {
       margin-bottom: 24px;
+}
+.pollinformation {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.pollinformation:first-child {
+	border-right: 2px dotted #fff;
 }
