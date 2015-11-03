@@ -56,10 +56,6 @@ body {
 	background-color: #1f6380 !important;
 	color:#FFF !important;
 }
-.marked {
-	background-color: #e7e7e7;
-	padding: 5px;
-}
 .learnmore {
 	float: left;
 	width: 100%;
@@ -78,7 +74,7 @@ body {
 }
 .bluebackground {
 	background-color: rgb(51, 96, 163);
-	padding: 10px 20px 10px 20px;
+	padding: 20px;
 }
 .bluebackground h4 {
 	color: #fff !important;
@@ -458,7 +454,6 @@ h1, h2, h3, h5, p {
 	padding: 20px 20px 0px 20px;
 }
 h4 {
-	margin-top: 25px;
 	color: #1f6380 !important;
 	font-family: 'Raleway', sans-serif;
 }
@@ -492,20 +487,7 @@ h6 {
   font-family: 'Raleway', sans-serif !important;
   font-size: x-large;
 }
-.managepollsection h4, .managepollsection p {
-	white-space: nowrap;
-	display: inline-block;
-}
-.managepollsection .marked  p{
-	padding: 0px 10px 0px 10px;
-}
-.managepollsection h4 {
-	line-height: 30px;
-}
-.managepollsection .marked {
-	border-right: 5px solid #cdcbcb;
-	margin-right: 15px;
-}
+
 .teamname {
 	line-height: 62px !important;
 	font-weight: bold;
@@ -950,10 +932,6 @@ h4 .invitesection {
     font-size: small;
     margin-left: 5px;
 }
-.marked {
-    background-color: #e7e7e7;
-    padding: 5px;
-}
 .tutorialborder {
 	border:10px solid #f7f7f7 !important;
 }
@@ -1391,4 +1369,20 @@ table {
 	text-align: center;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+
+.grey-round-buttons a {
+    background-color: #e7e7e7;
+    color: #333333;
+    width: 100%;
+    float: left;
+    border-radius: 25px;
+    font-family: 'Raleway', sans-serif;
+    padding: 15px;
+    margin:10px 0;
+}
+
+.grey-round-buttons a:hover {
+      background-color: #b9b9b9;
 }
