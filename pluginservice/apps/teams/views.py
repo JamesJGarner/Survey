@@ -1,15 +1,15 @@
-from django.views.generic import TemplateView, CreateView, ListView, FormView
+from django.views.generic import TemplateView, CreateView, ListView, FormView, DetailView
 from django.contrib.auth.models import User
 from .models import Team, Invite, TeamMate
 from django.core.urlresolvers import reverse
 from .forms import InviteResponseForm, InviteUserForm
-from pluginservice.apps.polls.views import owner
+from pluginservice.apps.polls.views import owner, isUserAdmin
+from pluginservice.apps.polls.models import Poll
 
-class TeamHome(ListView):
+class TeamList(ListView):
     model = Team
 
     def get_queryset(self):
-
         teamlist = []
 
         for team in Team.objects.all():
@@ -18,6 +18,23 @@ class TeamHome(ListView):
 
         queryset = Team.objects.filter(id__in=teamlist)
         return queryset
+
+
+
+class TeamDetail(DetailView):
+    model = Team
+
+    def get_context_data(self, **kwargs):
+        context = super(TeamDetail, self).get_context_data(**kwargs)
+        context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])  
+        context['admin'] = isUserAdmin(self)
+        teamid = self.kwargs['pk']
+        if not owner(self, teamid):
+            raise Http404
+
+        return context
+
+
 
 class TeamCreate(CreateView):
     model = Team
@@ -32,7 +49,7 @@ class TeamCreate(CreateView):
         return super(TeamCreate, self).form_valid(form)
 
     def get_success_url(self, **kwargs):
-        return reverse('polls:PollList', kwargs={'pk': self.object.id})
+        return reverse('teams:TeamDetail', kwargs={'pk': self.object.id})
 
 
 class InviteUser(CreateView):

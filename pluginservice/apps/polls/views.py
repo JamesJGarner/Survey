@@ -11,21 +11,6 @@ class PollHome(TemplateView):
     template_name = 'polls/polls_home.html'
 
 
-class PollList(DetailView):
-    model = Team
-    template_name = 'polls/poll_list.html'
-
-
-    def get_context_data(self, **kwargs):
-        context = super(PollList, self).get_context_data(**kwargs)
-        context['poll_list'] = Poll.objects.filter(team=self.kwargs['pk'])  
-        context['admin'] = isUserAdmin(self)
-        teamid = self.kwargs['pk']
-        if not owner(self, teamid):
-            raise Http404
-
-        return context
-
 def isUserAdmin(self):
 
     try:
