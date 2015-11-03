@@ -82,7 +82,7 @@
 					{% if team.admin %}
 						<li>
 							<span class="left">
-							<a href="/widgets/polls/team/{{ team.team.id }}" class="joinedteamslink"><small class="smallusers"><i class="fa fa-users"></i></small>  {{ team.team }} </a>
+							<a href="/team/{{ team.team.id }}" class="joinedteamslink"><small class="smallusers"><i class="fa fa-users"></i></small>  {{ team.team }} </a>
 							</span>
 							<span class="right">
 							<a href="/team/#panel{{ team.team.id }}" class="manage red"><i class="fa fa-bookmark-o"></i></a>
@@ -93,7 +93,7 @@
 
 					{% else %}
 						<li>
-							<a href="/widgets/polls/team/{{ team.team.id }}" >{{ team.team }}</a>
+							<a href="/team/{{ team.team.id }}" >{{ team.team }}</a>
 						</li>
  					{% endif %}
 				{% endfor %}

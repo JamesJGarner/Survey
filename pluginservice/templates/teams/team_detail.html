@@ -18,21 +18,21 @@
 
 	  	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>
-
+	<br>
 			<div class="row">
-			<div class="large-12 columns">
-			<div class="panel left100 simple">
-						<div class="left">
-				<h1><small>Team</small> {{ team.name }}</h1>
+
+			<div class="whitebackground left100 simple">
+						<div class="large-12 columns">
+				<div class="left">
+				<h3><small>Team</small> {{ team.name }}</h3>
 				</div>
 				<div class="right">
-				<a href="/widgets/polls/create/" class="secondary buttonSelected2 button small margin">Add Poll</a>
+				  <a href="/widgets/polls/create/" class="buttonSelected2 button small">Create Poll</a>
 				</div>
-			</div>
-
-			</div>
+			</div></div>
+	<div class="white left100 simple">
 			<div class="large-4 columns">
-			<div class="panel left100">
+			<div class="whitebackground left100">
 			<h4>Team Involved</h4>
 			<ul class="poll-list team" id="team">
 			{% for person in team.teammate_set.all %}
@@ -45,7 +45,7 @@
 			</div>
 			</div>
 			<div class="large-8 columns">
-			<div class="panel left100">
+			<div class="whitebackground left100">
 
 			<h4>Poll Activity</h4>
 			<ul class="poll-list">
