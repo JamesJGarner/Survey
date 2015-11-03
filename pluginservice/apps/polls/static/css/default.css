@@ -1243,3 +1243,6 @@ table {
 .pollinformation:first-child {
 	border-right: 2px dotted #fff;
 }
+.Dull {
+	background: #b9b9b9 !important;
+}
