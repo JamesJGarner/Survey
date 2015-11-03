@@ -186,8 +186,12 @@ body {
   border-bottom: none;
 }
 
-.simple {
+.simple-single {
   border-bottom:1px solid #ddd;
+}
+
+.simple {
+  border-bottom-width: 1px;
 }
 
 .add-button {
