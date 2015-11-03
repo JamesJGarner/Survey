@@ -1373,16 +1373,58 @@ table {
 
 
 .grey-round-buttons a {
-    background-color: #e7e7e7;
+    background-color: #FFF;
     color: #333333;
-    width: 100%;
+    width: 200px;
+    height:200px;
     float: left;
-    border-radius: 25px;
+
     font-family: 'Raleway', sans-serif;
-    padding: 15px;
-    margin:10px 0;
+    padding: 55px 20px;
+    text-align: center;
+    border-right:1px solid #ccc;
 }
 
 .grey-round-buttons a:hover {
-      background-color: #b9b9b9;
+      background-color: rgba(185, 185, 185, 0.25);
+}
+
+.grey-round-buttons {
+  float: left;
+  border-top:1px solid #ddd;
+  background: #FFF;
+  padding: 0;
+}
+
+
+.grey-round-buttons i {
+  font-size: 25pt;
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.white {
+  padding:20px;
+  background: #FFF;
+}
+
+.marked div h4 span {
+  padding: 10px 20px;
+  font-size: 14pt;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #333;
+  background-color: #e7e7e7;
+  border-right: 5px solid #cdcbcb;
+  font-size: 1rem;
+}
+
+.icons a {
+  float: left;
+  margin-left:10px;
+}
+
+.marked div h4:first-child {
+      margin-bottom: 24px;
 }
