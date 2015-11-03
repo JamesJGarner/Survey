@@ -342,8 +342,11 @@ width: 90px;
     float: left;
     width: 100%;
 	background-color: #fff;
-	margin: 10px 0px 10px 0px;
-	
+  border-bottom: 0;
+}
+
+.yourteams li:last-child {
+  border-bottom: 1px solid #ddd;
 }
 
 .yourteams li a {
