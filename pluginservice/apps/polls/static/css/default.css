@@ -259,6 +259,15 @@ width: 90px;
     font-size: 16pt;
     line-height: 37px;
 }
+.team-page p small {
+  display: block;
+  line-height: 15px;
+  color: #1f6380;
+  font-weight: 200;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 10pt;
+}
 
 .accordion .content {
     float: left;

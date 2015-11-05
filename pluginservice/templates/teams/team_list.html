@@ -37,7 +37,8 @@
 					{% for person in team.teammate_set.all %}
 					<li>
 					<img src="/media/{{ person.user.userprofile.profile_picture }}">
-					<p>	{{ person.user.first_name }} {{ person.user.last_name }}</p>
+					<p>	{{ person.user.first_name }} {{ person.user.last_name }} {% if person.admin %}<small>Admin</small>{% endif %}</p>
+
 					</li>
 					{% endfor %}
 				</ul>
