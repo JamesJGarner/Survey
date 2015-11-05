@@ -3,42 +3,39 @@
 {% block content %}
 
 <form action="" method="post">
+<br>
 <div class="row">
 	<div class="large-12 columns">
-	<div class="panel simple left100">
+	<div class="whitebackground left100 simple-single">
 	<div class="left">
-	<h3 class="marginbig">Create your own Poll</h3>
+	<h4>Create your own Poll</h4>
 	</div>
 	<div class="right">
-	<button type="reset" class="secondary button small buttonClear right" value="Reset"><i class="fa fa-times-circle"></i> CLEAR POLL</button>
+	<button type="reset" class="secondary button tiny buttonClear right" value="Reset"><i class="fa fa-times-circle"></i> CLEAR POLL</button>
 	</div>
 	</div>
 	</div>
+
 	<div class="large-12 columns">
-		<div class="panel">
+	<div class="whitebackground left100 simple-single">
+		<div class="large-6 columns">
 			{% csrf_token %}
-			<label>
-				<h4>Create a Poll Name</h4>
-			</label>
-			<input id="id_title" maxlength="200" name="title" type="text" placeholder="Your Poll name will not be visible for anyone else than you (Maximum of 21 characters)">
-
-			<label>
-				<h4>Add a Poll Question</h4>
-			</label>
-			<input id="id_question" maxlength="200" name="question" type="text" placeholder="Choose the question you want to ask everyone">
-
-			<label>
-				<h4>Choose Team</h4>
-			</label>
+			<label>Poll Name</label>
+			{{ form.title }}
+			<label>Poll Question</label>
+			{{ form.question }}
+</div></div>
+	<div class="whitebackground left100 simple-single">
+		<div class="large-6 columns">
+			<label>Choose Team</label>
 			{{ form.team }}
-			<label>
-				<h4>URL to image</h4>
-			</label>
-			<input type="text" name="image" placeholder="Paste in image URL">
 
-			<label>
-				<h4>Enter some answers</h4>
-			</label>
+			<label>URL to image</label>
+			<input type="text" name="image" placeholder="Paste in image URL">
+</div></div>
+	<div class="whitebackground left100 simple-single">
+		<div class="large-12 columns">
+			<label>Enter some answers</label>
 			<div class="row">
 				<div class="large-4 columns">
 					<input type="text" name="choice1" placeholder="Poll answer #1">
@@ -53,8 +50,9 @@
 					<a href="create.html" class="secondary button tiny NoBorder"><i class="fa fa-plus"></i> ADD MORE QUESTIONS</a>
 				</div>
 			</div>
-			<hr>
-
+			</div>
+			
+					<!--<hr>
 									<div class="poll">
 										<div class="pollgrid clearfix">
 											<div class="left">
@@ -88,6 +86,10 @@
 								</div>
 
 			<hr><br/>
+			-->
+			</div>
+				<div class="whitebackground left100 simple-single">
+					<div class="large-12 columns">
 			<center>
 				<h3>Are you ready for more power?</h3><br/>
 				<input type="submit" value="GENERATE THE WIDGET" class="button small buttonSelected2">
