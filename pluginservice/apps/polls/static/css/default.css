@@ -1255,3 +1255,17 @@ table {
 .Dull {
 	background: #b9b9b9 !important;
 }
+.homepagenav {
+	background-color: #FFF;
+	color: #333333;
+	width: calc(25% - 0px);
+	height: 200px;
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	padding: 55px 20px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	line-height: 90px;
+}
