@@ -384,7 +384,7 @@ width: 90px;
 
 .teamsearch {
   float: right;
-  width:300px;
+  width: 240px;
   height: 52px !important;
       margin-bottom:10px; 
 }
@@ -392,10 +392,14 @@ width: 90px;
 .teamsearch input[type="text"] {
     line-height: 24px;
     border-radius: 5px;
-    padding-left: 20px;
+    padding-left: 12px;
     margin-top:4px;
     height: 37px !important;  
 
+}
+
+.title {
+      padding: 10px 20px !important;
 }
 
 .yourteams {
@@ -418,6 +422,10 @@ width: 90px;
 
 .yourteams li .left {
   padding: 16px 0;
+}
+
+.yourteams li .left a {
+  color:#333;
 }
 
 .yourteams li .left a i {
@@ -687,11 +695,14 @@ h6 {
 	margin: 50px;
 }
 .invitesection {
-	background: #ee2e3d;
-	border-radius: 25px;
-	padding: 10px;
-	margin-top: 18px;
-	font-family: 'Raleway', sans-serif;
+    background: #ee2e3d;
+    padding: 10px;
+    position: absolute;
+    right: 15px;
+    z-index: 99;
+    top: 10px;
+    font-size: 10pt;
+    color: #FFF;	font-family: 'Raleway', sans-serif;
 }
 .invitesection:hover {
 	background:#D42936;
