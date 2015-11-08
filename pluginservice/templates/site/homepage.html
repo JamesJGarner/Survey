@@ -89,41 +89,41 @@
 		-->
 		<div class="row">
 		<div class="large-12 columns">
-		<div class="panel left100">
+		<div class="whitebackground profilemain nobb">
 						<h5 class="left welcometext">Welcome<span class="teamname"> {{ user.username|title  }}</span>, this is your Dashboard!</h5>
 				<h4 class="right nomargin"><a href="#" data-reveal-id="invitesModal"><div class="invitesection"><i class="fa fa-envelope"></i> TEAM INVITES <span>(0)</span></div></a></h4>
-				<hr/>
+		</div>
+		<div class="whitebackground profilemain nobb">
 		<h3 class="left joinedteams"><a href="#"><span class="selected"><i class="fa fa-bookmark-o"></i> Show All</span></a> <a href="#"><span> <i class="fa fa-user"></i> Solo Creations</span></a> <a href="#"><span> <i class="fa fa-users"></i>  Team Creations</span></a></h3>
 		<div class="teamsearch">
 			<input type="text" class="searchfunctions" placeholder="&#128269; Search for Teams & Functions...">
 		</div>
+		</div>
 			<ul class="yourteams">
-			<hr/>
- 				{% for team in teams %}
-					{% if team.admin %}
-						<li class="arrowleft">
+ 				{% for poll in polls %}
+					<li>
+						<div class="large-8 columns">
 							<span class="left">
-							<a href="/team/{{ team.team.id }}" class="joinedteamslink"><small class="smallusers"><i class="fa fa-users"></i></small>  {{ team.team }} </a>
+								<a href="/team/{{ team.team.id }}">
+									<i class="fa fa-users"></i>
+									{{ poll.title }} - <small><i>{{ poll.question }}</i></small>
+								</a>
 							</span>
+						</div>
+						<div class="large-4 columns">
 							<span class="right">
-							<a href="/team/#panel{{ team.team.id }}" class="manage red"><i class="fa fa-bookmark-o"></i></a>
-							<a href="/team/#panel{{ team.team.id }}" class="manage"><i class="fa fa-cog"></i></a>
-							<a href="#" class="manage"><i class="fa fa-bar-chart"></i> View Analytics</a>
+								<a href="/team/#panel{{ team.team.id }}" class="red"><i class="fa fa-bookmark-o"></i></a>
+								<a href="/team/#panel{{ team.team.id }}"><i class="fa fa-cog"></i></a>
+								<a href="#" class="view"><i class="fa fa-bar-chart"></i> View Analytics</a>
 							</span>
-						</li>
-						<hr class="invisible"/>
-					{% else %}
-						<li>
-							<a href="/team/{{ team.team.id }}" >{{ team.team }}</a>
-						</li>
- 					{% endif %}
+						</div>
+					</li>
 				{% endfor %}
 			</ul>
 		</div>
 	</div>
 </div>
-<br/>
-<br/>
+
 
 	{% else %}
 	<div id="loginmodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">

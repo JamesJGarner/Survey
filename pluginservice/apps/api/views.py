@@ -1,5 +1,5 @@
 from django.views.generic import DetailView, TemplateView
-from pluginservice.apps.polls.models import Poll, Vote
+from pluginservice.apps.polls.models import Poll, Vote, PollAnswer
 from pluginservice.apps.teams.models import Invite, TeamMate, Team
 from pluginservice.apps.notifications.models import Notification
 from rest_framework import viewsets
@@ -99,7 +99,14 @@ class PollVoteViewSet(viewsets.ModelViewSet):
         step 2 filter by the polls the users is involved in
         step 3 get all the votes ass
         """
-    
+
+        userteammates = TeamMate.objects.filter(user=self.request.user)
+        teams = []
+        for teammateobject in userteammates:
+            teams.append(teammateobject.team)
+
+
+        #return Vote.objects.filter(team__in=teams)
         return Vote.objects.filter(choice__poll=1)
 
 

@@ -10,6 +10,15 @@ class Homepage(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(Homepage, self).get_context_data(**kwargs)
         if self.request.user.is_authenticated():
+            Listofteams = []
+
+            TeamMateList = TeamMate.objects.filter(user=self.request.user)
+
+            for mate in TeamMateList:
+                Listofteams.append(mate.team)
+
+            context ['polls'] = Poll.objects.filter(team__in=Listofteams)
+
             context['teams'] = TeamMate.objects.filter(user=self.request.user)
 
             context['invites'] = Invite.objects.filter(invite_to=self.request.user, closed=False)

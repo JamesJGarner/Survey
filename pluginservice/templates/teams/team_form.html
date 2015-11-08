@@ -6,21 +6,21 @@
 
 <div class="row">
 	<div class="large-12 columns">
-			<div class="whitebackground left100 simple-single">
-					
-
-<h3>Create a Team.</h3>
-</div>
-<div class="whitebackground left100 simple-single">
-<p class="subheading">Bring your company / group together</p>
-</div>
-<div class="whitebackground left100 simple-single">
-<div class="large-6 columns">
-<form method="post">
-{{form.as_p }}
-{% csrf_token %} 
-<input type="submit" class="button small" value="Create Team">
-</form>
-</div>
+		<div class="whitebackground left100 simple-single">
+			<h3>Create a Team.</h3>
+		</div>
+		<div class="whitebackground left100 simple-single">
+			<p class="subheading">Bring your company / group together</p>
+		</div>
+		<div class="whitebackground left100 simple-single">
+			<div class="large-6 columns">
+				<form method="post">
+					{{form.as_p }}
+					{% csrf_token %} 
+					<input type="submit" class="button small" value="Create Team">
+					</form>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}

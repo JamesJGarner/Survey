@@ -43,9 +43,6 @@ body {
 .header ul li a:hover {
 	color: #1e87b3;
 }
-.fa {
-	margin-right: 5px;
-}
 .fa-home {
 	font-size: large;
 }
@@ -344,51 +341,15 @@ width: 90px;
 	margin-left: 10px;
 }
 
-.yourteams {
-    margin: 0;
-}
 
-.yourteams li {
-    list-style: none;
-    border: 1px solid #ddd;
-    float: left;
-    width: 100%;
-	background-color: #fff;
-	padding: 20px 10px 20px 10px;
-}
 
-.yourteams li:last-child {
-  border-bottom: 1px solid #ddd;
-}
 
-.yourteams li a {
-    font-size: large;
-	color: #333333;
-	padding: 10px;
-	font-family: 'Raleway', sans-serif;
-	
-}
-.yourteams li a:hover {
-	color: rgba(51, 96, 163, 0.93);
-}
-.yourteams .manage {
-  background: none;
-  background-color: #fff;
-  padding: 8px 19px;
-  margin-left: 10px;
-  font-size: 9pt;
-  color: rgba(51, 96, 163, 0.93);
-  font-family: 'Oxygen', sans-serif;
-  font-size: normal;
-  
-}
-.yourteams .manage .fa {
-	margin: 0px;
-}
+
 .red {
-	color: #D42936 !important;
-	font-weight: bold;
-	border-radius: 12px;
+  color: #D42936 !important;
+  font-weight: bold;
+  border-left: 1px solid #ddd;
+  background: none !important;
 }
 .red:hover {
 	color:#fff !important;
@@ -424,22 +385,79 @@ width: 90px;
 .teamsearch {
   float: right;
   width:300px;
-  height: 57px !important;
+  height: 52px !important;
+      margin-bottom:10px; 
 }
 
 .teamsearch input[type="text"] {
     line-height: 24px;
-    border-radius: 20px;
+    border-radius: 5px;
     padding-left: 20px;
+    margin-top:4px;
+    height: 37px !important;  
+
 }
-.yourteams .manage:hover {
-  color: #333;
+
+.yourteams {
+    float: left;
+    width: 100%;
+    margin: 0;
+    background: #FFF;
+    border-top: 1px solid #ddd;
+    padding: 20px;
+    padding-bottom: 10px;
 }
+
+.yourteams li {
+    float: left;
+    width: 100%;
+    list-style: none;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.yourteams li .left {
+  padding: 16px 0;
+}
+
+.yourteams li .left a i {
+  font-size: 9pt;
+  margin-top:-4px;
+  margin-right:4px;
+}
+
+.yourteams li .large-4.columns {
+    padding: 0;
+}
+
+.yourteams li .large-4 .right a {
+    background: #FFF;
+    padding: 20px;
+    float: left;
+    border-left: 1px solid #ddd;
+    font-size: 9pt;
+    color: #333;
+    text-align: center;
+}
+
+.yourteams li .large-4 .right a .red {
+  color: #D42936;
+  font-weight: bold;
+  border-left: 1px solid #ddd;
+}
+.yourteams li .large-4 .right a .red:hover {
+  color:#fff !important;
+  background-color: #D42936 !important;
+}
+
+
+.yourteams li .large-4 .right a .view {
+      background-color: rgba(51, 96, 163, 0.93) !important;
+      color: #FFF;
+}
+
 .keywordactivity2 {
 	color: #2424AE;
-}
-.yourteams {
-	padding: 10px 0px 10px 0px;
 }
 .radarreport {
 	width: 100%;
@@ -798,11 +816,6 @@ h4 .invitesection {
 }
 .content h6{
 	margin: 10px !important;
-}
-.smallusers {
-	float: left;
-	margin-top: 6px;
-	margin-left: 10px;
 }
 .createapollhref {
 	color: #1f6380 !important;
@@ -1286,7 +1299,6 @@ table {
 	border:solid 1px black; 
 	position:relative; 
 	display:block; 
-	height:70px; 
 	width:100px; 
 }
 .arrowleft:before{
@@ -1302,14 +1314,12 @@ table {
     content:"";
     display:inline-block;
     position:absolute;
-    border:9px solid #f2f2f2;
-    border-color:transparent transparent transparent #f2f2f2;
+    border:9px solid #FFF;
+    border-color:transparent transparent transparent #FFF;
     top:25px;
     left:-1px;
 }
-.searchfunctions {
-	height: 42px !important;	
-}
+  
 .nopaddingtop {
 	padding-top: 0px !important;
 }
