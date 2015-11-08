@@ -351,11 +351,10 @@ width: 90px;
 .yourteams li {
     list-style: none;
     border: 1px solid #ddd;
-    padding: 10px;
     float: left;
     width: 100%;
 	background-color: #fff;
-  border-bottom: 0;
+	padding: 20px 10px 20px 10px;
 }
 
 .yourteams li:last-child {
@@ -372,7 +371,6 @@ width: 90px;
 .yourteams li a:hover {
 	color: rgba(51, 96, 163, 0.93);
 }
-
 .yourteams .manage {
   background: none;
   background-color: #fff;
@@ -410,10 +408,10 @@ width: 90px;
 .joinedteams span {
 	background-color: #e7e7e7;
     border-color: #b9b9b9;
-	padding: 5px 15px 5px 15px;
-	margin-right: 10px;
-	margin-left: 10px !important;
-	border-radius: 25px;
+	padding: 10px 15px 10px 15px;
+	margin-right: 5px;
+	border-radius: 5px;
+
 }
 .joinedteams span:hover {
 	background-color: #b9b9b9;
@@ -426,6 +424,7 @@ width: 90px;
 .teamsearch {
   float: right;
   width:300px;
+  height: 57px !important;
 }
 
 .teamsearch input[type="text"] {
@@ -1264,8 +1263,53 @@ table {
 	font-family: 'Raleway', sans-serif;
 	padding: 55px 20px;
 	text-align: center;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 1px solid #ccc;
+	border: 1px solid #ccc;
 	line-height: 90px;
+}
+.homepagenav:hover {
+	background-color: rgba(185, 185, 185, 0.25);
+	color: #333333;
+}
+.welcometext {
+	margin-top: 3px !important;
+}
+.startoutbutton {
+	width: 50%;
+	background: #f2f2f2;
+	display: inline-block;
+	float: left;
+	border-radius: 0px !Important;
+	margin: 25px 0px 25px 0px;
+	text-align: center;
+}
+.arrowleft{
+	border:solid 1px black; 
+	position:relative; 
+	display:block; 
+	height:70px; 
+	width:100px; 
+}
+.arrowleft:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border:10px solid #ddd;
+    border-color:transparent transparent transparent #ddd;
+    top:24px;
+	left: -1px;
+}
+.arrowleft:after{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border:9px solid #f2f2f2;
+    border-color:transparent transparent transparent #f2f2f2;
+    top:25px;
+    left:-1px;
+}
+.searchfunctions {
+	height: 42px !important;	
+}
+.nopaddingtop {
+	padding-top: 0px !important;
 }

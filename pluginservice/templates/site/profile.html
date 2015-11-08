@@ -55,7 +55,12 @@
 <div id="deactivatemodal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Deactivate your account.</h2>
     <hr>
-    <p>You can <a href="#">deactivate your account</a>, but we'd really like to have you here.</p>
+    <p>You can deactivate your account, but <strong>{{ user.first_name }} {{ user.last_name }} we'd really like to have you here</strong>.</p>
+	<p>If you decide to leave us, <strong>could you do us a favour?</strong> Could you please fill out the form on the next page for us. It is really important for us in the Semety managment to know why you'd want to leave us. But remember though,
+	you could always come back to us whenever you feel like it!</p>
+	<p>After deactivating your account, you will lose all Semety connections. This means that you will lose support on all your functions, you can <a href="#">read more about this here</a>.</p>
+	<br/>
+	<a href="#" class="button bluebutton tiny">I understand, deactive my account</a>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
@@ -117,11 +122,15 @@
         </div>
 		<div class="whitebackground profilemain">
             <div class="large-12 columns">
-                <h5>For Maximum Protection, We Encourage.</h5>
+                <h5>Secure your Semety account better!</h5>
                 <p>For optional security and recovery settings, we encourage social network assignation.</p>
-				 <div class="whitebackground left100">
+				 <div class="whitebackground left100 nopaddingtop">
 				 <hr/>
 					<p class="left"> <img class="logo" src="/static/img/home/icons/google_profile.png"/></p>
+					<p class="right">You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
+				<hr/>
+				<hr/>
+					<p class="left"> <img class="logo" src="/static/img/home/icons/facebook_profile.png"/></p>
 					<p class="right">You don't have Google Plus assigned, <a href="#">do it here</a>.</p>
 				<hr/>
 				</div>
