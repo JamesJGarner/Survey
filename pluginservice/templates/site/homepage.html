@@ -124,6 +124,43 @@
 					</li>
 				{% endfor %}
 			</ul>
+
+
+			<div class="whitebackground left100">
+				<div class="left">
+					<h4>Teams</h4> 
+					</div>
+				<div class="right">
+					<a href="/team/create/" class="buttonSelected2 button small">View all Team</a>
+				</div>
+			</div>
+
+			<ul class="yourteams">
+ 				{% for team in teams %}
+					<li>
+						<div class="large-8 columns">
+							<span class="left">
+								<a href="/widgets/polls/{{ poll.id }}">
+									<i class="fa fa-users"></i>
+									{{ team.team.name }}
+								</a>
+							</span>
+						</div>
+						<div class="large-4 columns">
+							<span class="right">
+								<a href="#" class="red"><i class="fa fa-bookmark-o"></i></a>
+								<a href="/team/{{ poll.team.id }}"><i class="fa fa-cog"></i></a>
+								{% if team.admin %}
+								<a href="#" class="view"><i class="fa fa-cogs" style="margin-right:10px;"></i> Manage Team</a>
+								{% endif %}
+							</span>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+
+			</div>
 		</div>
 	</div>
 </div>
