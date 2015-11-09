@@ -1,9 +1,10 @@
-from django.views.generic import FormView
+from django.views.generic import FormView, UpdateView
 from django.forms.models import inlineformset_factory
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from .forms import UserCreateForm
+from .models import UserProfile
 from django.contrib.auth import authenticate, login
 
 class CreateAccount(FormView):
@@ -17,7 +18,6 @@ class CreateAccount(FormView):
         user = authenticate(
             username=form.cleaned_data['username'],
             password=form.cleaned_data['password1']
-
         )
 
         if user is not None:
@@ -38,3 +38,7 @@ class TutorialForm(FormView):
         user = UserProfile.get(user=self.request.user)
         user.tutorial_completed = True;
         user.save()
+
+
+class UserProfileUpdate(FormView):
+    model = UserProfile
