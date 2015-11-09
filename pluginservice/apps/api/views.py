@@ -85,10 +85,6 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
         user = self.request.user
         result = Notification.objects.filter(user=user, read=False)
 
-        for item in result:
-            item.read = True
-            item.save()
-            
         return result
 
 
