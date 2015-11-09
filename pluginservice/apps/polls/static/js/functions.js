@@ -75,15 +75,19 @@ function Notfiy() {
 		    var items = [];
 
 		    $.each( data, function( key, val ) {
-		        var datastring = '<li id="note{0}"><span>{1} </span> <p>{2}</p></li>';
-				items.push(
-					String.format(
-						datastring,
-						val["id"],
-						val["title"],
-						val["text"]
-						)
-				);
+
+				if (Notification.permission !== "granted")
+					Notification.requestPermission();
+				else {
+					var notification = new Notification(val["title"], {
+					icon: '/static/img/icon.png',
+					body: val["text"],
+					});
+				}
+				notification.onclick = function () {
+					window.open("/");      
+				};
+    
   			});
 			$('#notification').append(items)
 		});
@@ -183,10 +187,11 @@ window.setInterval(function(){
 	if (typeof Team !== 'undefined') {
 	  GetTeamList(Team);
     }
+    Notfiy();
 }, 5000);
 
 
-
+Notfiy();
 
 
 
@@ -217,4 +222,34 @@ if (!String.format) {
       ;
     });
   };
+}
+
+
+
+
+/* Desktop notify */
+
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+function notifyMe() {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey there! You've been notified!",
+    });
+
+
+  }
+
 }

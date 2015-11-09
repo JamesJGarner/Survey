@@ -83,7 +83,13 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        return Notification.objects.filter(user=user, read=False)
+        result = Notification.objects.filter(user=user, read=False)
+
+        for item in result:
+            item.read = True
+            item.save()
+            
+        return result
 
 
 class PollVoteViewSet(viewsets.ModelViewSet):
