@@ -44,13 +44,14 @@
     {% endif %}
     <script src="/static/js/Chart.js"></script>
     <script>
-      $(document).foundation();
+      $(document).foundation();7
       var csrf = "{{ csrf_token }}"
     </script>
     <ul id="notification"></ul>
     {% block js %}{% endblock%}
 		<div class="large-12 columns">
 			<div class="row footer">
+			<hr/>
 				<div class="large-6 columns">
 					<p>All rights reserved, © Copyright <a href="http://semety.com">Semety</a>, 2015.</p>
 				</div>
@@ -58,8 +59,8 @@
 					<ul class="inline-list right">
 					<li><a href="http://livepicturefeed.com">LivePictureFeed</a></li>
 					<li><a href="#">Press</a></li>
-					<li><a href="#">Terms and Conditions</a></li>
 					<li><a href="#">Blog</a></li>
+					<li><a href="#">Terms and Conditions</a></li>
 					</ul>
 				</div>
 			</div>

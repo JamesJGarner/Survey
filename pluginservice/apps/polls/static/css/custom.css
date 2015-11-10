@@ -599,8 +599,19 @@ input:focus ~ .highlight {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
-@keyframes inputHighlighter {
+@keyframes inputHighlighter {5
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
 /* ---- --- -- --- - */
+
+.footer {
+	margin-bottom: 20px !important;
+}
+.footer p {
+	font-size: 12px !important;
+}
+.footer a {
+	font-size: 12px !important;
+	color: rgb(51, 96, 163);
+}

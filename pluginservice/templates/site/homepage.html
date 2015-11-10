@@ -33,7 +33,7 @@
 		<div class="row">
 		<div class="large-12 columns">
 			<div class="panel learnmore"><br/>
-					<div class="left"><h2><strong>Start now for free</strong>, create your own functions with Semety!</h2></div>
+					<div class="left"><h2><strong>Start now for free</strong>, create your functions with Semety!</h2></div>
 					<div class="right">
 						<a href="/create/" data-reveal-id="createpollModal" class="right secondary button small learnmoreButton">START OUT →</a>
 						<!--
@@ -117,8 +117,8 @@
 						<div class="large-4 columns">
 							<span class="right">
 								<a href="#" class="red"><i class="fa fa-bookmark-o"></i></a>
-								<a href="/team/{{ poll.team.id }}"><i class="fa fa-cog"></i></a>
-								<a href="#" class="view"><i class="fa fa-bar-chart"></i> View Analytics</a>
+								<a href="/team/{{ poll.team.id }}" class="hg"><i class="fa fa-cog"></i></a>
+								<a href="#" class="view hg"><i class="fa fa-bar-chart" style="margin-right:10px;"></i> View Analytics</a>
 							</span>
 						</div>
 					</li>
@@ -128,10 +128,10 @@
 
 			<div class="whitebackground left100">
 				<div class="left">
-					<h4>Teams</h4> 
+					<h4>Your Teams</h4> 
 					</div>
 				<div class="right">
-					<a href="/team/create/" class="buttonSelected2 button small">View all Team</a>
+					<a href="/team/create/" class="buttonSelected2 button small borderradius">View all Teams</a>
 				</div>
 			</div>
 
@@ -149,9 +149,9 @@
 						<div class="large-4 columns">
 							<span class="right">
 								<a href="#" class="red"><i class="fa fa-bookmark-o"></i></a>
-								<a href="/team/{{ poll.team.id }}"><i class="fa fa-cog"></i></a>
+								<a href="/team/{{ poll.team.id }}" class="hg"><i class="fa fa-cog"></i></a>
 								{% if team.admin %}
-								<a href="#" class="view"><i class="fa fa-cogs" style="margin-right:10px;"></i> Manage Team</a>
+								<a href="#" class="view hg"><i class="fa fa-cogs" style="margin-right:10px;"></i> Manage Team</a>
 								{% endif %}
 							</span>
 						</div>

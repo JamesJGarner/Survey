@@ -444,6 +444,10 @@ width: 90px;
       background-color: rgba(51, 96, 163, 0.93) !important;
       color: #FFF;
 }
+.hg {}
+.hg:hover {
+	background-color: rgba(185, 185, 185, 0.25) !important;
+}
 
 .keywordactivity2 {
 	color: #2424AE;
@@ -643,7 +647,7 @@ width: 90px;
     position: absolute;
     right: 15px;
     z-index: 99;
-    top: 10px;
+    top: 27px;
     font-size: 10pt;
     color: #FFF;	font-family: 'Raleway', sans-serif;
 }

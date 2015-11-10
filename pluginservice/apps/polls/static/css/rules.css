@@ -116,3 +116,10 @@ h6 {
 .marginbig {
 	margin-top: 9px !important;
 }
+.borderradius{
+	border-radius: 5px !Important;
+}
+.hg {}
+.hg:hover {
+	background-color: rgba(185, 185, 185, 0.25) !important;
+}
