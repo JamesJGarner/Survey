@@ -1258,4 +1258,14 @@ table {
     top:25px;
     left:-1px;
 }
+.footer {
+	margin-bottom: 20px !important;
+}
+.footer p {
+	font-size: 12px !important;
+}
+.footer a {
+	font-size: 12px !important;
+	color: rgb(51, 96, 163);
+}
   
