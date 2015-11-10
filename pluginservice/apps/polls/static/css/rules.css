@@ -1,0 +1,118 @@
+* {
+	transition: background-color 300ms ease-out;
+}
+.Dull {
+	background: #b9b9b9 !important;
+}
+.title {
+      padding: 10px 20px !important;
+}
+.red {
+  color: #D42936 !important;
+  font-weight: bold;
+  border-left: 1px solid #ddd;
+  background: none !important;
+}
+.red:hover {
+	color:#fff !important;
+	background-color: #D42936 !important;
+}
+.green {
+	color: #43ac6a;
+}
+.new {
+	color: #ee2e3d;
+	font-size: small;
+	margin-left: 5px;
+}
+.small {
+	font-size: 1.25rem;
+}
+.veryblue {
+	color: #2424AE !important;
+}
+h1, h2, h3, h5, p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+.whitebackground p, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+.whitebackground {
+	background-color: #fff;
+	padding: 20px 20px 0px 20px;
+}
+h4 {
+	color: #1f6380 !important;
+	font-family: 'Raleway', sans-serif;
+}
+.manage h4 {
+  color: #1f6380;
+  border-bottom: 1px solid #1f6380;
+  padding-bottom: 10px;
+  margin: 15px 15px 15px 15px;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: xx-large;
+}
+h6 {
+	color: #2e3030;
+	font-family: 'Raleway', sans-serif;
+}
+.nopaddingtop {
+	padding-top: 0px !important;
+}
+.nopaddingbottom {
+	padding-bottom: 0px !important;
+}
+.nopaddingleft {
+	padding-left: 0px !Important;
+}
+.nopaddingright {
+	padding-right: 0px !important;
+}
+.nopadding {
+	padding: 0px !important;
+}
+.nobordertop {
+	border-top: 0px !important;
+}
+.noborderbottom {
+	border-bottom: 0px !important;
+}
+.noborderleft {
+	border-left: 0px !important;
+}
+.noborderright {
+	border-right: 0px !important;
+}
+.noborder {
+	border: none !important;
+}
+.nomargintop {
+	margin-top: 0px !Important;
+}
+.nomarginbottom {
+	margin-bottom: 0px !Important;
+}
+.nomarginleft {
+	margin-left: 0px !Important;
+}
+.nomarginright {
+	margin-right: 0px !Important;
+}
+.nomargin {
+	margin: 0px !important;
+}
+.white {
+  padding:20px;
+  background: #FFF;
+}
+.blue {
+	color: rgb(51, 96, 163);
+}
+.bluetext {
+	color: rgb(51, 96, 163);
+}
+.marginbig {
+	margin-top: 9px !important;
+}
