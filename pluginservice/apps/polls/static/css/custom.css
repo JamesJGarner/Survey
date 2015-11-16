@@ -147,17 +147,16 @@ p.section-title:after {
   border-right: none;
  }
  .buttonSelected3 {
-  background-color: #fff !important;
-  color: #3161a5 !important;
-  border-color: #3161a5 !important;
-  border: 3px solid !important;
+  color: #333!important;
+  background-color: #fff!important;
+  border-color: #ccc!important;
 }
 .buttonSelected3:hover {
   color: #fff !important;
   background-color: #3161a5 !important;
 }
 .buttonSelected2 {
-  background-color: #1f6380 !important;
+  background-color: rgb(51, 96, 163) !important;
   color: #fff !important;
 }
 .buttonSelected2:hover {
@@ -254,7 +253,7 @@ span {
   margin-right: 5px;
 }
 .landingblue {
-	background-color: #2e64b6;
+	background-image:url('../img/intro-bg.jpg');
 	width: 100%;
 	padding: 0px 0px 150px 0px;
 }
@@ -277,63 +276,66 @@ span {
 	font-weight: 300;
 }
 .landinggreen {
-	background-color: #13ad51;
+	background-color: #f8f8f8;
 	width: 100%;
 	padding: 100px 0px 100px 0px;
 }
 .landinggreen h5 {
 	font-weight: 200;
     font-size: 45px;
-    color: #fff;
+    color: #333;
 }
 .landinggreen h6{
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+	color: #333;
 }
 .landingpurple {
-	background: #d23b4a;
+	
+	border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
 	width: 100%;
 	padding: 100px 0px 100px 0px;
 }
 .landingpurple  h5 {
 	font-weight: 200;
     font-size: 45px;
-    color: #fff;
+    color: #333;
 }
 .landingpurple  h6{
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+	color: #333;
 }
 .landingpurple a {
-	color: #fff;
-	border-bottom: 1px dotted #fff;
+	color: #333;
+	border-bottom: 1px dotted #333;
 }
 .landingpurple a:hover {
-	color:#bebfbf;
+	color:#000;
 }
 .landingorange {
-	background: #dda00f;
+	border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
 	width: 100%;
 	padding: 100px 0px 100px 0px;
 }
 .landingorange   h5 {
 	font-weight: 200;
     font-size: 45px;
-    color: #fff;
+    color: #333;
 }
 .landingorange   h6{
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-	color: #fff;
+	color: #333;
 }
 .landingorange a {
-	color: #fff;
-	border-bottom: 1px dotted #fff;
+	color: #333;
+	border-bottom: 1px dotted #333;
 }
 .landingwhite {
 	background: #fff;
@@ -352,20 +354,21 @@ span {
   color: rgb(51, 96, 163);
 }
 .landingdark {
-  background: #2c3e50;
+	border-top: 1px solid #e7e7e7;
+	    background-color: #f8f8f8;
   width: 100%;
   padding: 100px 0px 100px 0px;
 }
 .landingdark   h5 {
   font-weight: 200;
     font-size: 45px;
-    color: #fff;
+    color: #333;
 }
 .landingdark  h6{
     font-size: 30px !important;
     line-height: 1.25 !important;
     font-weight: 200 !important;
-  color: #fff;
+  color: #333;
 }
 .registerbox{
   width: 100%;
@@ -614,4 +617,37 @@ input:focus ~ .highlight {
 .footer a {
 	font-size: 12px !important;
 	color: rgb(51, 96, 163);
+	border-bottom: none !Important;
+}
+.header {
+  background-color: #FFF;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0 10px 0;
+}
+
+.header img {
+  width: 150px;
+  margin-top: -13px;
+}
+
+.header ul li {
+  list-style: none;
+  float:  left;
+}
+
+.header ul li a{
+	color: rgb(51, 96, 163);
+    margin-left: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+}
+.header ul li a:hover {
+	color: #1e87b3;
+}
+.landingpic {
+	margin: 170px 0px 100px 0px !important;
+}
+.lead {
+	    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
