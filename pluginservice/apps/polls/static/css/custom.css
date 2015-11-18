@@ -147,13 +147,14 @@ p.section-title:after {
   border-right: none;
  }
  .buttonSelected3 {
-  color: #333!important;
-  background-color: #fff!important;
-  border-color: #ccc!important;
+  color: #fff!important;
+  background-color: rgb(51, 96, 163) !important;
+  border-color: #fff!important;
 }
 .buttonSelected3:hover {
-  color: #fff !important;
-  background-color: #3161a5 !important;
+  color: rgb(51, 96, 163)!important;
+  background-color: #fff !important;
+  border-color: rgb(51, 96, 163)!important;
 }
 .buttonSelected2 {
   background-color: rgb(51, 96, 163) !important;

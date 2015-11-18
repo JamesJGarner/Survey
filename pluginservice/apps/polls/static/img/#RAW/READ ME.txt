@@ -1,0 +1,15 @@
+
+http://semety.com
+
+                                                ****
+
+ /*---------------------------------------------------------------------------------------------*\
+
+ The folder #RAW is designed to keep editable files, such as Illustrator (.svg) and Photoshop (.psd).
+ Furthermore, materials should be stored in their selected folder, but the #RAW folder should always
+ keep backups on important files that has the ability to be edited.
+
+ /*---------------------------------------------------------------------------------------------*\
+
+ 
+                                                ****
