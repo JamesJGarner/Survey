@@ -1272,4 +1272,284 @@ table {
 	font-size: 12px !important;
 	color: rgb(51, 96, 163);
 }
+
+
+
+
+
+
+
+
+
+
+#tutorialheader {
+    background: #2980b9;
+    color: #fff;
+    text-align: left;
+	padding-bottom: 20px;
+}
+#tutorialheader h2 {
+    color: #fff;
+	font-size: 2.7em;
+	font-family: 'Raleway', sans-serif !important;
+}
+.tutorialul {
+	list-style: none;
+	font-size: large;
+}
+.tutorialul li {
+	padding: 10px 0px 10px 0px;
+	font-family: 'Raleway', sans-serif !important;
+}
+.whitetutorial2 {
+    float: left;
+    background-color: #f7f7f7;
+    width: 25%;
+    height: 70px;
+    margin-bottom: 50px;
+	-webkit-border-top-right-radius: 25px;
+	-webkit-border-bottom-right-radius: 25px;
+	-moz-border-radius-topright: 25px;
+	-moz-border-radius-bottomright: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+.whitetutorial2:Hover {
+	background: #dadada;
+}
+.whitetutorial {
+    float: left;
+    background-color: #fff;
+    width: 75%;
+    height: 70px;
+    margin-bottom: 50px;
+}
+.whitetutorial2 h4, .whitetutorial h4 {
+	padding: 18px;
+	padding-left: 30px;
+	font-family: 'Raleway', sans-serif !important;
+	font-size: large;
+	line-height: 0px !Important;
+	margin-top: 18px !Important;
+}
+.whitetutorial2 h4{
+	font-weight: bold;
+}
+.tutorialimage0 {
+	margin: -28px;
+	width: 155px;
+	height: 155px;
+}
+.divider {
+    display: block;
+    background: url(../img/tutorial/spine/divider.png) no-repeat top center;
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    height: 124px;
+    margin-top: -18px;
+    clear: both;
+}
+.tutorialline{
+	background: url(../img/tutorial/spine/line.png) top center;
+	height: 3px;
+	width: 67%;
+	margin: auto;
+}
+.tutorialup {
+	background: url(../img/tutorial/spine/up.png) no-repeat top center;
+	width: 33.3333%;
+	height: 30px;
+	display: inline-block;
+}
+.tutorialspine h2 {
+	font-family: 'Raleway', sans-serif !important; 
+	font-size: larger;
+}
+.whitebackgroundtutorial {
+	background-color: #fff;
+	padding-bottom: 150px;
+}
+.whitebackgroundanalytics {
+	background-color: #fff;
+	padding-bottom: 200px;
+}
+.divider2 {
+    display: block;
+    background: url(../img/tutorial/spine/divider2.png) no-repeat top center;
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    height: 124px;
+    margin-top: -18px;
+    clear: both;
+
+}
+.tutorialline2{
+	background: url(../img/tutorial/spine/line.png) top center;
+	height: 3px;
+	width: 67%;
+	margin: auto;
+	margin-top: -8px;
+}
+.tutorialup2 {
+	background: url(../img/tutorial/spine/up2.png) no-repeat top center;
+	width: 33.3333%;
+	height: 40px;
+	display: inline-block;
+}
+.notransition {
+	transition: none !important;
+}
+.new {
+    color: #ee2e3d;
+    font-size: small;
+    margin-left: 5px;
+}
+.tutorialborder {
+	border:10px solid #f7f7f7 !important;
+}
+.css3-bounce-effect {
+	-webkit-animation: bounce 800ms ease-out;
+	-moz-animation: bounce 800ms ease-out;
+	-o-animation: bounce 800ms ease-out;
+	animation: bounce 800ms ease-out;
+}
+.tutorialsocial{
+	width: 50px !important;
+	height: 50px !important;
+	margin-right: 15px;
+}
+#analytics .panel {
+	min-height: 580px;
+}	
+ul.pagination li.current a, ul.pagination li.current button {
+	background: rgb(51, 96, 163) !important;
+}
+
+#analytics h5 {
+	color: #aeaeae;
+	font-weight: 300;
+	padding-left: 10px;
+}
+#analytics h4 {
+	font-family: 'Raleway', sans-serif;
+	color: #333333;
+	font-weight: 300;
+	margin-top: 8px !Important;
+}
+#analytics h6 {
+	font-family: 'Raleway', sans-serif;
+	color: #333333;
+	font-weight: 300;
+	font-size: 1.2em;
+}
+.analyticstime{
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+.pagination {
+	position: absolute;
+	bottom: 0;
+	left: 225px;
+	padding-bottom: 20px;
+}
+.label.success {
+    background-color: #43AC6A;
+    color: #FFFFFF !important;
+}
+.side-nav li a:not(.button) {
+	color: rgb(51, 96, 163);
+	border-radius: 25px;
+	font-size: 1.1em !important;
+
+}
+.side-nav li a:not(.button):hover {
+	background-color: rgb(51, 96, 163) !important;
+	color: #fff !important;
+}
+.tag {
+    float: left;
+    background: #e7e7e7;
+    line-height: 30px;
+	margin: 10px;
+    padding: 0 30px 0 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+	display: inline-block !important;
+}
+
+.underlinep p {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.46);
+  line-height: 28px;
+}
+
+.profilemain {
+  border-top:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  float: left;
+  width:100%;
+  background-color:#FFF;
+}
+
+.profile-box {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  float: left;
+  width: 100%;
+  padding-top:20px;
+  margin-bottom: 20px;
+}
+
+.team-list {
+  margin:0;
+  background: #fff;
+  float:  left;
+  width:  100%;
+}
+
+.team-list li {
+  list-style:   none;
+}
+
+.team-header {
+  width:100%;
+  border-top:  1px solid #ddd;
+
+
+  text-align: left;
+  float:  left;
+}
+
+.team-header h4 {
+  margin: 20px;
+    line-height: 24px;
+
+}
+
+.team-list h4 a {
+  float:  right;
+  font-size:  13pt;
+
+}
+
+.team-butons {
+  float: left;
+  border-right:1px solid #ddd;
+}
+
+.team-buttons a {
+    float: left;
+    height: 100%;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-left: 1px solid #ddd;
+    color:rgb(51, 96, 163);
+}
+
+.team-divider {
+    border-top: 1px solid #ddd;
+    float: left;
+    width: 100%;
+}
   
