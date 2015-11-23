@@ -1552,4 +1552,8 @@ ul.pagination li.current a, ul.pagination li.current button {
     float: left;
     width: 100%;
 }
+.textlogo {
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif !important;
+}
   
