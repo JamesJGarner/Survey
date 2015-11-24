@@ -375,7 +375,7 @@ span {
 }
 .registerbox{
   width: 100%;
-  height: 871px;
+  max-height: 100% !Important;
   padding: 0px !important;
   background-image: url('../img/norway.jpg');
     background-repeat: no-repeat;
@@ -476,7 +476,7 @@ aside {
   float: right;
 }
 .registerboxfooter {
-  margin-top: 250px;
+  margin-top: 0px !Important;
   margin-lefT: 20px;
 }
 .registerboxfooter h1 {
@@ -528,7 +528,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 
 .group 			  { 
   position:relative; 
-  margin-bottom:55px; 
+  margin-bottom:40px; 
+  margin-top: 30px;
 }
 input:focus 		{ outline:none; }
 
