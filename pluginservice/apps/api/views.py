@@ -84,12 +84,7 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
     def get_queryset(self):
         user = self.request.user
         result = Notification.objects.filter(user=user, read=False)
-        modify = result
-
-        for item in modify:
-            item.read = True
-            item.save()
-
+        print result
         return result
 
 

@@ -13,10 +13,12 @@ class CreateAccount(FormView):
     success_url = '/'
 
     def form_valid(self, form):
-        form.save()
+        createform = form.save(commit=False)
+        createform.username = form.cleaned_data['username'].lower()
+        self.object = form.save()
 
         user = authenticate(
-            username=form.cleaned_data['username'],
+            username=form.cleaned_data['username'].lower(),
             password=form.cleaned_data['password1']
         )
 
