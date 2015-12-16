@@ -200,7 +200,7 @@ p.section-title:after {
 .poll {
   width: 100%;
   min-height: 100px;
-  background-image: url('../img/water.jpg');
+  background-image: url('../img/water.png');
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px 0px 20px 0px;
@@ -259,6 +259,11 @@ span {
 	background-image:url('../img/intro-bg.jpg');
 	width: 100%;
 	padding: 0px 0px 70px 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 }
 .register {
 	width: 100%;
